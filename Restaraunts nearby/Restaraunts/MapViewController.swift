@@ -30,7 +30,11 @@ final class MapViewController: UIViewController {
         }
     }
 
-    private let mapView = MKMapView()
+    private let mapView: MKMapView = {
+        let mapView = MKMapView()
+        mapView.showsUserLocation = true
+        return mapView
+    }()
     
     private var centerButton: UIButton = {
         let offset: CGFloat = 5.0;
@@ -47,6 +51,8 @@ final class MapViewController: UIViewController {
         button.layer.shadowOpacity = 0.15
         button.layer.shadowOffset = .zero
         button.layer.shadowRadius = 10
+        
+        button.addTarget(self, action: #selector(centerMe), for: .touchUpInside)
         
         return button
     }()
@@ -70,15 +76,14 @@ final class MapViewController: UIViewController {
         
         SwiftLocation.gpsLocationWith({ (options) in
             options.subscription = .single
-        }).then { (result) in
-            switch result {
-            case .success(let data):
-                self.mapView.centerCoordinate = data.coordinate
-                break
-            case .failure(_):
-                // TODO: handle here
-                break
-            }
+        }).then { [weak self] (result) in
+            self?.centerMe()
+        }
+        
+        SwiftLocation.gpsLocationWith({ (options) in
+            options.subscription = .continous
+        }).then { _ in
+            // Continue getting updates to have a fast re-centering over user location
         }
     }
     
@@ -126,6 +131,16 @@ final class MapViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
+    // MARK: Actions
+    
+    @objc private func centerMe() {
+        guard let coordinate = SwiftLocation.lastKnownGPSLocation?.coordinate else {
+            // TODO: handle error here
+            return
+        }
+        
+        mapView.centerCoordinate = coordinate
+    }
     
     // MARK: Error handling
     
