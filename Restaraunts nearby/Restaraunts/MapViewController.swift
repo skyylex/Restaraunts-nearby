@@ -15,11 +15,24 @@ extension UIColor {
     static let almostWhite = UIColor(red: 239.0 / 255.0, green: 238.0 / 255.0, blue: 235.0 / 255.0, alpha: 1.0)
 }
 
-class MapViewController: UIViewController {
-
-    let mapView = MKMapView()
+final class MapViewController: UIViewController {
     
-    var centerButton: UIButton = {
+    private enum Error {
+        case locationServicesUnavailable
+        
+        var message: String {
+            switch self {
+            case .locationServicesUnavailable:
+                return """
+                    Location Services are unavailable. If you want to use your geo-location: \n\n 1. Go to \"Settings\". \n 2. Go to \"Privacy\". \n 3. Choose \"Location Services\". \n 4. Turn \"Location services\" on.
+                    """
+            }
+        }
+    }
+
+    private let mapView = MKMapView()
+    
+    private var centerButton: UIButton = {
         let offset: CGFloat = 5.0;
             
         let image = UIImage(named: "center-button")?.withTintColor(UIColor.brightBlue)
@@ -38,6 +51,8 @@ class MapViewController: UIViewController {
         return button
     }()
     
+    // MARK: UIViewController lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,25 +62,41 @@ class MapViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        if SwiftLocation.authorizationStatus == .denied {
+            handleError(.locationServicesUnavailable)
+            return
+        }
         
-        SwiftLocation.gpsLocation().then {
-            print("Location is \($0.location)")
+        SwiftLocation.gpsLocationWith({ (options) in
+            options.subscription = .single
+        }).then { (result) in
+            switch result {
+            case .success(let data):
+                self.mapView.centerCoordinate = data.coordinate
+                break
+            case .failure(_):
+                // TODO: handle here
+                break
+            }
         }
     }
     
-    func attachMapControls() {
+    // MARK: Views attachment
+    
+    private func attachMapControls() {
         view.addSubview(centerButton)
         centerButton.translatesAutoresizingMaskIntoConstraints = false
         
         let constraints = [
-            centerButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            centerButton.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 10),
+            centerButton.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            centerButton.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -10),
         ]
         
         NSLayoutConstraint.activate(constraints)
     }
     
-    func attachMapView() {
+    private func attachMapView() {
         view.addSubview(mapView)
         mapView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -79,8 +110,31 @@ class MapViewController: UIViewController {
         NSLayoutConstraint.activate(constraints)
     }
     
+    // MARK: Alerts
     
+    private func showAlert(title: String, message: String) {
+        let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+            let url = URL(string: UIApplication.openSettingsURLString)!
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        let okAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(openSettingsAction)
+        alertController.addAction(okAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
 
+    
+    // MARK: Error handling
+    
+    private func handleError(_ error: Error) {
+        switch error {
+        case .locationServicesUnavailable:
+            showAlert(title: "Error", message: error.message)
+        }
+    }
 
 }
 
