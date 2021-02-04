@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Restaraunts_nearby
+@testable import Restaraunts
 
 class Restaraunts_nearbyTests: XCTestCase {
 

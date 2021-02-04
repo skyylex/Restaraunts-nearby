@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SwiftLocation
 
 extension UIColor {
     static let brightBlue = UIColor(red: 31.0 / 255.0, green: 116.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0)
@@ -42,6 +43,14 @@ class MapViewController: UIViewController {
         
         attachMapView()
         attachMapControls()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        SwiftLocation.gpsLocation().then {
+            print("Location is \($0.location)")
+        }
     }
     
     func attachMapControls() {

@@ -1,0 +1,16 @@
+PODS:
+  - SwiftLocation (5.0.3)
+
+DEPENDENCIES:
+  - SwiftLocation (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - SwiftLocation
+
+SPEC CHECKSUMS:
+  SwiftLocation: bb31568141be88499a6d15b9dcd5d6bfea113a3b
+
+PODFILE CHECKSUM: 8cc6cdda22f99c297a990d3a1fff0f1f6516c996
+
+COCOAPODS: 1.9.3
