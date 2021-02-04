@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9439619F25CCB5C8000623A3 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9439619E25CCB5C8000623A3 /* MapViewModel.swift */; };
 		9446457A25CBE20500E247F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9446457925CBE20500E247F6 /* AppDelegate.swift */; };
 		9446457C25CBE20500E247F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9446457B25CBE20500E247F6 /* SceneDelegate.swift */; };
 		9446457E25CBE20500E247F6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9446457D25CBE20500E247F6 /* MapViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		3591F79AD11C91BC7F091E61 /* Pods-Restaraunts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaraunts.debug.xcconfig"; path = "Target Support Files/Pods-Restaraunts/Pods-Restaraunts.debug.xcconfig"; sourceTree = "<group>"; };
 		6B42188F3FCEEA0E0991FC23 /* Pods_Restaraunts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restaraunts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9439619E25CCB5C8000623A3 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		9446457625CBE20500E247F6 /* Restaraunts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaraunts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9446457925CBE20500E247F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9446457B25CBE20500E247F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9439619D25CCB5B5000623A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9439619E25CCB5C8000623A3 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		943961A425CCB728000623A3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9446457D25CBE20500E247F6 /* MapViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		9446456D25CBE20500E247F6 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +119,10 @@
 		9446457825CBE20500E247F6 /* Restaraunts */ = {
 			isa = PBXGroup;
 			children = (
+				943961A425CCB728000623A3 /* ViewController */,
+				9439619D25CCB5B5000623A3 /* ViewModel */,
 				9446457925CBE20500E247F6 /* AppDelegate.swift */,
 				9446457B25CBE20500E247F6 /* SceneDelegate.swift */,
-				9446457D25CBE20500E247F6 /* MapViewController.swift */,
 				9446458225CBE20500E247F6 /* Assets.xcassets */,
 				9446458425CBE20500E247F6 /* LaunchScreen.storyboard */,
 				9446458725CBE20500E247F6 /* Info.plist */,
@@ -267,6 +286,7 @@
 				9446457E25CBE20500E247F6 /* MapViewController.swift in Sources */,
 				9446457A25CBE20500E247F6 /* AppDelegate.swift in Sources */,
 				9446457C25CBE20500E247F6 /* SceneDelegate.swift in Sources */,
+				9439619F25CCB5C8000623A3 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

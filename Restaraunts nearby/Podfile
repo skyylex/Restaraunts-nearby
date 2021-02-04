@@ -3,4 +3,6 @@ use_frameworks!
 
 target 'Restaraunts' do
   pod 'SwiftLocation', '~> 5.0'
+  pod 'CombineCocoa', '~> 0.2'
+  pod 'GSMessages', '~> 1.7'
 end

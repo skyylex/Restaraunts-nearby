@@ -1,16 +1,24 @@
 PODS:
+  - CombineCocoa (0.2.2)
+  - GSMessages (1.7.4)
   - SwiftLocation (5.0.3)
 
 DEPENDENCIES:
+  - CombineCocoa (~> 0.2)
+  - GSMessages (~> 1.7)
   - SwiftLocation (~> 5.0)
 
 SPEC REPOS:
   trunk:
+    - CombineCocoa
+    - GSMessages
     - SwiftLocation
 
 SPEC CHECKSUMS:
+  CombineCocoa: 66c79441761907c096ecbd0021cefd8566acaf06
+  GSMessages: 9a82cc40465b88cd5d5759bee1fe812c3c63cc3a
   SwiftLocation: bb31568141be88499a6d15b9dcd5d6bfea113a3b
 
-PODFILE CHECKSUM: 8cc6cdda22f99c297a990d3a1fff0f1f6516c996
+PODFILE CHECKSUM: 8f80c220934d7490567aae5609f3c6c2034bb7ed
 
 COCOAPODS: 1.9.3

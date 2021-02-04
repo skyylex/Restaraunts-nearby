@@ -8,27 +8,40 @@
 
 import UIKit
 import MapKit
-import SwiftLocation
+import Combine
+import CombineCocoa
+import GSMessages
 
 extension UIColor {
     static let brightBlue = UIColor(red: 31.0 / 255.0, green: 116.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0)
     static let almostWhite = UIColor(red: 239.0 / 255.0, green: 238.0 / 255.0, blue: 235.0 / 255.0, alpha: 1.0)
 }
 
-final class MapViewController: UIViewController {
-    
-    private enum Error {
-        case locationServicesUnavailable
-        
-        var message: String {
-            switch self {
-            case .locationServicesUnavailable:
-                return """
-                    Location Services are unavailable. If you want to use your geo-location: \n\n 1. Go to \"Settings\". \n 2. Go to \"Privacy\". \n 3. Choose \"Location Services\". \n 4. Turn \"Location services\" on.
-                    """
-            }
+enum MapViewError {
+    case generic(message: String)
+}
+
+extension MapViewError {
+    var message: String {
+        switch self {
+        case .generic(let message):
+            return message
         }
     }
+}
+
+protocol MapViewModelInput {
+    func onViewDidAppear()
+    func onSettingsAppOpeningRequest()
+    func onCenteringRequest()
+}
+
+protocol MapViewModelOutput {
+    var handleError: (MapViewError) -> Void { get set }
+    var centerMe: (CLLocationCoordinate2D) -> Void { get set }
+}
+
+final class MapViewController: UIViewController {
 
     private let mapView: MKMapView = {
         let mapView = MKMapView()
@@ -36,6 +49,7 @@ final class MapViewController: UIViewController {
         return mapView
     }()
     
+    private var centerButtonTapToken: AnyCancellable?
     private var centerButton: UIButton = {
         let offset: CGFloat = 5.0;
             
@@ -52,10 +66,11 @@ final class MapViewController: UIViewController {
         button.layer.shadowOffset = .zero
         button.layer.shadowRadius = 10
         
-        button.addTarget(self, action: #selector(centerMe), for: .touchUpInside)
-        
         return button
     }()
+    
+    var viewModelInput: MapViewModelInput!
+    var viewModelOutput: MapViewModelOutput!
     
     // MARK: UIViewController lifecycle
     
@@ -64,26 +79,41 @@ final class MapViewController: UIViewController {
         
         attachMapView()
         attachMapControls()
+        
+        setupViewModelOutput()
+        setupViewModelInput()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        if SwiftLocation.authorizationStatus == .denied {
-            handleError(.locationServicesUnavailable)
-            return
+        viewModelInput.onViewDidAppear()
+    }
+    
+    // MARK: Setup view model
+    
+    private func setupViewModelOutput() {
+        viewModelOutput.handleError = { [weak self] error in
+            let font = UIFont.boldSystemFont(ofSize: 16)
+            let attributes: [NSAttributedString.Key : Any] = [
+                NSAttributedString.Key.font: font,
+                NSAttributedString.Key.strokeColor: UIColor.white,
+            ]
+            
+            let attributedString = NSAttributedString(string: error.message, attributes: attributes)
+            self?.view.showMessage(attributedString, type: .error)
         }
         
-        SwiftLocation.gpsLocationWith({ (options) in
-            options.subscription = .single
-        }).then { [weak self] (result) in
-            self?.centerMe()
+        viewModelOutput.centerMe = { [weak self] coordinate in
+            self?.mapView.centerCoordinate = coordinate
         }
-        
-        SwiftLocation.gpsLocationWith({ (options) in
-            options.subscription = .continous
-        }).then { _ in
-            // Continue getting updates to have a fast re-centering over user location
+    }
+    
+    // MARK: Actions
+    
+    private func setupViewModelInput() {
+        centerButtonTapToken = centerButton.tapPublisher.sink { [weak self] in
+            self?.viewModelInput.onCenteringRequest()
         }
     }
     
@@ -118,9 +148,8 @@ final class MapViewController: UIViewController {
     // MARK: Alerts
     
     private func showAlert(title: String, message: String) {
-        let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
-            let url = URL(string: UIApplication.openSettingsURLString)!
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default) { [weak self] (action) in
+            self?.viewModelInput.onSettingsAppOpeningRequest()
         }
         let okAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
@@ -130,26 +159,6 @@ final class MapViewController: UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-
-    // MARK: Actions
     
-    @objc private func centerMe() {
-        guard let coordinate = SwiftLocation.lastKnownGPSLocation?.coordinate else {
-            // TODO: handle error here
-            return
-        }
-        
-        mapView.centerCoordinate = coordinate
-    }
-    
-    // MARK: Error handling
-    
-    private func handleError(_ error: Error) {
-        switch error {
-        case .locationServicesUnavailable:
-            showAlert(title: "Error", message: error.message)
-        }
-    }
-
 }
 

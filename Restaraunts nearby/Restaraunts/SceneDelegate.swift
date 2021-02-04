@@ -17,9 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let rootViewController = MapViewController()
-        window?.rootViewController = rootViewController
         
+        let mapViewModel = MapViewModel()
+        let rootViewController = MapViewController()
+        rootViewController.viewModelInput = mapViewModel
+        rootViewController.viewModelOutput = mapViewModel
+        
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
     }
 
