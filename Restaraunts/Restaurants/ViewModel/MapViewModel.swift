@@ -50,6 +50,10 @@ final class MapViewModel: MapViewModelInput, MapViewModelOutput {
         locationProvider.startLocationUpdates()
     }
     
+    func onViewDidDisappear() {
+        locationProvider.stopLocationUpdates()
+    }
+    
     func onSettingsAppOpeningRequest() {
         // TODO: move to Coordinator
         let url = URL(string: UIApplication.openSettingsURLString)!

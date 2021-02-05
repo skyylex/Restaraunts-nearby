@@ -32,6 +32,7 @@ extension MapViewError {
 
 protocol MapViewModelInput {
     func onViewDidAppear()
+    func onViewDidDisappear()
     func onSettingsAppOpeningRequest()
     func onCenteringRequest()
 }

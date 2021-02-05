@@ -17,6 +17,8 @@
 		9491663C25CDF83C001ED057 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491663B25CDF83C001ED057 /* RootCoordinator.swift */; };
 		9491664125CDF99A001ED057 /* SimpleLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491664025CDF99A001ED057 /* SimpleLocationProvider.swift */; };
 		9491665825CDFCF3001ED057 /* RootCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491665725CDFCF3001ED057 /* RootCoordinatorTests.swift */; };
+		9491666025CDFDE9001ED057 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */; };
+		9491666525CE026E001ED057 /* SimpleLocationProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491666425CE026E001ED057 /* SimpleLocationProviderMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		9491664825CDFCCC001ED057 /* RestaurantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9491664C25CDFCCC001ED057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9491665725CDFCF3001ED057 /* RootCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorTests.swift; sourceTree = "<group>"; };
+		9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
+		9491666425CE026E001ED057 /* SimpleLocationProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLocationProviderMock.swift; sourceTree = "<group>"; };
 		B6C313FB0C2608CEF53359BE /* Pods-Restaurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurants.release.xcconfig"; path = "Target Support Files/Pods-Restaurants/Pods-Restaurants.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,8 +161,18 @@
 			children = (
 				9491664C25CDFCCC001ED057 /* Info.plist */,
 				9491665725CDFCF3001ED057 /* RootCoordinatorTests.swift */,
+				9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */,
+				9491666325CE0253001ED057 /* Mocks */,
 			);
 			path = RestaurantsTests;
+			sourceTree = "<group>";
+		};
+		9491666325CE0253001ED057 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9491666425CE026E001ED057 /* SimpleLocationProviderMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +334,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9491665825CDFCF3001ED057 /* RootCoordinatorTests.swift in Sources */,
+				9491666525CE026E001ED057 /* SimpleLocationProviderMock.swift in Sources */,
+				9491666025CDFDE9001ED057 /* MapViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
