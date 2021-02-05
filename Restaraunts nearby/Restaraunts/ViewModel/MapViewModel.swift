@@ -12,12 +12,12 @@ import UIKit
 import CoreLocation
 
 final class MapViewModel: MapViewModelInput, MapViewModelOutput {
-    static let defaultMessage = "Unknown error happened while fetching current user location"
+    private static let defaultMessage = "Cannot fetch current user location"
     
     // ViewModelInput:
     func onCenteringRequest() {
         guard let coordinate = SwiftLocation.lastKnownGPSLocation?.coordinate else {
-            // TODO: improve handling here
+            handleError(.generic(message: Self.defaultMessage))
             return
         }
         
