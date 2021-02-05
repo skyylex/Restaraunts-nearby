@@ -18,20 +18,46 @@ extension UIColor {
 }
 
 enum MapViewError {
-    case generic(message: String)
+    case generic(title: String?, message: String, shouldBlockUI: Bool)
+    case locationServicesNotAuthorized(title: String, message: String, shouldBlockUI: Bool)
 }
 
 extension MapViewError {
+    var shouldBlockUI: Bool {
+        switch self {
+        case .generic(_, _, let shouldBlockUI):
+            return shouldBlockUI
+        case .locationServicesNotAuthorized(_, _, let shouldBlockUI):
+            return shouldBlockUI
+        }
+    }
+    
     var message: String {
         switch self {
-        case .generic(let message):
+        case .generic(_, let message, _):
             return message
+        case .locationServicesNotAuthorized(_, let message, _):
+            return message
+        }
+    }
+    
+    var title: String? {
+        switch self {
+        case .generic(let title,_ ,_):
+            return title
+        case .locationServicesNotAuthorized(let title,_,_):
+            return title
         }
     }
 }
 
-protocol MapViewModelInput {
-    func onViewDidAppear()
+enum ViewLifecycleEvent {
+    case viewDidLoad
+    case viewDidAppear
+    case viewDidDisappear
+}
+
+protocol MapViewModelInput: ViewModelInput {
     func onSettingsAppOpeningRequest()
     func onCenteringRequest()
 }
@@ -82,26 +108,31 @@ final class MapViewController: UIViewController {
         
         setupViewModelOutput()
         setupViewModelInput()
+        
+        viewModelInput.viewLifecyleEventsPublisher.value = .viewDidLoad
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        viewModelInput.onViewDidAppear()
+        viewModelInput.viewLifecyleEventsPublisher.value = .viewDidAppear
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        viewModelInput.viewLifecyleEventsPublisher.value = .viewDidDisappear
     }
     
     // MARK: Setup view model
     
     private func setupViewModelOutput() {
         viewModelOutput.handleError = { [weak self] error in
-            let font = UIFont.boldSystemFont(ofSize: 16)
-            let attributes: [NSAttributedString.Key : Any] = [
-                NSAttributedString.Key.font: font,
-                NSAttributedString.Key.strokeColor: UIColor.white,
-            ]
-            
-            let attributedString = NSAttributedString(string: error.message, attributes: attributes)
-            self?.view.showMessage(attributedString, type: .error)
+            if error.shouldBlockUI {
+                self?.showAlert(title: error.title ?? "", message: error.message)
+            } else {
+                self?.showToastMessage(message: error.message)
+            }
         }
         
         viewModelOutput.centerMe = { [weak self] coordinate in
@@ -147,15 +178,37 @@ final class MapViewController: UIViewController {
     
     // MARK: Alerts
     
+    private func showToastMessage(message: String) {
+        let font = UIFont.boldSystemFont(ofSize: 16)
+        let attributes: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.strokeColor: UIColor.white,
+        ]
+        
+        view.showMessage(NSAttributedString(string: message, attributes: attributes), type: .error)
+    }
+    
     private func showAlert(title: String, message: String) {
         let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default) { [weak self] (action) in
             self?.viewModelInput.onSettingsAppOpeningRequest()
         }
         let okAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         alertController.addAction(openSettingsAction)
         alertController.addAction(okAction)
+        
+        let style = NSMutableParagraphStyle()
+        style.alignment = .left;
+
+        let atrStr = NSMutableAttributedString(string: message, attributes: [
+            NSAttributedString.Key.paragraphStyle : style,
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14)
+        ])
+
+        // Might lead to a rejection during Apple Review,
+        // however it seems like all other major apps use it (Waze, MAPS.ME, etc)
+        alertController.setValue(atrStr, forKey: "attributedMessage")
         
         present(alertController, animated: true, completion: nil)
     }
