@@ -7,16 +7,25 @@
 //
 
 import Foundation
-import SwiftLocation
 import UIKit
 import CoreLocation
 
 final class MapViewModel: MapViewModelInput, MapViewModelOutput {
+    struct Dependencies {
+        let locationProvider: SimpleLocationProviding
+    }
+    
     private static let defaultMessage = "Cannot fetch current user location"
+    private let locationProvider: SimpleLocationProviding
+    private var isFirstAppearance = true
+    
+    init(dependencies: Dependencies) {
+        locationProvider = dependencies.locationProvider
+    }
     
     // ViewModelInput:
     func onCenteringRequest() {
-        guard let coordinate = SwiftLocation.lastKnownGPSLocation?.coordinate else {
+        guard let coordinate = locationProvider.lastKnownGPSCoordinate else {
             handleError(.generic(message: Self.defaultMessage))
             return
         }
@@ -25,22 +34,20 @@ final class MapViewModel: MapViewModelInput, MapViewModelOutput {
     }
     
     func onViewDidAppear() {
-        SwiftLocation.gpsLocationWith({ (options) in
-            options.subscription = .single
-        }).then { [weak self] (result) in
-            switch result {
-            case .success(let data):
-                self?.centerMe(data.coordinate)
-            case .failure(let error):
-                self?.handleError(.generic(message: error.failureReason ?? Self.defaultMessage))
+        if isFirstAppearance {
+            locationProvider.fetchCurrentLocation { [weak self] (result) in
+                switch result {
+                case .success(let coordinate):
+                    self?.centerMe(coordinate)
+                case .failure(let error):
+                    self?.handleError(.generic(message: error.localizedDescription))
+                }
             }
+            
+            isFirstAppearance = false
         }
 
-        SwiftLocation.gpsLocationWith({ (options) in
-            options.subscription = .continous
-        }).then { _ in
-            // Continue getting updates to have a fast re-centering over user location
-        }
+        locationProvider.startLocationUpdates()
     }
     
     func onSettingsAppOpeningRequest() {
