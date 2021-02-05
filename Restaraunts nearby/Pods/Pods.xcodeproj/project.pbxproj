@@ -39,7 +39,9 @@
 		44D418770510BE27EEB9D64B2DE5E946 /* Geocoder-Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DFA958FD4AD7BA4B12B0FB6F7AAAB1 /* Geocoder-Here.swift */; };
 		47CE6A620157EC8D64B8BC2ECE01B2C6 /* Autocomplete-Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDF00445E505A5FCB116E5E2C79476E /* Autocomplete-Google.swift */; };
 		4A4574B6645D66B4860C962215A81AF7 /* UISwitch+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1024F8FF80408AD94791EBFD68825553 /* UISwitch+Combine.swift */; };
+		59263F01F99BCD1768CD3028A831BE49 /* Pods-Restaurants-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F3E9A489D21F50C1554C92C779C776 /* Pods-Restaurants-dummy.m */; };
 		6207DD484A8AE98D53D0A127A1E5DC74 /* BeaconRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D172A77750ABD4EA0F3ABAE45DF16A79 /* BeaconRequest.swift */; };
+		63187B608226ADDF90662A49A1275FDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
 		65252D1DE3E723064408246E2826257C /* Geocoder-Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5253035534923C6B16689B18BFF691 /* Geocoder-Google.swift */; };
 		65E69FA38BB277ECB9AF805F6434D75A /* UITextField+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944DF5100016E71A024F2A0C544E0E1 /* UITextField+Combine.swift */; };
 		671A7AF928FF32097430DD9C75C0C02E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8E8509914E92A79AD124928D644003 /* CoreLocation.framework */; };
@@ -67,7 +69,6 @@
 		A759AA6F08CD63326373A3095F943936 /* DelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD5043FBA8F54D770952D6919A61FDB /* DelegateProxyType.swift */; };
 		ACF4DB1B863356B32029E648AC15BE91 /* UIStepper+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3621823B0806DBFEC286AF4100EC3 /* UIStepper+Combine.swift */; };
 		AF395ED8DBC3E8D98BB4BFBA59FBA3B1 /* LocationManagerImpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDD01251E2C82B35E47655F491B6FCF /* LocationManagerImpProtocol.swift */; };
-		B1E89527156EF2B828C7A50F9F60605E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
 		BCD7099CECD6BFD8F01FF23EB8E735FF /* AutocompleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567FEB34A1761490AA88D4C3F15B999 /* AutocompleteProtocol.swift */; };
 		C09E9659FE9DB6C66E6F0A12D51001DC /* CombineCocoa-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D6C656D5ACB6B37DACAA5FC06FE1651 /* CombineCocoa-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C34A1399C1EC48FC68551B24D4DF008C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6857EF65E3DB52CB9A78DC4226EEA57 /* GSMessage.swift */; };
@@ -89,41 +90,40 @@
 		E69E1D32831BD4B4179629A34C716121 /* IPServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F344789A00FBB3D6B0EE1D52CCC2167 /* IPServiceProtocol.swift */; };
 		E6E097A350F8A0F5E15365C76CE84DBB /* Autocomplete-Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8221DA54A8A3FC07DC25FA394B314A97 /* Autocomplete-Apple.swift */; };
 		E6E2965FA76BD98868A27DA401DFB5DD /* UIPageControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414884609A1DB17E28D872549A48998 /* UIPageControl+Combine.swift */; };
+		E969ABCD2298D144FC8227EF1DE66FFC /* Pods-Restaurants-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F5F2C1D6FFD33BECA85FC1C927201FA /* Pods-Restaurants-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE0846009144D7CC2D62221664404638 /* Autocomplete-Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48724068CA26D1DFF4366CCCF511C78D /* Autocomplete-Here.swift */; };
 		EF5535FC9DDEBE1255EC1154CD3132D0 /* CombineCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 449478016B559E18DEB5A4DB7CF3435F /* CombineCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF615FCD96421DBC7B0C8E6405F9505C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8983A73C90EE4D828BFDD4C51BB19176 /* MapKit.framework */; };
 		F13AF73F03456956BE6DBE74C99546E1 /* BeaconBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C1A4C78885052A3F50F25BF73C6C3 /* BeaconBroadcaster.swift */; };
 		F16B9FDB65E7E1AE0EAD08879CC138D7 /* IPLocation-IPInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6D39B04509FC6DCB6FAACF5E110ADA /* IPLocation-IPInfo.swift */; };
 		F2188D266FBF40ABB41CBCF63996D4AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
-		F22853488443BAA946024AB5FD99C8ED /* Pods-Restaraunts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9543F30C9C220A8CD348685FE1D6AF3A /* Pods-Restaraunts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6326F229FB844B17ED504BD880DCF3C /* JSONNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291C830B9973AAFF8CFB32DB006C911F /* JSONNetworkHelper.swift */; };
-		FA07F6C01B93C627C107B89963B9ADCE /* Pods-Restaraunts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8582FABBE3DC0D00C0124EF6257C92F7 /* Pods-Restaraunts-dummy.m */; };
 		FB6D38EBC44E1493B4DBEDF519B192DF /* PartialAddressMatch+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D37830AEF26B204870C563AB2D3171 /* PartialAddressMatch+Apple.swift */; };
 		FD7B0A6091D717E9BD539049162913B4 /* ObjcDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 998ADB61945B46277BC9954F286C7D08 /* ObjcDelegateProxy.m */; };
 		FFA5DE1E4B18077214CF18C5A2DAD012 /* IPLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522384AB8F81D7EE93B1C40008590144 /* IPLocationRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		76558535095E860C7ABF3241CA54AB21 /* PBXContainerItemProxy */ = {
+		0CCEEE3200E28E13FAD13ECA91B8A666 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C11E051A417486DA3B63E1333BABA34;
+			remoteInfo = CombineCocoa;
+		};
+		33E29440DD236510EA108883664DB684 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6190D0D27761CCF3C26503CD61890ED1;
 			remoteInfo = GSMessages;
 		};
-		8FAE5D6C0115E703FF80C5D2FCAD915B /* PBXContainerItemProxy */ = {
+		45FF20A8D98A48C94A12C59932C62D2B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A77DC3FBE3DFD1D1CA8D8812A6CF0776;
 			remoteInfo = SwiftLocation;
-		};
-		988461FC368BA11ECD43F70492D63DB8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C11E051A417486DA3B63E1333BABA34;
-			remoteInfo = CombineCocoa;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -148,7 +148,6 @@
 		291C830B9973AAFF8CFB32DB006C911F /* JSONNetworkHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONNetworkHelper.swift; path = "Sources/SwiftLocation/Request/Support Structures/JSONNetworkHelper/JSONNetworkHelper.swift"; sourceTree = "<group>"; };
 		2BA950509635A86CA76718954BE8083D /* GSMessages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSMessages-dummy.m"; sourceTree = "<group>"; };
 		2D78472B1B2FD07723FB1BC3AAC47D36 /* GSMessages-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSMessages-umbrella.h"; sourceTree = "<group>"; };
-		2F8CBE1C54BAA420E19872620AE953A2 /* Pods-Restaraunts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Restaraunts.debug.xcconfig"; sourceTree = "<group>"; };
 		37D1EA06AE3354CFE888E2EA350ED8F9 /* GSMessages-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GSMessages-Info.plist"; sourceTree = "<group>"; };
 		39D37830AEF26B204870C563AB2D3171 /* PartialAddressMatch+Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PartialAddressMatch+Apple.swift"; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch+Apple.swift"; sourceTree = "<group>"; };
 		3AEE47DE809E00E30539937DF104FB6E /* GeoLocation+MapBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+MapBox.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+MapBox.swift"; sourceTree = "<group>"; };
@@ -163,6 +162,7 @@
 		47C9DD4FF81F2F96FC7D9BC1FFBF867A /* SwiftLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLocation.debug.xcconfig; sourceTree = "<group>"; };
 		48724068CA26D1DFF4366CCCF511C78D /* Autocomplete-Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Autocomplete-Here.swift"; path = "Sources/SwiftLocation/Request/Requests/Autocomplete/Services/Autocomplete-Here.swift"; sourceTree = "<group>"; };
 		4C678B4A8CAADE71D75DA8311295097A /* SwiftLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftLocation.framework; path = SwiftLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7B594A1F96147D047C4B99A7204438 /* Pods-Restaurants.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Restaurants.modulemap"; sourceTree = "<group>"; };
 		4E5253035534923C6B16689B18BFF691 /* Geocoder-Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-Google.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-Google.swift"; sourceTree = "<group>"; };
 		4ED6214A0E6B19EDB1D0563A7C00BF7D /* Foundation+Extras.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Foundation+Extras.swift"; path = "Sources/SwiftLocation/Extensions/Foundation+Extras.swift"; sourceTree = "<group>"; };
 		522384AB8F81D7EE93B1C40008590144 /* IPLocationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPLocationRequest.swift; path = Sources/SwiftLocation/Request/Requests/IPLocation/IPLocationRequest.swift; sourceTree = "<group>"; };
@@ -174,11 +174,13 @@
 		5A7C26A916B86331FE9B0FC0D82D47A7 /* CLLocationManager+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CLLocationManager+Extension.swift"; path = "Sources/SwiftLocation/Extensions/CLLocationManager+Extension.swift"; sourceTree = "<group>"; };
 		5BE12E03036BB638845F44483A2F8B24 /* IPLocation-IPGeolocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPGeolocation.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPGeolocation.swift"; sourceTree = "<group>"; };
 		5FDD01251E2C82B35E47655F491B6FCF /* LocationManagerImpProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationManagerImpProtocol.swift; path = Sources/SwiftLocation/CLLocationManager/LocationManagerImpProtocol.swift; sourceTree = "<group>"; };
+		63B17C917F46C79C2FC84465C17B9A88 /* Pods-Restaurants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Restaurants.debug.xcconfig"; sourceTree = "<group>"; };
 		6756626383A0EE981F5260BD7664F273 /* GeoLocation+OpenStreet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+OpenStreet.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+OpenStreet.swift"; sourceTree = "<group>"; };
 		68A1697904D022BCE06002C99CBA7A45 /* GeofencingRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeofencingRequest.swift; path = Sources/SwiftLocation/Request/Requests/Geofencing/GeofencingRequest.swift; sourceTree = "<group>"; };
 		68F87E5B154B304BF77C801A31A781A0 /* DeviceLocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceLocationManager.swift; path = Sources/SwiftLocation/CLLocationManager/CLDeviceLocationManager/DeviceLocationManager.swift; sourceTree = "<group>"; };
 		6B333F4EE04B312D7879D7330F47F0B6 /* UIDatePicker+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDatePicker+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIDatePicker+Combine.swift"; sourceTree = "<group>"; };
 		6C570A3A653F4692BB520F5538AA56E8 /* CombineCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CombineCocoa.release.xcconfig; sourceTree = "<group>"; };
+		6E12CFCD20AE4440390C390370EBCEBD /* Pods_Restaurants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Restaurants.framework; path = "Pods-Restaurants.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71057136E4A176FD7B72262D7AEA4A01 /* UISlider+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISlider+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISlider+Combine.swift"; sourceTree = "<group>"; };
 		717BB3705192E3A636D9743357C2661A /* SwiftLocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftLocation-dummy.m"; sourceTree = "<group>"; };
 		796821DA19C42DC6FB07B3092F184C31 /* Geocoder-Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-Apple.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-Apple.swift"; sourceTree = "<group>"; };
@@ -186,22 +188,20 @@
 		8221DA54A8A3FC07DC25FA394B314A97 /* Autocomplete-Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Autocomplete-Apple.swift"; path = "Sources/SwiftLocation/Request/Requests/Autocomplete/Services/Autocomplete-Apple.swift"; sourceTree = "<group>"; };
 		8350B14712A75A35EAA46225DC67B981 /* CombineCocoa-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CombineCocoa-Info.plist"; sourceTree = "<group>"; };
 		84B289F6B390E9052C6620BCBA656C54 /* CombineCocoa.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CombineCocoa.modulemap; sourceTree = "<group>"; };
-		8582FABBE3DC0D00C0124EF6257C92F7 /* Pods-Restaraunts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Restaraunts-dummy.m"; sourceTree = "<group>"; };
 		8983A73C90EE4D828BFDD4C51BB19176 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		8C724318F9361698F0EB5ADF8033FE11 /* DelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxy.swift; path = Sources/CombineCocoa/DelegateProxy/DelegateProxy.swift; sourceTree = "<group>"; };
 		8C872C5888F995D384A22D4A27939511 /* AnimatedAssignSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedAssignSubscriber.swift; path = Sources/CombineCocoa/AnimatedAssignSubscriber.swift; sourceTree = "<group>"; };
-		8E567452580A57D59A2DC9C977E80AA3 /* Pods-Restaraunts-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Restaraunts-frameworks.sh"; sourceTree = "<group>"; };
 		8F6D39B04509FC6DCB6FAACF5E110ADA /* IPLocation-IPInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPInfo.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPInfo.swift"; sourceTree = "<group>"; };
 		90D7AA84BEC18ADE533AE3F6B3EE21EF /* Geocoder-OpenStreet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-OpenStreet.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-OpenStreet.swift"; sourceTree = "<group>"; };
 		92E1A3C670DFC0444FAACEB72E62D045 /* SwiftLocation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftLocation-umbrella.h"; sourceTree = "<group>"; };
 		93B019BA53EF03D9679D2B4A83AC7696 /* CombineControlTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombineControlTarget.swift; path = Sources/CombineCocoa/CombineControlTarget.swift; sourceTree = "<group>"; };
 		94AFAB66F04B437F7327C1A6794F9ACB /* IPLocation-IPData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPData.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPData.swift"; sourceTree = "<group>"; };
 		95309E57EB00C5DE8C69D86A5C098CA1 /* NSTextStorage+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextStorage+Combine.swift"; path = "Sources/CombineCocoa/Controls/NSTextStorage+Combine.swift"; sourceTree = "<group>"; };
-		9543F30C9C220A8CD348685FE1D6AF3A /* Pods-Restaraunts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Restaraunts-umbrella.h"; sourceTree = "<group>"; };
 		998ADB61945B46277BC9954F286C7D08 /* ObjcDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjcDelegateProxy.m; path = Sources/Runtime/ObjcDelegateProxy.m; sourceTree = "<group>"; };
 		9C7928A63D907F5207345CEFE4FC4685 /* CombineCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CombineCocoa.debug.xcconfig; sourceTree = "<group>"; };
 		9D6C656D5ACB6B37DACAA5FC06FE1651 /* CombineCocoa-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CombineCocoa-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F5F2C1D6FFD33BECA85FC1C927201FA /* Pods-Restaurants-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Restaurants-umbrella.h"; sourceTree = "<group>"; };
 		A00F93650D1B8730A07E27A3D3865AB5 /* UIRefreshControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIRefreshControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIRefreshControl+Combine.swift"; sourceTree = "<group>"; };
 		A50DF946BBB70D6EC75B8A71B99DFE66 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Combine.framework; sourceTree = DEVELOPER_DIR; };
 		A8A3621823B0806DBFEC286AF4100EC3 /* UIStepper+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStepper+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIStepper+Combine.swift"; sourceTree = "<group>"; };
@@ -209,33 +209,32 @@
 		AD9F9E65E2E6C34D15DF07AE208F4370 /* IPLocation-IPApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPApi.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPApi.swift"; sourceTree = "<group>"; };
 		ADD5043FBA8F54D770952D6919A61FDB /* DelegateProxyType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxyType.swift; path = Sources/CombineCocoa/DelegateProxy/DelegateProxyType.swift; sourceTree = "<group>"; };
 		ADFA78ACDABFEEEDAA80EDB9C61D6520 /* GeocoderRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeocoderRequest.swift; path = Sources/SwiftLocation/Request/Requests/Geocoder/GeocoderRequest.swift; sourceTree = "<group>"; };
-		AE72CB2C1060BB236838D2E5C50D070A /* Pods-Restaraunts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Restaraunts.modulemap"; sourceTree = "<group>"; };
 		AF90CBC67B6FFF1E7701A298579841A9 /* DelegateProxyPublisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxyPublisher.swift; path = Sources/CombineCocoa/DelegateProxy/DelegateProxyPublisher.swift; sourceTree = "<group>"; };
 		B1E8ABB7CAAEC4EA9685B51A02B1DAD9 /* CombineCocoa-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CombineCocoa-prefix.pch"; sourceTree = "<group>"; };
+		B2C955D702FB0BEB5DAEB7056A434A21 /* Pods-Restaurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Restaurants.release.xcconfig"; sourceTree = "<group>"; };
 		B326F66F9028889BD9CB285AC6C361F7 /* UISegmentedControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISegmentedControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISegmentedControl+Combine.swift"; sourceTree = "<group>"; };
 		B43009BE0A6F57B07D789CB6B9CFAC2E /* UIControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIControl+Combine.swift"; sourceTree = "<group>"; };
 		B556DE86F0B54A48FCAE03BCCBBE9AB1 /* VisitsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VisitsRequest.swift; path = Sources/SwiftLocation/Request/Requests/Visits/VisitsRequest.swift; sourceTree = "<group>"; };
+		B6032120DF35B860E20777EBC61869E7 /* Pods-Restaurants-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Restaurants-acknowledgements.plist"; sourceTree = "<group>"; };
 		B8D65671184E5D0A75F58F17350D47A5 /* GSMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GSMessages.release.xcconfig; sourceTree = "<group>"; };
 		B96447FB4A7E72906FF2BB21AD01D321 /* UIGestureRecognizer+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIGestureRecognizer+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIGestureRecognizer+Combine.swift"; sourceTree = "<group>"; };
-		BAF381FF5755E5DF6D010D62BEC9DB32 /* Pods-Restaraunts-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Restaraunts-acknowledgements.plist"; sourceTree = "<group>"; };
+		B9F4DA3AF9DE6A122CB6CFE668497250 /* Pods-Restaurants-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Restaurants-Info.plist"; sourceTree = "<group>"; };
 		BD57EAB49F91EC33445F27C6F203622C /* GeoLocation+Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+Apple.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+Apple.swift"; sourceTree = "<group>"; };
 		BF6678AC8779796B45F17BB81EC879A8 /* IPLocation+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation+Data.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/IPLocation+Data.swift"; sourceTree = "<group>"; };
-		C2EE0ACBAD244380F5125298688E6D93 /* Pods-Restaraunts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Restaraunts.release.xcconfig"; sourceTree = "<group>"; };
-		C5A974F3F5A13B2205D6EB7D5343DA78 /* Pods_Restaraunts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Restaraunts.framework; path = "Pods-Restaraunts.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8D108B16AAF5B676E2893A34579192A /* Pods-Restaraunts-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Restaraunts-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CA453DA57FD70FCFFC8834C0AD0D223B /* UIScrollView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIScrollView+Combine.swift"; sourceTree = "<group>"; };
 		CB4822BDDB14E60A746CDAF080133911 /* Geocoder-MapBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-MapBox.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-MapBox.swift"; sourceTree = "<group>"; };
 		CBB9555D04F3B0ABB4295535B4B8849E /* UIButton+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIButton+Combine.swift"; sourceTree = "<group>"; };
-		CF112FD365DB1A253C16C51714F861CC /* Pods-Restaraunts-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Restaraunts-Info.plist"; sourceTree = "<group>"; };
 		D172A77750ABD4EA0F3ABAE45DF16A79 /* BeaconRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconRequest.swift; path = Sources/SwiftLocation/Request/Requests/Beacon/BeaconRequest.swift; sourceTree = "<group>"; };
 		D194D345472E28B1C25BB3B11CD374AF /* PartialAddressMatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PartialAddressMatch.swift; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch.swift"; sourceTree = "<group>"; };
 		D1B5A3EC749B972FFABD8618E49860E8 /* PartialAddressMatch+Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PartialAddressMatch+Here.swift"; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch+Here.swift"; sourceTree = "<group>"; };
 		D60A350D8273A19150C10149314EAE5A /* GPSLocationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPSLocationRequest.swift; path = Sources/SwiftLocation/Request/Requests/GPSLocation/GPSLocationRequest.swift; sourceTree = "<group>"; };
 		D67DB8F620B75E401AB2EF15C279D684 /* RequestProtocol+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RequestProtocol+Extension.swift"; path = "Sources/SwiftLocation/Request/Abstract Request/RequestProtocol+Extension.swift"; sourceTree = "<group>"; };
+		D9F3E9A489D21F50C1554C92C779C776 /* Pods-Restaurants-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Restaurants-dummy.m"; sourceTree = "<group>"; };
 		DC1D1C98BDC301630267674654DDE904 /* CombineCocoa-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CombineCocoa-dummy.m"; sourceTree = "<group>"; };
 		DCFE269B99BF5A295BB57A5DACEDABCD /* IPLocation-IPIpify.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPIpify.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPIpify.swift"; sourceTree = "<group>"; };
 		DE437EA3EC804C4AE7C2978A22818F52 /* UICollectionView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UICollectionView+Combine.swift"; sourceTree = "<group>"; };
 		DF0E31E430574ED282AF9D9FF8362BFE /* GPSLocationOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPSLocationOptions.swift; path = Sources/SwiftLocation/Request/Requests/GPSLocation/GPSLocationOptions.swift; sourceTree = "<group>"; };
+		DF12C2D94C69FD0021EE02F6149C4F92 /* Pods-Restaurants-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Restaurants-frameworks.sh"; sourceTree = "<group>"; };
 		DF586A1AB41BA413FE49D7E299D6F6C7 /* GSMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GSMessages.h; path = GSMessages/GSMessages.h; sourceTree = "<group>"; };
 		E07B03A38FF48810E4E1FA07AEB0DA60 /* ObjcDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjcDelegateProxy.h; path = Sources/Runtime/include/ObjcDelegateProxy.h; sourceTree = "<group>"; };
 		E3CFA892A9AADE8D9EFACB8E542E06F7 /* SwiftLocation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftLocation-Info.plist"; sourceTree = "<group>"; };
@@ -246,6 +245,7 @@
 		F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F5D26B5B425065A59900B097F0E27B8F /* CombineControlEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombineControlEvent.swift; path = Sources/CombineCocoa/CombineControlEvent.swift; sourceTree = "<group>"; };
 		FA0708C9CF8EEE1FE703F8C845A43B64 /* PartialAddressMatch+Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PartialAddressMatch+Google.swift"; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch+Google.swift"; sourceTree = "<group>"; };
+		FFFA1E9C8E77AD540DE75F1776DD52EF /* Pods-Restaurants-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Restaurants-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,17 +276,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF0D2A576878067993665BFDED6AF9EE /* Frameworks */ = {
+		DAC3C7301F163B5681BBC4D92692FE88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1E89527156EF2B828C7A50F9F60605E /* Foundation.framework in Frameworks */,
+				63187B608226ADDF90662A49A1275FDF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CEA275C3779A5279E42AF5BDBDD6764 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAC91070C4196357785C6A157C24782A /* CombineCocoa.framework */,
+				3D4168388EDAE7B3A797680A24646B84 /* GSMessages.framework */,
+				6E12CFCD20AE4440390C390370EBCEBD /* Pods_Restaurants.framework */,
+				4C678B4A8CAADE71D75DA8311295097A /* SwiftLocation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0DDDC0B9E84E726951D943AEEB0041D2 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +309,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		1B13E1A75B0BD3C09C9FDFF94C0568C3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84CD8C26CEA1DFBBF51FB8BDF8405FE5 /* Pods-Restaurants */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		26666BE69222D8A914F029A455468B81 /* GSMessages */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,23 +326,6 @@
 			);
 			name = GSMessages;
 			path = GSMessages;
-			sourceTree = "<group>";
-		};
-		3812FE3BC0FAEEBBA8781AC04D53C95F /* Pods-Restaraunts */ = {
-			isa = PBXGroup;
-			children = (
-				AE72CB2C1060BB236838D2E5C50D070A /* Pods-Restaraunts.modulemap */,
-				C8D108B16AAF5B676E2893A34579192A /* Pods-Restaraunts-acknowledgements.markdown */,
-				BAF381FF5755E5DF6D010D62BEC9DB32 /* Pods-Restaraunts-acknowledgements.plist */,
-				8582FABBE3DC0D00C0124EF6257C92F7 /* Pods-Restaraunts-dummy.m */,
-				8E567452580A57D59A2DC9C977E80AA3 /* Pods-Restaraunts-frameworks.sh */,
-				CF112FD365DB1A253C16C51714F861CC /* Pods-Restaraunts-Info.plist */,
-				9543F30C9C220A8CD348685FE1D6AF3A /* Pods-Restaraunts-umbrella.h */,
-				2F8CBE1C54BAA420E19872620AE953A2 /* Pods-Restaraunts.debug.xcconfig */,
-				C2EE0ACBAD244380F5125298688E6D93 /* Pods-Restaraunts.release.xcconfig */,
-			);
-			name = "Pods-Restaraunts";
-			path = "Target Support Files/Pods-Restaraunts";
 			sourceTree = "<group>";
 		};
 		413ED44DB55ECE7DF28A089994633273 /* SwiftLocation */ = {
@@ -424,23 +426,21 @@
 			path = "../Target Support Files/SwiftLocation";
 			sourceTree = "<group>";
 		};
-		8D810DCC81A3D3D969390E54736D8106 /* Targets Support Files */ = {
+		84CD8C26CEA1DFBBF51FB8BDF8405FE5 /* Pods-Restaurants */ = {
 			isa = PBXGroup;
 			children = (
-				3812FE3BC0FAEEBBA8781AC04D53C95F /* Pods-Restaraunts */,
+				4D7B594A1F96147D047C4B99A7204438 /* Pods-Restaurants.modulemap */,
+				FFFA1E9C8E77AD540DE75F1776DD52EF /* Pods-Restaurants-acknowledgements.markdown */,
+				B6032120DF35B860E20777EBC61869E7 /* Pods-Restaurants-acknowledgements.plist */,
+				D9F3E9A489D21F50C1554C92C779C776 /* Pods-Restaurants-dummy.m */,
+				DF12C2D94C69FD0021EE02F6149C4F92 /* Pods-Restaurants-frameworks.sh */,
+				B9F4DA3AF9DE6A122CB6CFE668497250 /* Pods-Restaurants-Info.plist */,
+				9F5F2C1D6FFD33BECA85FC1C927201FA /* Pods-Restaurants-umbrella.h */,
+				63B17C917F46C79C2FC84465C17B9A88 /* Pods-Restaurants.debug.xcconfig */,
+				B2C955D702FB0BEB5DAEB7056A434A21 /* Pods-Restaurants.release.xcconfig */,
 			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		9EABAA1932C84902A535C5BF44B7AB54 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EAC91070C4196357785C6A157C24782A /* CombineCocoa.framework */,
-				3D4168388EDAE7B3A797680A24646B84 /* GSMessages.framework */,
-				C5A974F3F5A13B2205D6EB7D5343DA78 /* Pods_Restaraunts.framework */,
-				4C678B4A8CAADE71D75DA8311295097A /* SwiftLocation.framework */,
-			);
-			name = Products;
+			name = "Pods-Restaurants";
+			path = "Target Support Files/Pods-Restaurants";
 			sourceTree = "<group>";
 		};
 		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
@@ -472,8 +472,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
 				7A751AAC569282F16F236229A01938B0 /* Pods */,
-				9EABAA1932C84902A535C5BF44B7AB54 /* Products */,
-				8D810DCC81A3D3D969390E54736D8106 /* Targets Support Files */,
+				0CEA275C3779A5279E42AF5BDBDD6764 /* Products */,
+				1B13E1A75B0BD3C09C9FDFF94C0568C3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -536,11 +536,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0578987DF4704A563B99D0DF6E0E77D /* Headers */ = {
+		9E2E33260BAE94C1AA32F23FE23FA1F2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22853488443BAA946024AB5FD99C8ED /* Pods-Restaraunts-umbrella.h in Headers */,
+				E969ABCD2298D144FC8227EF1DE66FFC /* Pods-Restaurants-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,27 +591,6 @@
 			productReference = 3D4168388EDAE7B3A797680A24646B84 /* GSMessages.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6B3EA76E4E44CCA87A94D3C62548E910 /* Pods-Restaraunts */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E5715161002642C13713DBA49FD25C32 /* Build configuration list for PBXNativeTarget "Pods-Restaraunts" */;
-			buildPhases = (
-				B0578987DF4704A563B99D0DF6E0E77D /* Headers */,
-				7352E916CB9877DDDCFBA813186352DB /* Sources */,
-				EF0D2A576878067993665BFDED6AF9EE /* Frameworks */,
-				55CA51AD199495308B8BA3680D9F7407 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0CC9B9B97FF170E02863A6F54FE5E23D /* PBXTargetDependency */,
-				8726F3DADDB442FDAA535C706C84BC08 /* PBXTargetDependency */,
-				B30ABC1136ED6F9EC996BB87D0A29DB5 /* PBXTargetDependency */,
-			);
-			name = "Pods-Restaraunts";
-			productName = "Pods-Restaraunts";
-			productReference = C5A974F3F5A13B2205D6EB7D5343DA78 /* Pods_Restaraunts.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		A77DC3FBE3DFD1D1CA8D8812A6CF0776 /* SwiftLocation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A29B69FEDCE775FBBA430FB73178A5EE /* Build configuration list for PBXNativeTarget "SwiftLocation" */;
@@ -628,6 +607,27 @@
 			name = SwiftLocation;
 			productName = SwiftLocation;
 			productReference = 4C678B4A8CAADE71D75DA8311295097A /* SwiftLocation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA8F3BA2993BAC5DEC851B454F2C4668 /* Pods-Restaurants */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCE4BACD724E06C19CBA6934DE937863 /* Build configuration list for PBXNativeTarget "Pods-Restaurants" */;
+			buildPhases = (
+				9E2E33260BAE94C1AA32F23FE23FA1F2 /* Headers */,
+				5B33F47B9807DE74E42D26D0A8497C30 /* Sources */,
+				DAC3C7301F163B5681BBC4D92692FE88 /* Frameworks */,
+				7267C8F68E33334703BB5CEC3A05DE5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A1198872B5A07833F8D36354B8705D3 /* PBXTargetDependency */,
+				43978F996D80DB22AA8AEDFCA3EA8414 /* PBXTargetDependency */,
+				01095EBC00260CA042F84E230D826258 /* PBXTargetDependency */,
+			);
+			name = "Pods-Restaurants";
+			productName = "Pods-Restaurants";
+			productReference = 6E12CFCD20AE4440390C390370EBCEBD /* Pods_Restaurants.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -648,13 +648,13 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9EABAA1932C84902A535C5BF44B7AB54 /* Products */;
+			productRefGroup = 0CEA275C3779A5279E42AF5BDBDD6764 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1C11E051A417486DA3B63E1333BABA34 /* CombineCocoa */,
 				6190D0D27761CCF3C26503CD61890ED1 /* GSMessages */,
-				6B3EA76E4E44CCA87A94D3C62548E910 /* Pods-Restaraunts */,
+				AA8F3BA2993BAC5DEC851B454F2C4668 /* Pods-Restaurants */,
 				A77DC3FBE3DFD1D1CA8D8812A6CF0776 /* SwiftLocation */,
 			);
 		};
@@ -675,7 +675,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55CA51AD199495308B8BA3680D9F7407 /* Resources */ = {
+		7267C8F68E33334703BB5CEC3A05DE5F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -735,11 +735,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7352E916CB9877DDDCFBA813186352DB /* Sources */ = {
+		5B33F47B9807DE74E42D26D0A8497C30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA07F6C01B93C627C107B89963B9ADCE /* Pods-Restaraunts-dummy.m in Sources */,
+				59263F01F99BCD1768CD3028A831BE49 /* Pods-Restaurants-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,23 +803,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0CC9B9B97FF170E02863A6F54FE5E23D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CombineCocoa;
-			target = 1C11E051A417486DA3B63E1333BABA34 /* CombineCocoa */;
-			targetProxy = 988461FC368BA11ECD43F70492D63DB8 /* PBXContainerItemProxy */;
-		};
-		8726F3DADDB442FDAA535C706C84BC08 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GSMessages;
-			target = 6190D0D27761CCF3C26503CD61890ED1 /* GSMessages */;
-			targetProxy = 76558535095E860C7ABF3241CA54AB21 /* PBXContainerItemProxy */;
-		};
-		B30ABC1136ED6F9EC996BB87D0A29DB5 /* PBXTargetDependency */ = {
+		01095EBC00260CA042F84E230D826258 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLocation;
 			target = A77DC3FBE3DFD1D1CA8D8812A6CF0776 /* SwiftLocation */;
-			targetProxy = 8FAE5D6C0115E703FF80C5D2FCAD915B /* PBXContainerItemProxy */;
+			targetProxy = 45FF20A8D98A48C94A12C59932C62D2B /* PBXContainerItemProxy */;
+		};
+		43978F996D80DB22AA8AEDFCA3EA8414 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GSMessages;
+			target = 6190D0D27761CCF3C26503CD61890ED1 /* GSMessages */;
+			targetProxy = 33E29440DD236510EA108883664DB684 /* PBXContainerItemProxy */;
+		};
+		9A1198872B5A07833F8D36354B8705D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CombineCocoa;
+			target = 1C11E051A417486DA3B63E1333BABA34 /* CombineCocoa */;
+			targetProxy = 0CCEEE3200E28E13FAD13ECA91B8A666 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -966,44 +966,6 @@
 			};
 			name = Release;
 		};
-		43CD873AA740DB9F6271C48D5CAEF8E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2EE0ACBAD244380F5125298688E6D93 /* Pods-Restaraunts.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Restaraunts/Pods-Restaraunts-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Restaraunts/Pods-Restaraunts.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		8C7FC025747B55D46DDEDEE5F4DFD2F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1065,6 +1027,44 @@
 			};
 			name = Release;
 		};
+		96E66B7C5C0090AB18C6B16974D0D82B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2C955D702FB0BEB5DAEB7056A434A21 /* Pods-Restaurants.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Restaurants/Pods-Restaurants-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Restaurants/Pods-Restaurants.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9F468639B1A0060E28F2AD62ADEBCC53 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C7928A63D907F5207345CEFE4FC4685 /* CombineCocoa.debug.xcconfig */;
@@ -1100,9 +1100,9 @@
 			};
 			name = Debug;
 		};
-		E728114BBF3DCCCEA0CE2221586A85A3 /* Debug */ = {
+		ACB5D2E55230267B653A6081EC6F1FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F8CBE1C54BAA420E19872620AE953A2 /* Pods-Restaraunts.debug.xcconfig */;
+			baseConfigurationReference = 63B17C917F46C79C2FC84465C17B9A88 /* Pods-Restaurants.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1114,7 +1114,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Restaraunts/Pods-Restaraunts-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Restaurants/Pods-Restaurants-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1123,7 +1123,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Restaraunts/Pods-Restaraunts.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Restaurants/Pods-Restaurants.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1275,11 +1275,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5715161002642C13713DBA49FD25C32 /* Build configuration list for PBXNativeTarget "Pods-Restaraunts" */ = {
+		DCE4BACD724E06C19CBA6934DE937863 /* Build configuration list for PBXNativeTarget "Pods-Restaurants" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E728114BBF3DCCCEA0CE2221586A85A3 /* Debug */,
-				43CD873AA740DB9F6271C48D5CAEF8E8 /* Release */,
+				ACB5D2E55230267B653A6081EC6F1FA0 /* Debug */,
+				96E66B7C5C0090AB18C6B16974D0D82B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

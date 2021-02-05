@@ -1,6 +1,6 @@
 //
 //  MapViewModel.swift
-//  Restaraunts
+//  Restaurants
 //
 //  Created by Yury Lapitsky on 05/02/2021.
 //  Copyright © 2021 Yury Lapitsky. All rights reserved.

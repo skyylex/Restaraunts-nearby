@@ -1,6 +1,6 @@
 //
 //  MapViewController.swift
-//  Restaraunts nearby
+//  Restaurants nearby
 //
 //  Created by Yury Lapitsky on 04/02/2021.
 //  Copyright © 2021 Yury Lapitsky. All rights reserved.
