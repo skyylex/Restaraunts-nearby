@@ -198,12 +198,14 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CombineCocoa/CombineCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FoursquareAPIClient/FoursquareAPIClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GSMessages/GSMessages.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LocationProvider/LocationProvider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CombineCocoa/CombineCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FoursquareAPIClient/FoursquareAPIClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GSMessages/GSMessages.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LocationProvider/LocationProvider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework"

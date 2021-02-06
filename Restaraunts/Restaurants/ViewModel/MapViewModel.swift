@@ -89,6 +89,8 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         
         if let coordinate = locationProvider.lastKnownGPSCoordinate {
             centerMe(coordinate)
+            
+            FourSquareService().search(with: coordinate)
         } else {
             locationProvider.fetchCurrentLocation { [weak self] (result) in
                 switch result {

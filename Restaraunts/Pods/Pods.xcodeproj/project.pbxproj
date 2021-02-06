@@ -7,273 +7,305 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0135162EACCDC49BE0826834EA5561FB /* GeoLocation+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7996D97608BB68A0753A19292E2F06 /* GeoLocation+Google.swift */; };
-		01430E27F323F072DE32E9C8A7D2D1B2 /* PartialAddressMatch+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC7162924E95D1B9B8212F321C8482F /* PartialAddressMatch+Google.swift */; };
-		029D41E4C1CB82F70F3914DB1B902D10 /* UITableView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40706A354DD5430B67BB5AEA11C6C24 /* UITableView+Combine.swift */; };
-		02EDB919E1F9BCBA2AA226452198FCA4 /* LocationProvider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D78B7CDB44FD88F46196E51821A39A5 /* LocationProvider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03FA4FCF3D8D069C44C58A189B02BF7F /* IPLocation-IPApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E5BC89DD5873205ADB5E7564E09A47 /* IPLocation-IPApi.swift */; };
+		0135162EACCDC49BE0826834EA5561FB /* GeoLocation+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B1CBB08C1871AF85730DDB375045CE /* GeoLocation+Google.swift */; };
+		01430E27F323F072DE32E9C8A7D2D1B2 /* PartialAddressMatch+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327F71EE08F394662C7B75721E1D2B8 /* PartialAddressMatch+Google.swift */; };
+		029D41E4C1CB82F70F3914DB1B902D10 /* UITableView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC2DA31E0563F3F352643A59B70D9DB /* UITableView+Combine.swift */; };
+		02EDB919E1F9BCBA2AA226452198FCA4 /* LocationProvider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C03C5FC1F8C5B08E69A2C67BFABBF12D /* LocationProvider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03FA4FCF3D8D069C44C58A189B02BF7F /* IPLocation-IPApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97F659538BD88F698BC81DEF0BC3A89 /* IPLocation-IPApi.swift */; };
 		055662CA5409753B878A60C86312D974 /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50DF946BBB70D6EC75B8A71B99DFE66 /* Combine.framework */; };
-		08A4331858F587AE1217EA1FD7D26355 /* UIDatePicker+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B8F50B4CF6A343E97CF9F48038981 /* UIDatePicker+Combine.swift */; };
-		0E7B3344D8CB7F6A6FDC17E82FE2CF55 /* UIGestureRecognizer+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2993B74F79EF9199861E3B2028ACA /* UIGestureRecognizer+Combine.swift */; };
-		1040E574FCD67056AB7647D9AE527D4A /* DelegateProxyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C78649042FA7B14229252BC1AE8BB75 /* DelegateProxyPublisher.swift */; };
-		1085032BF4B3BFC99F0D993189A1EE5E /* GeoLocation+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1546912C160D6103DE7930CB7E1366 /* GeoLocation+Apple.swift */; };
-		12B0634E3632110328D2A7C33CC48D8C /* CombineControlTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5166DEE5A071F2B49543385F03388A /* CombineControlTarget.swift */; };
-		153911E13D1FA8FBE8539512B02C7416 /* UIScrollView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0182690FDFDA2A4989F90C1572C3FC4 /* UIScrollView+Combine.swift */; };
-		15FC9DDE7B6FDD7F9AAA9F87DB223095 /* RequestProtocol+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343433DD9DBE3F703BAC9AA3FB977C77 /* RequestProtocol+Extension.swift */; };
+		08A4331858F587AE1217EA1FD7D26355 /* UIDatePicker+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7529B9A0FE6332A9ED4525F408FA5D4 /* UIDatePicker+Combine.swift */; };
+		0E7B3344D8CB7F6A6FDC17E82FE2CF55 /* UIGestureRecognizer+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7FD807E2031001B65BE149A6041639 /* UIGestureRecognizer+Combine.swift */; };
+		1040E574FCD67056AB7647D9AE527D4A /* DelegateProxyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBF0B688CDD80181682E803636ED1E0 /* DelegateProxyPublisher.swift */; };
+		1085032BF4B3BFC99F0D993189A1EE5E /* GeoLocation+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A02DB7B5076D38D02DF08E6D757C23D /* GeoLocation+Apple.swift */; };
+		12B0634E3632110328D2A7C33CC48D8C /* CombineControlTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB29BD1C8D4665ED13EA7D31C0703F06 /* CombineControlTarget.swift */; };
+		153911E13D1FA8FBE8539512B02C7416 /* UIScrollView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD37EAB0EEF85554F2FA90C143DCD1D /* UIScrollView+Combine.swift */; };
+		15FC9DDE7B6FDD7F9AAA9F87DB223095 /* RequestProtocol+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321EF4C14CD2DA87CAA772432B794969 /* RequestProtocol+Extension.swift */; };
+		1AB03F8C7C500999E963A9C83BC3EDBD /* FoursquareAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271257EC861D51862D0550936A38AD7 /* FoursquareAuthViewController.swift */; };
 		1C12C694012D3F562B633785E30F4FE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
-		205D4926CA343ADD3625414DD8F0DC59 /* Geocoder-MapBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B58EAA879B59BFEB3CF9F10ABE6FFD /* Geocoder-MapBox.swift */; };
-		22C49834F33FCD81113602CA3D9F070E /* GSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B74F55394A8FF8EBBDA18500B86396A /* GSMessages-dummy.m */; };
-		251F504C7916DE874A1B6FD3AF7904F6 /* UIBarButtonItem+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0EF3311D64A6995E2D841D07DED8CB /* UIBarButtonItem+Combine.swift */; };
-		25E30948884EDB2DEF4364F829BA337D /* GSMessages-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 281C478A08A455B2B8C8624D3C578F4C /* GSMessages-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		279756052F325D9A80D3201F207CE5CD /* GPSLocationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9945042E41DAEF18E90E626927BD4B /* GPSLocationOptions.swift */; };
-		2AA3EC58E1EB56DB264DE2FBCEB3336C /* GeoLocation+MapBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B36BD474BA32E4B4E8BBF3DC278B184 /* GeoLocation+MapBox.swift */; };
-		2EC9747367C97387D3A9DDA227E42C10 /* GeocoderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7244B38D2A4A740AA7027628A1E7A /* GeocoderServiceProtocol.swift */; };
-		318717772516B57BAE1DC5FD9CCA2D27 /* IPLocation-IPGeolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB791F1443825817415354E741A1EB /* IPLocation-IPGeolocation.swift */; };
-		31C7A46003A5E739ACCB3CE39331CD13 /* GPSLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3806A285CDDE11B0A6818A2EA1E428E7 /* GPSLocationRequest.swift */; };
-		3652FD7CEF564BD35A73B4F8F5954E4F /* Pods-Restaurants-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F5F2C1D6FFD33BECA85FC1C927201FA /* Pods-Restaurants-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		380E16909BBFED14B1A6FC644C082B45 /* UISegmentedControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6789B1CDB2595E3BD83B47AFDB3772 /* UISegmentedControl+Combine.swift */; };
-		3A3754D198FA4E141BAC8CAA67225FE4 /* UISlider+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4694167098D36D721E93F448122DB6 /* UISlider+Combine.swift */; };
-		3C123754FB411A8C076DD9C991E5249D /* SwiftLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29B80C0E1CAB89F54A032BF4CD2B30 /* SwiftLocation.swift */; };
-		3C718399D06F1E52D9C30164516592A7 /* UIRefreshControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7559C4728191EF2A183733B076C81 /* UIRefreshControl+Combine.swift */; };
-		3F17740A6A5F9301B12BB79242A9DE58 /* VisitsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D0B74D3AA82F9DD1F4F168D5B078D1 /* VisitsRequest.swift */; };
-		3F7538BC802869FFB8C20483CD9618F9 /* ObjcDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 79741E719835329C18EC09612972E75C /* ObjcDelegateProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4044CC85D9132395F0D218EF9247D184 /* Geocoder-Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC05DE055CB0B6049C686ADD9CAB5AA /* Geocoder-Apple.swift */; };
-		44D418770510BE27EEB9D64B2DE5E946 /* Geocoder-Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D289CB89642ACAAD1294C8CDC8E699C /* Geocoder-Here.swift */; };
-		47CE6A620157EC8D64B8BC2ECE01B2C6 /* Autocomplete-Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C647AC198BD86CCB6F4F860456E415 /* Autocomplete-Google.swift */; };
-		4A4574B6645D66B4860C962215A81AF7 /* UISwitch+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8A99ACA9F6D37751DEF6011A56EE4 /* UISwitch+Combine.swift */; };
-		6207DD484A8AE98D53D0A127A1E5DC74 /* BeaconRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25424C58848B403FD5CD504A71E2B022 /* BeaconRequest.swift */; };
-		65252D1DE3E723064408246E2826257C /* Geocoder-Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0B430461AAA61C585CD9A4625E0872 /* Geocoder-Google.swift */; };
-		65E69FA38BB277ECB9AF805F6434D75A /* UITextField+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F95797847E05ADC97F85F4F7C2E206D /* UITextField+Combine.swift */; };
+		205D4926CA343ADD3625414DD8F0DC59 /* Geocoder-MapBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE569E64CFD9AA51830EA9636ADC6AB /* Geocoder-MapBox.swift */; };
+		22C49834F33FCD81113602CA3D9F070E /* GSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B00EA4D91A63D601E8FAEDAF3EB973 /* GSMessages-dummy.m */; };
+		251F504C7916DE874A1B6FD3AF7904F6 /* UIBarButtonItem+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F155870C63B92193993494CFCC5181B /* UIBarButtonItem+Combine.swift */; };
+		25E30948884EDB2DEF4364F829BA337D /* GSMessages-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E511104047011703AD1152A13E18BA7 /* GSMessages-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		279756052F325D9A80D3201F207CE5CD /* GPSLocationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C00A597CD4D42718B95873D1460B3 /* GPSLocationOptions.swift */; };
+		2AA3EC58E1EB56DB264DE2FBCEB3336C /* GeoLocation+MapBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844227043C1CCB2EAED084E2A4229EA7 /* GeoLocation+MapBox.swift */; };
+		2EC9747367C97387D3A9DDA227E42C10 /* GeocoderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1169A87AC26AFA23C0321946441FA0DE /* GeocoderServiceProtocol.swift */; };
+		318717772516B57BAE1DC5FD9CCA2D27 /* IPLocation-IPGeolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEB10736471A304A1ED38E01D0563B1 /* IPLocation-IPGeolocation.swift */; };
+		31C7A46003A5E739ACCB3CE39331CD13 /* GPSLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C346E9DFB2CF9527C09F7BF6FAA98E /* GPSLocationRequest.swift */; };
+		380E16909BBFED14B1A6FC644C082B45 /* UISegmentedControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32B5DF881C521A42FA686EB5760C293 /* UISegmentedControl+Combine.swift */; };
+		3A3754D198FA4E141BAC8CAA67225FE4 /* UISlider+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586A9BF383B44CB57422525A4898905A /* UISlider+Combine.swift */; };
+		3C123754FB411A8C076DD9C991E5249D /* SwiftLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22A548EA53ED6D148E8A71312BF4823 /* SwiftLocation.swift */; };
+		3C718399D06F1E52D9C30164516592A7 /* UIRefreshControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C066D74FB65126797CEEAE594310E1B /* UIRefreshControl+Combine.swift */; };
+		3F17740A6A5F9301B12BB79242A9DE58 /* VisitsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0042260A31C70ED5BB91A3E3C59D4D9 /* VisitsRequest.swift */; };
+		3F7538BC802869FFB8C20483CD9618F9 /* ObjcDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B903C75E610731DE4C4CD1F0E42A8EB /* ObjcDelegateProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4044CC85D9132395F0D218EF9247D184 /* Geocoder-Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A78183702D46B33C984B9D17C8B7E /* Geocoder-Apple.swift */; };
+		44D418770510BE27EEB9D64B2DE5E946 /* Geocoder-Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F782A294640CB2B17FFFB655B83BB04 /* Geocoder-Here.swift */; };
+		47CE6A620157EC8D64B8BC2ECE01B2C6 /* Autocomplete-Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C078E81F5EEE4030D1189D729F73D46 /* Autocomplete-Google.swift */; };
+		4A4574B6645D66B4860C962215A81AF7 /* UISwitch+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087CF5422E9B1B74840C4160C5CA659 /* UISwitch+Combine.swift */; };
+		53978168EA95F4F6107FD40CD1AEBBD1 /* FoursquareAPIClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A936E37289BFE4F9FCDDBCBB40D0E28 /* FoursquareAPIClient-dummy.m */; };
+		6207DD484A8AE98D53D0A127A1E5DC74 /* BeaconRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742F583FEDECEB101FDAD88AC35136AA /* BeaconRequest.swift */; };
+		65252D1DE3E723064408246E2826257C /* Geocoder-Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985472CD5E74E12A7720AB474429A00 /* Geocoder-Google.swift */; };
+		65E69FA38BB277ECB9AF805F6434D75A /* UITextField+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F57892B60AD8125922CFAE586957F99 /* UITextField+Combine.swift */; };
 		671A7AF928FF32097430DD9C75C0C02E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8E8509914E92A79AD124928D644003 /* CoreLocation.framework */; };
-		672E3725ACC88580351226F69B4DAA64 /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6F1DF68F30214F814E126847030CCA /* DelegateProxy.swift */; };
+		672E3725ACC88580351226F69B4DAA64 /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F2FD6ECB29C9EBD3E19F4F3005811 /* DelegateProxy.swift */; };
 		6AEB488DA191AF3A921D3CA5732A0A1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
-		6BCBE96B0E2CD03E52E5CC445BF5D00B /* IPLocation-IPStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C37BD3F9FEF59347AA35C405F84190 /* IPLocation-IPStack.swift */; };
-		7A247EE68A07D96E0C6D4BAC03B7D45F /* CLLocationManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9AE773122F207F4CA316F588BDB64B /* CLLocationManager+Extension.swift */; };
-		7B817009B47838FCA6B2192BF549B35B /* GeocoderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7702813377A5471EFF9AD3B12697E /* GeocoderRequest.swift */; };
-		81CEB0E88D7C47D70F9376F75B0CE018 /* IPLocation-IPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FF3A4B5A7929736E1B1AF4DA84EDE /* IPLocation-IPData.swift */; };
-		820B26B8BB2BBCA5DA3F604CC20A446B /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBB2F47D7EC66C37AE43F441F38BB76 /* GeoLocation.swift */; };
+		6BCBE96B0E2CD03E52E5CC445BF5D00B /* IPLocation-IPStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C32FEF26317246E451595F0D5B621 /* IPLocation-IPStack.swift */; };
+		71662D2855678C6E47F4B71370411C97 /* FoursquareAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515553A39ACEA51E9C860CD8FF23683B /* FoursquareAuthClient.swift */; };
+		75DA8B808996CFEAA7F1303DB2A8279A /* FoursquareAPIClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EB58FE57B6E4FCCB8FBCFA599850544 /* FoursquareAPIClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A247EE68A07D96E0C6D4BAC03B7D45F /* CLLocationManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78812619CA12C1E50C11ABF0E0D161 /* CLLocationManager+Extension.swift */; };
+		7B817009B47838FCA6B2192BF549B35B /* GeocoderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2D1186FE9218965F16E870BF3BF025 /* GeocoderRequest.swift */; };
+		7BEEF73CF1222403C2BB7F62DD3A3209 /* FoursquareAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE093F0FB8555D263BEB674CBCD6E94 /* FoursquareAPIClient.swift */; };
+		81CEB0E88D7C47D70F9376F75B0CE018 /* IPLocation-IPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1971366775491B6240D8B7C4C892C1 /* IPLocation-IPData.swift */; };
+		820B26B8BB2BBCA5DA3F604CC20A446B /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E24B76E7EEFEC90AAE1E5C96BC3F0E /* GeoLocation.swift */; };
 		8256700B35C2DD7D84686198FA27FFBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
-		825F365AF3EAB312230F52ACBA122B4B /* UIButton+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728F154FE01BDC60B5FDE300C29AEED2 /* UIButton+Combine.swift */; };
-		83A4D15FE76E9E692FE8EFD2D6E57828 /* Pods-Restaurants-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F3E9A489D21F50C1554C92C779C776 /* Pods-Restaurants-dummy.m */; };
-		856B8736CE6D097D9B842B45FBA0C18A /* RequestProtocol+Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4868BE394C5342E81260CE49D9F064 /* RequestProtocol+Support.swift */; };
-		88309A3B15C072EBC1E6C3886E0C3F0A /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD55DBC21B90E1CCC71A8BDD373610 /* RequestProtocol.swift */; };
-		89303E0A7847DAFF04869B778890E989 /* CombineControlProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC34543C995DAF814FEAE1C1A81298 /* CombineControlProperty.swift */; };
-		89A05BF36EBCA2E4FAE30F1182DCDA6F /* PartialAddressMatch+Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3292026C25B0616B9786A763F92094 /* PartialAddressMatch+Here.swift */; };
-		8BA5B5CBAC42A14FDD3735E1F3794760 /* SwiftLocation+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC97319CA810F8733CD4B048E8E9AE0 /* SwiftLocation+Credentials.swift */; };
-		91EC05BAB32ACEE6BE727D3A475973E5 /* UITextView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F5A86EECF8B3CCC311642DBC1BE438 /* UITextView+Combine.swift */; };
-		9751FB534C8CE7447B2E0EAFD64E52ED /* IPLocation+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650203CD51723A95EC769E81635A79A7 /* IPLocation+Data.swift */; };
-		9A954E7892DB11A93340E4085B726602 /* LocationProvider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11547333F19BDEA94F5138AA2F6F18E8 /* LocationProvider-dummy.m */; };
-		9AF6F699D9852FD45884F5549E292EA8 /* CombineControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A4BA139917A4D2E6AC7AF0F565D3F /* CombineControlEvent.swift */; };
-		9E546379D73ADFAC2E30A82FA11582BC /* Foundation+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEEEEA4BCF46CD6E13D9EFDD61EDFA /* Foundation+Extras.swift */; };
-		9EE9A9A14D9D563616E590AB3C4942D6 /* SwiftLocation+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89621879C434BA71C320C04341726AB8 /* SwiftLocation+Errors.swift */; };
-		A38F98C1E7E109E049E408E7463F3404 /* PartialAddressMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFD2BC763E7B3C7F9383E93BCE24364 /* PartialAddressMatch.swift */; };
-		A3E0AD6F44D874E74D58752CE9206BFF /* GSMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 65480F11042ED966002C344AB09865FC /* GSMessages.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A75988CBB7A66B261193F8CDC8CE4EAB /* UISearchBar+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365496806D0C80DC58290A09062CCFF /* UISearchBar+Combine.swift */; };
-		A759AA6F08CD63326373A3095F943936 /* DelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3B462FB72A11650B1EE9ADB73DA38 /* DelegateProxyType.swift */; };
-		ACF4DB1B863356B32029E648AC15BE91 /* UIStepper+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC100D3CB4B599C12F7C57B758516377 /* UIStepper+Combine.swift */; };
-		AF395ED8DBC3E8D98BB4BFBA59FBA3B1 /* LocationManagerImpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26052DEB88403DEF0ED73B657A92233 /* LocationManagerImpProtocol.swift */; };
-		BCD7099CECD6BFD8F01FF23EB8E735FF /* AutocompleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A608B2E7174AADF0FE23AEB787DF86 /* AutocompleteProtocol.swift */; };
-		C09E9659FE9DB6C66E6F0A12D51001DC /* CombineCocoa-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 657CA9E99AB8090B6E25C16C438343A2 /* CombineCocoa-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C34A1399C1EC48FC68551B24D4DF008C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCF2A183308FC48251E886C6AF4C175 /* GSMessage.swift */; };
-		C3AFE652E684138A90E1106012663FCD /* NSTextStorage+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB84A6175E8D84DB69B18BEC3080E6D6 /* NSTextStorage+Combine.swift */; };
-		C74930C23B7E98BF8F6FBAFB586E7888 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
-		C7A693B2A1E29DD5B82A0C70EC68BC65 /* Geocoder-OpenStreet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2F85339F0ABC94FD3339C3513D72AA /* Geocoder-OpenStreet.swift */; };
-		C9EC90E8A2D06959E39DEA579E3EB5FD /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1DA2A2E1AC9B789BB0AC1BCEF0FFE2 /* UIControl+Combine.swift */; };
-		CBAC35D1D9CFB9F088E7215BD2704C07 /* UICollectionView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B495AF2726B8D520988D8926C2F649F4 /* UICollectionView+Combine.swift */; };
-		CC03CAE907A21161C9C25E2DA0B6202A /* CombineCocoa-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68319863BFF6B7E55F9BD76CA4FF58EF /* CombineCocoa-dummy.m */; };
-		D15F0F68A7A30EDFC1AB64CA886A4520 /* GeofencingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607CE212EAC96BD78EAAF491B1977F4 /* GeofencingRequest.swift */; };
-		D5A7993578E653BA8EF2209909868E15 /* DeviceLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741BC64830B451DF5EECFA1218331B4A /* DeviceLocationManager.swift */; };
-		D5B270C3F7BBEB42342770AD6CE12857 /* IPLocation-IPIpify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E59CD28A9A1D8CEFE3DB84B4CEFE9 /* IPLocation-IPIpify.swift */; };
-		D5D7AEF5EE5208510B99D410FEA87C91 /* SwiftLocation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F50A19C1A6D0ED7E25AEC622B6A44 /* SwiftLocation-dummy.m */; };
-		D5DC960A0664836EE39F3F3C569303AD /* GeofencingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26269E87567FEAE06587F2E0218AE601 /* GeofencingOptions.swift */; };
-		D69CFB4DCF0D072C26F16BA0ADB62C4A /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD21D99C03F30DB3B3BD122322669A15 /* LocationProvider.swift */; };
-		D73316F4702C547097E1CACE3A84FAEE /* GeoLocation+OpenStreet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7D10DE2E0573F9F477ACB2E51892CD /* GeoLocation+OpenStreet.swift */; };
-		DB1BCEC8A549CB43ACF99355592ED8A3 /* GeoLocation+Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401ABFC79B24B12F39A170028EB5CF4F /* GeoLocation+Here.swift */; };
-		DE7653A271D1F54439EA6BC51BE15441 /* AnimatedAssignSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF16C229B47D374410F65AE638FD0130 /* AnimatedAssignSubscriber.swift */; };
-		E0D9D8558FC2C08FA3D4BC4E89D7445E /* SwiftLocation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 633DAC7360E8BC4B5EB15B200DC7C62E /* SwiftLocation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5B3D755E73497C751A86FB02E2D1916 /* AutocompleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC169B7C8A2E32707AB1C93D8026672 /* AutocompleteRequest.swift */; };
-		E69E1D32831BD4B4179629A34C716121 /* IPServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F6F1A37EBBA9B42B19B2F112E1986D /* IPServiceProtocol.swift */; };
-		E6E097A350F8A0F5E15365C76CE84DBB /* Autocomplete-Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88316A05A9845A0B079ED9CC972E0A22 /* Autocomplete-Apple.swift */; };
-		E6E2965FA76BD98868A27DA401DFB5DD /* UIPageControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4DA6F73372E963DADE763771FB888 /* UIPageControl+Combine.swift */; };
-		EE0846009144D7CC2D62221664404638 /* Autocomplete-Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4792C09E151D1684F9F85CAE7E53FDE /* Autocomplete-Here.swift */; };
-		EF5535FC9DDEBE1255EC1154CD3132D0 /* CombineCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DA0A2C9AA20F72D35576B1CC5279AD /* CombineCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		825F365AF3EAB312230F52ACBA122B4B /* UIButton+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F7230502E08BA861AF7E7265566A0 /* UIButton+Combine.swift */; };
+		856B8736CE6D097D9B842B45FBA0C18A /* RequestProtocol+Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6F648A1B0748009B1A4F6D2D35BB8 /* RequestProtocol+Support.swift */; };
+		88309A3B15C072EBC1E6C3886E0C3F0A /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910AFEF04878DDC0344D06446457F91E /* RequestProtocol.swift */; };
+		89303E0A7847DAFF04869B778890E989 /* CombineControlProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7195037B2C4635FB8F0D01B45D646 /* CombineControlProperty.swift */; };
+		89A05BF36EBCA2E4FAE30F1182DCDA6F /* PartialAddressMatch+Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2D9A50EC03B7F9E5E5C7B5F45284C7 /* PartialAddressMatch+Here.swift */; };
+		8BA5B5CBAC42A14FDD3735E1F3794760 /* SwiftLocation+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06A0E4BBE4EAF7D16B55B55C9886916 /* SwiftLocation+Credentials.swift */; };
+		91EC05BAB32ACEE6BE727D3A475973E5 /* UITextView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F35DE041EC37F469071BEC60D1619D /* UITextView+Combine.swift */; };
+		955D974C67A61E62F4C94034D2729777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
+		9751FB534C8CE7447B2E0EAFD64E52ED /* IPLocation+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17797793F07AA0E66AE29D2E0C1FA62B /* IPLocation+Data.swift */; };
+		9A954E7892DB11A93340E4085B726602 /* LocationProvider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D494DE88317CB3C5978EE099D78289 /* LocationProvider-dummy.m */; };
+		9AF6F699D9852FD45884F5549E292EA8 /* CombineControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6110EDF8E179978DDEA8803CE438206D /* CombineControlEvent.swift */; };
+		9E546379D73ADFAC2E30A82FA11582BC /* Foundation+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E986EAC335FA61A63C9193DAB79B6 /* Foundation+Extras.swift */; };
+		9EE9A9A14D9D563616E590AB3C4942D6 /* SwiftLocation+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4AFC2B1A8B2879C6B1365676B0B639 /* SwiftLocation+Errors.swift */; };
+		A38F98C1E7E109E049E408E7463F3404 /* PartialAddressMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A56C046E1269234759BB2CA4EA23DA /* PartialAddressMatch.swift */; };
+		A3E0AD6F44D874E74D58752CE9206BFF /* GSMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 822B01875647FF828676E899B84C91E9 /* GSMessages.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A75988CBB7A66B261193F8CDC8CE4EAB /* UISearchBar+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E729701AE668008D8098A1A7DE80FC /* UISearchBar+Combine.swift */; };
+		A759AA6F08CD63326373A3095F943936 /* DelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CED86423F49BECF074C3259428198A /* DelegateProxyType.swift */; };
+		ACF4DB1B863356B32029E648AC15BE91 /* UIStepper+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDD0C1B4CB0B46A0FB1E45A1DC34FD5 /* UIStepper+Combine.swift */; };
+		AF395ED8DBC3E8D98BB4BFBA59FBA3B1 /* LocationManagerImpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3735EED71FE214F0784C3CC788B33581 /* LocationManagerImpProtocol.swift */; };
+		B5AF54157D64CEC03B5C9A33A3746680 /* Pods-Restaurants-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F3E9A489D21F50C1554C92C779C776 /* Pods-Restaurants-dummy.m */; };
+		BCD7099CECD6BFD8F01FF23EB8E735FF /* AutocompleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D20AB41CE82BD1C0B8A1F6567AD851D /* AutocompleteProtocol.swift */; };
+		C09E9659FE9DB6C66E6F0A12D51001DC /* CombineCocoa-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ACB09AE24BFDE88B2A8E013BEC2FFEC /* CombineCocoa-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C34A1399C1EC48FC68551B24D4DF008C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2B8D3A50A3F317176E7E8A64E16406 /* GSMessage.swift */; };
+		C3AFE652E684138A90E1106012663FCD /* NSTextStorage+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7DF40C3CA9CD194F3F3E3E4A03C9D /* NSTextStorage+Combine.swift */; };
+		C7A693B2A1E29DD5B82A0C70EC68BC65 /* Geocoder-OpenStreet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218F7BF6226BF887EAB62B33DF55C462 /* Geocoder-OpenStreet.swift */; };
+		C9EC90E8A2D06959E39DEA579E3EB5FD /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59B0C7BA00864D267FFDCB4357E524F /* UIControl+Combine.swift */; };
+		CB01D3BE3984793A0088C98D206D6AEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
+		CBAC35D1D9CFB9F088E7215BD2704C07 /* UICollectionView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ACD5DAEE72AAB89DFBA69FB3C93DDE /* UICollectionView+Combine.swift */; };
+		CC03CAE907A21161C9C25E2DA0B6202A /* CombineCocoa-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F834AD42DE8AB9B6410DE5DD4CD41D /* CombineCocoa-dummy.m */; };
+		D15F0F68A7A30EDFC1AB64CA886A4520 /* GeofencingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D63EE77B4F254AE5E8DF15A2039E66 /* GeofencingRequest.swift */; };
+		D5A7993578E653BA8EF2209909868E15 /* DeviceLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CF08636600723A6AC4A5F4E642230 /* DeviceLocationManager.swift */; };
+		D5B270C3F7BBEB42342770AD6CE12857 /* IPLocation-IPIpify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB207A549369C07DDBCE2BD741E020 /* IPLocation-IPIpify.swift */; };
+		D5D7AEF5EE5208510B99D410FEA87C91 /* SwiftLocation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3366323B84917F72C2FF8FECF047E56 /* SwiftLocation-dummy.m */; };
+		D5DC960A0664836EE39F3F3C569303AD /* GeofencingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B940BF2BF220C9DB5544F3B29912D9 /* GeofencingOptions.swift */; };
+		D69CFB4DCF0D072C26F16BA0ADB62C4A /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12E422064477BCC8C75FFA4BB74FA3D /* LocationProvider.swift */; };
+		D73316F4702C547097E1CACE3A84FAEE /* GeoLocation+OpenStreet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AAF7DCB146CCCB9695671D7C59166F /* GeoLocation+OpenStreet.swift */; };
+		DB1BCEC8A549CB43ACF99355592ED8A3 /* GeoLocation+Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994D8D953507A5CEE47367D006402F6 /* GeoLocation+Here.swift */; };
+		DE7653A271D1F54439EA6BC51BE15441 /* AnimatedAssignSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708B720E2F39D024097DE4C5669714E7 /* AnimatedAssignSubscriber.swift */; };
+		E0D9D8558FC2C08FA3D4BC4E89D7445E /* SwiftLocation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B800697D740A0EBBB827CC9CD9E92FE /* SwiftLocation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5B3D755E73497C751A86FB02E2D1916 /* AutocompleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B077CA3E679C51FE0847B8504E8A67 /* AutocompleteRequest.swift */; };
+		E69E1D32831BD4B4179629A34C716121 /* IPServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079E3493246F9344FB4D596FF847F8F /* IPServiceProtocol.swift */; };
+		E6E097A350F8A0F5E15365C76CE84DBB /* Autocomplete-Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283E172FE44C4307A35ADF3D7679592 /* Autocomplete-Apple.swift */; };
+		E6E2965FA76BD98868A27DA401DFB5DD /* UIPageControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986F68E6688DE0F9F3245B44CDD936 /* UIPageControl+Combine.swift */; };
+		EBCF818AE59F417361172BEFA334982A /* Pods-Restaurants-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F5F2C1D6FFD33BECA85FC1C927201FA /* Pods-Restaurants-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE0846009144D7CC2D62221664404638 /* Autocomplete-Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBC84F6CD78A99C56E7CC3DF158FA4 /* Autocomplete-Here.swift */; };
+		EF5535FC9DDEBE1255EC1154CD3132D0 /* CombineCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C094CD78B99E3A81A6D6D6CDEA8E70D /* CombineCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF615FCD96421DBC7B0C8E6405F9505C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8983A73C90EE4D828BFDD4C51BB19176 /* MapKit.framework */; };
-		F13AF73F03456956BE6DBE74C99546E1 /* BeaconBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F0298227071CDF4043AD66A678C85E /* BeaconBroadcaster.swift */; };
-		F16B9FDB65E7E1AE0EAD08879CC138D7 /* IPLocation-IPInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA092DD76ECE13BFFF254E0A114F3530 /* IPLocation-IPInfo.swift */; };
+		F13AF73F03456956BE6DBE74C99546E1 /* BeaconBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C883A56AB9E8EF6F2031E7A5D2EC5 /* BeaconBroadcaster.swift */; };
+		F16B9FDB65E7E1AE0EAD08879CC138D7 /* IPLocation-IPInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C946E7E1C5C655C786F3B20E3B8ABF /* IPLocation-IPInfo.swift */; };
 		F2188D266FBF40ABB41CBCF63996D4AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */; };
-		F6326F229FB844B17ED504BD880DCF3C /* JSONNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747968F348CB6E193FDFCE8E667D5C1C /* JSONNetworkHelper.swift */; };
-		FB6D38EBC44E1493B4DBEDF519B192DF /* PartialAddressMatch+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C346FDB736ADF9044B8045F1E4DCCC8E /* PartialAddressMatch+Apple.swift */; };
-		FD7B0A6091D717E9BD539049162913B4 /* ObjcDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B6701CE58DA74EAEB372464A47FC1B /* ObjcDelegateProxy.m */; };
-		FFA5DE1E4B18077214CF18C5A2DAD012 /* IPLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054C8103D098E1D58719614B5CDF0E7F /* IPLocationRequest.swift */; };
+		F6326F229FB844B17ED504BD880DCF3C /* JSONNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2AD5EBE8070290EB352B8FD8A974D2 /* JSONNetworkHelper.swift */; };
+		FB6D38EBC44E1493B4DBEDF519B192DF /* PartialAddressMatch+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACAFBE53A24CC0CE24A97DACBCE2162 /* PartialAddressMatch+Apple.swift */; };
+		FD7B0A6091D717E9BD539049162913B4 /* ObjcDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A13A366D92A6AF74C2B5D6CF7E3C68 /* ObjcDelegateProxy.m */; };
+		FFA5DE1E4B18077214CF18C5A2DAD012 /* IPLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A6876371FDF002D70169EAE45955CC /* IPLocationRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		08096B016D4F407707337F7D61FD633F /* PBXContainerItemProxy */ = {
+		1D33E1C9F3F88B086B871E3B41029964 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6190D0D27761CCF3C26503CD61890ED1;
-			remoteInfo = GSMessages;
+			remoteGlobalIDString = 21E6F2BA6EDECB7A0CC549C3A1A6DD2B;
+			remoteInfo = FoursquareAPIClient;
 		};
-		1BD3C31B439AF6FB21E8B73FEA471F0E /* PBXContainerItemProxy */ = {
+		7E5E3269580CFBF98C868F35BFB81499 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1C11E051A417486DA3B63E1333BABA34;
 			remoteInfo = CombineCocoa;
 		};
-		405A5F7C9FFB6E3B2989EDA04F1850FB /* PBXContainerItemProxy */ = {
+		A467257553D11F35E83FF2C7044463D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BCB15B20D457C3B8093800CB601891E1;
 			remoteInfo = LocationProvider;
 		};
-		F22D55F48C64CF34E414A61BE93758A4 /* PBXContainerItemProxy */ = {
+		B92371340815E6604C71F176585FE82A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A77DC3FBE3DFD1D1CA8D8812A6CF0776;
 			remoteInfo = SwiftLocation;
 		};
+		EA452102C56EEBDF99679E67A4B5FEB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6190D0D27761CCF3C26503CD61890ED1;
+			remoteInfo = GSMessages;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0365496806D0C80DC58290A09062CCFF /* UISearchBar+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchBar+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISearchBar+Combine.swift"; sourceTree = "<group>"; };
-		054C8103D098E1D58719614B5CDF0E7F /* IPLocationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPLocationRequest.swift; path = Sources/SwiftLocation/Request/Requests/IPLocation/IPLocationRequest.swift; sourceTree = "<group>"; };
-		07A7244B38D2A4A740AA7027628A1E7A /* GeocoderServiceProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeocoderServiceProtocol.swift; path = Sources/SwiftLocation/Request/Requests/Geocoder/GeocoderServiceProtocol.swift; sourceTree = "<group>"; };
-		0ABB791F1443825817415354E741A1EB /* IPLocation-IPGeolocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPGeolocation.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPGeolocation.swift"; sourceTree = "<group>"; };
-		0B0B430461AAA61C585CD9A4625E0872 /* Geocoder-Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-Google.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-Google.swift"; sourceTree = "<group>"; };
-		0CC8A99ACA9F6D37751DEF6011A56EE4 /* UISwitch+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISwitch+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISwitch+Combine.swift"; sourceTree = "<group>"; };
-		0D4694167098D36D721E93F448122DB6 /* UISlider+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISlider+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISlider+Combine.swift"; sourceTree = "<group>"; };
-		0EFD658E9CDC87022B7994AFCE30B09A /* SwiftLocation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftLocation.modulemap; sourceTree = "<group>"; };
-		0F95797847E05ADC97F85F4F7C2E206D /* UITextField+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Combine.swift"; path = "Sources/CombineCocoa/Controls/UITextField+Combine.swift"; sourceTree = "<group>"; };
-		11547333F19BDEA94F5138AA2F6F18E8 /* LocationProvider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LocationProvider-dummy.m"; sourceTree = "<group>"; };
-		13B6701CE58DA74EAEB372464A47FC1B /* ObjcDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjcDelegateProxy.m; path = Sources/Runtime/ObjcDelegateProxy.m; sourceTree = "<group>"; };
-		19A608B2E7174AADF0FE23AEB787DF86 /* AutocompleteProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutocompleteProtocol.swift; path = Sources/SwiftLocation/Request/Requests/Autocomplete/AutocompleteProtocol.swift; sourceTree = "<group>"; };
-		1D5166DEE5A071F2B49543385F03388A /* CombineControlTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombineControlTarget.swift; path = Sources/CombineCocoa/CombineControlTarget.swift; sourceTree = "<group>"; };
-		1D78B7CDB44FD88F46196E51821A39A5 /* LocationProvider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LocationProvider-umbrella.h"; sourceTree = "<group>"; };
-		25424C58848B403FD5CD504A71E2B022 /* BeaconRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconRequest.swift; path = Sources/SwiftLocation/Request/Requests/Beacon/BeaconRequest.swift; sourceTree = "<group>"; };
-		26269E87567FEAE06587F2E0218AE601 /* GeofencingOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeofencingOptions.swift; path = Sources/SwiftLocation/Request/Requests/Geofencing/GeofencingOptions.swift; sourceTree = "<group>"; };
-		281C478A08A455B2B8C8624D3C578F4C /* GSMessages-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSMessages-umbrella.h"; sourceTree = "<group>"; };
-		2A9AE773122F207F4CA316F588BDB64B /* CLLocationManager+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CLLocationManager+Extension.swift"; path = "Sources/SwiftLocation/Extensions/CLLocationManager+Extension.swift"; sourceTree = "<group>"; };
-		2D2B8F50B4CF6A343E97CF9F48038981 /* UIDatePicker+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDatePicker+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIDatePicker+Combine.swift"; sourceTree = "<group>"; };
-		343433DD9DBE3F703BAC9AA3FB977C77 /* RequestProtocol+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RequestProtocol+Extension.swift"; path = "Sources/SwiftLocation/Request/Abstract Request/RequestProtocol+Extension.swift"; sourceTree = "<group>"; };
-		3806A285CDDE11B0A6818A2EA1E428E7 /* GPSLocationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPSLocationRequest.swift; path = Sources/SwiftLocation/Request/Requests/GPSLocation/GPSLocationRequest.swift; sourceTree = "<group>"; };
-		3D20B0F624FB168E9A9120E64A4BBD58 /* CombineCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CombineCocoa.release.xcconfig; sourceTree = "<group>"; };
+		00CC5AB25C60656D7D758D48037553C9 /* CombineCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CombineCocoa.debug.xcconfig; sourceTree = "<group>"; };
+		04C346E9DFB2CF9527C09F7BF6FAA98E /* GPSLocationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPSLocationRequest.swift; path = Sources/SwiftLocation/Request/Requests/GPSLocation/GPSLocationRequest.swift; sourceTree = "<group>"; };
+		09E24B76E7EEFEC90AAE1E5C96BC3F0E /* GeoLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeoLocation.swift; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation.swift"; sourceTree = "<group>"; };
+		0C066D74FB65126797CEEAE594310E1B /* UIRefreshControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIRefreshControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIRefreshControl+Combine.swift"; sourceTree = "<group>"; };
+		0C5260D5E73BCEAE077A0EB371FC7C9B /* FoursquareAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FoursquareAPIClient.framework; path = FoursquareAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D2B8D3A50A3F317176E7E8A64E16406 /* GSMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GSMessage.swift; path = GSMessages/GSMessage.swift; sourceTree = "<group>"; };
+		0F21C699DFBC8332D91276746BF9E482 /* LocationProvider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LocationProvider-Info.plist"; sourceTree = "<group>"; };
+		1169A87AC26AFA23C0321946441FA0DE /* GeocoderServiceProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeocoderServiceProtocol.swift; path = Sources/SwiftLocation/Request/Requests/Geocoder/GeocoderServiceProtocol.swift; sourceTree = "<group>"; };
+		17797793F07AA0E66AE29D2E0C1FA62B /* IPLocation+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation+Data.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/IPLocation+Data.swift"; sourceTree = "<group>"; };
+		197C00A597CD4D42718B95873D1460B3 /* GPSLocationOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPSLocationOptions.swift; path = Sources/SwiftLocation/Request/Requests/GPSLocation/GPSLocationOptions.swift; sourceTree = "<group>"; };
+		197C32FEF26317246E451595F0D5B621 /* IPLocation-IPStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPStack.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPStack.swift"; sourceTree = "<group>"; };
+		1DF2F974351B04DABF08C7306738D01F /* GSMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GSMessages.release.xcconfig; sourceTree = "<group>"; };
+		1F155870C63B92193993494CFCC5181B /* UIBarButtonItem+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIBarButtonItem+Combine.swift"; sourceTree = "<group>"; };
+		1F2D9A50EC03B7F9E5E5C7B5F45284C7 /* PartialAddressMatch+Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PartialAddressMatch+Here.swift"; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch+Here.swift"; sourceTree = "<group>"; };
+		1FD37EAB0EEF85554F2FA90C143DCD1D /* UIScrollView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIScrollView+Combine.swift"; sourceTree = "<group>"; };
+		218F7BF6226BF887EAB62B33DF55C462 /* Geocoder-OpenStreet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-OpenStreet.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-OpenStreet.swift"; sourceTree = "<group>"; };
+		2408C98D4AA23D7867E0C1C835A5F79A /* LocationProvider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LocationProvider-prefix.pch"; sourceTree = "<group>"; };
+		261ADE6DCAD07141F1DFED1BA397C376 /* CombineCocoa-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CombineCocoa-prefix.pch"; sourceTree = "<group>"; };
+		26EB207A549369C07DDBCE2BD741E020 /* IPLocation-IPIpify.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPIpify.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPIpify.swift"; sourceTree = "<group>"; };
+		2994D8D953507A5CEE47367D006402F6 /* GeoLocation+Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+Here.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+Here.swift"; sourceTree = "<group>"; };
+		2C094CD78B99E3A81A6D6D6CDEA8E70D /* CombineCocoa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CombineCocoa.h; path = Sources/CombineCocoa/CombineCocoa.h; sourceTree = "<group>"; };
+		2DFF22E8A07F2EAD84196F587FF80C72 /* GSMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GSMessages.debug.xcconfig; sourceTree = "<group>"; };
+		2E511104047011703AD1152A13E18BA7 /* GSMessages-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSMessages-umbrella.h"; sourceTree = "<group>"; };
+		2EBF0B688CDD80181682E803636ED1E0 /* DelegateProxyPublisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxyPublisher.swift; path = Sources/CombineCocoa/DelegateProxy/DelegateProxyPublisher.swift; sourceTree = "<group>"; };
+		31F35DE041EC37F469071BEC60D1619D /* UITextView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UITextView+Combine.swift"; sourceTree = "<group>"; };
+		321EF4C14CD2DA87CAA772432B794969 /* RequestProtocol+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RequestProtocol+Extension.swift"; path = "Sources/SwiftLocation/Request/Abstract Request/RequestProtocol+Extension.swift"; sourceTree = "<group>"; };
+		3735EED71FE214F0784C3CC788B33581 /* LocationManagerImpProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationManagerImpProtocol.swift; path = Sources/SwiftLocation/CLLocationManager/LocationManagerImpProtocol.swift; sourceTree = "<group>"; };
+		3AC2DA31E0563F3F352643A59B70D9DB /* UITableView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UITableView+Combine.swift"; sourceTree = "<group>"; };
 		3D4168388EDAE7B3A797680A24646B84 /* GSMessages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GSMessages.framework; path = GSMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		401ABFC79B24B12F39A170028EB5CF4F /* GeoLocation+Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+Here.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+Here.swift"; sourceTree = "<group>"; };
-		41EECA583A970DE751F48D00E1B5C9B3 /* GSMessages-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GSMessages-Info.plist"; sourceTree = "<group>"; };
-		43A3B462FB72A11650B1EE9ADB73DA38 /* DelegateProxyType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxyType.swift; path = Sources/CombineCocoa/DelegateProxy/DelegateProxyType.swift; sourceTree = "<group>"; };
+		3F01F8B5C0AD8D7B8383356992A0B134 /* FoursquareAPIClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoursquareAPIClient.release.xcconfig; sourceTree = "<group>"; };
+		4087CF5422E9B1B74840C4160C5CA659 /* UISwitch+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISwitch+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISwitch+Combine.swift"; sourceTree = "<group>"; };
+		41B1CBB08C1871AF85730DDB375045CE /* GeoLocation+Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+Google.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+Google.swift"; sourceTree = "<group>"; };
+		41DBC84F6CD78A99C56E7CC3DF158FA4 /* Autocomplete-Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Autocomplete-Here.swift"; path = "Sources/SwiftLocation/Request/Requests/Autocomplete/Services/Autocomplete-Here.swift"; sourceTree = "<group>"; };
+		453CF08636600723A6AC4A5F4E642230 /* DeviceLocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceLocationManager.swift; path = Sources/SwiftLocation/CLLocationManager/CLDeviceLocationManager/DeviceLocationManager.swift; sourceTree = "<group>"; };
 		4C678B4A8CAADE71D75DA8311295097A /* SwiftLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftLocation.framework; path = SwiftLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C78649042FA7B14229252BC1AE8BB75 /* DelegateProxyPublisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxyPublisher.swift; path = Sources/CombineCocoa/DelegateProxy/DelegateProxyPublisher.swift; sourceTree = "<group>"; };
 		4D7B594A1F96147D047C4B99A7204438 /* Pods-Restaurants.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Restaurants.modulemap"; sourceTree = "<group>"; };
-		4E4B1191684D9F010F874B43C47322B2 /* LocationProvider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LocationProvider.modulemap; sourceTree = "<group>"; };
-		4EC05DE055CB0B6049C686ADD9CAB5AA /* Geocoder-Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-Apple.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-Apple.swift"; sourceTree = "<group>"; };
-		4FBD55DBC21B90E1CCC71A8BDD373610 /* RequestProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestProtocol.swift; path = "Sources/SwiftLocation/Request/Abstract Request/RequestProtocol.swift"; sourceTree = "<group>"; };
-		522F50A19C1A6D0ED7E25AEC622B6A44 /* SwiftLocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftLocation-dummy.m"; sourceTree = "<group>"; };
-		58E5BC89DD5873205ADB5E7564E09A47 /* IPLocation-IPApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPApi.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPApi.swift"; sourceTree = "<group>"; };
-		5B74F55394A8FF8EBBDA18500B86396A /* GSMessages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSMessages-dummy.m"; sourceTree = "<group>"; };
-		5BC97319CA810F8733CD4B048E8E9AE0 /* SwiftLocation+Credentials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftLocation+Credentials.swift"; path = "Sources/SwiftLocation/SwiftLocation+Credentials.swift"; sourceTree = "<group>"; };
-		5C6F1DF68F30214F814E126847030CCA /* DelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxy.swift; path = Sources/CombineCocoa/DelegateProxy/DelegateProxy.swift; sourceTree = "<group>"; };
-		5DC7162924E95D1B9B8212F321C8482F /* PartialAddressMatch+Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PartialAddressMatch+Google.swift"; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch+Google.swift"; sourceTree = "<group>"; };
-		5FCF2A183308FC48251E886C6AF4C175 /* GSMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GSMessage.swift; path = GSMessages/GSMessage.swift; sourceTree = "<group>"; };
-		633DAC7360E8BC4B5EB15B200DC7C62E /* SwiftLocation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftLocation-umbrella.h"; sourceTree = "<group>"; };
+		515553A39ACEA51E9C860CD8FF23683B /* FoursquareAuthClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoursquareAuthClient.swift; path = FoursquareAPIClient/FoursquareAuthClient.swift; sourceTree = "<group>"; };
+		520E986EAC335FA61A63C9193DAB79B6 /* Foundation+Extras.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Foundation+Extras.swift"; path = "Sources/SwiftLocation/Extensions/Foundation+Extras.swift"; sourceTree = "<group>"; };
+		5283E172FE44C4307A35ADF3D7679592 /* Autocomplete-Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Autocomplete-Apple.swift"; path = "Sources/SwiftLocation/Request/Requests/Autocomplete/Services/Autocomplete-Apple.swift"; sourceTree = "<group>"; };
+		573047D3BC30813038C81AC2F7BFAB01 /* LocationProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LocationProvider.release.xcconfig; sourceTree = "<group>"; };
+		586A9BF383B44CB57422525A4898905A /* UISlider+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISlider+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISlider+Combine.swift"; sourceTree = "<group>"; };
+		59D195063AA0072E5FFC2ECFDBF54A30 /* FoursquareAPIClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoursquareAPIClient-prefix.pch"; sourceTree = "<group>"; };
+		5EB58FE57B6E4FCCB8FBCFA599850544 /* FoursquareAPIClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoursquareAPIClient-umbrella.h"; sourceTree = "<group>"; };
+		5F57892B60AD8125922CFAE586957F99 /* UITextField+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Combine.swift"; path = "Sources/CombineCocoa/Controls/UITextField+Combine.swift"; sourceTree = "<group>"; };
+		5F782A294640CB2B17FFFB655B83BB04 /* Geocoder-Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-Here.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-Here.swift"; sourceTree = "<group>"; };
+		6110EDF8E179978DDEA8803CE438206D /* CombineControlEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombineControlEvent.swift; path = Sources/CombineCocoa/CombineControlEvent.swift; sourceTree = "<group>"; };
+		61B077CA3E679C51FE0847B8504E8A67 /* AutocompleteRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutocompleteRequest.swift; path = Sources/SwiftLocation/Request/Requests/Autocomplete/AutocompleteRequest.swift; sourceTree = "<group>"; };
 		63B17C917F46C79C2FC84465C17B9A88 /* Pods-Restaurants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Restaurants.debug.xcconfig"; sourceTree = "<group>"; };
-		650203CD51723A95EC769E81635A79A7 /* IPLocation+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation+Data.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/IPLocation+Data.swift"; sourceTree = "<group>"; };
-		65480F11042ED966002C344AB09865FC /* GSMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GSMessages.h; path = GSMessages/GSMessages.h; sourceTree = "<group>"; };
-		657CA9E99AB8090B6E25C16C438343A2 /* CombineCocoa-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CombineCocoa-umbrella.h"; sourceTree = "<group>"; };
-		65C37BD3F9FEF59347AA35C405F84190 /* IPLocation-IPStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPStack.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPStack.swift"; sourceTree = "<group>"; };
-		68319863BFF6B7E55F9BD76CA4FF58EF /* CombineCocoa-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CombineCocoa-dummy.m"; sourceTree = "<group>"; };
-		6B36BD474BA32E4B4E8BBF3DC278B184 /* GeoLocation+MapBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+MapBox.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+MapBox.swift"; sourceTree = "<group>"; };
-		6D289CB89642ACAAD1294C8CDC8E699C /* Geocoder-Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-Here.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-Here.swift"; sourceTree = "<group>"; };
+		65ACD5DAEE72AAB89DFBA69FB3C93DDE /* UICollectionView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UICollectionView+Combine.swift"; sourceTree = "<group>"; };
+		68A6876371FDF002D70169EAE45955CC /* IPLocationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPLocationRequest.swift; path = Sources/SwiftLocation/Request/Requests/IPLocation/IPLocationRequest.swift; sourceTree = "<group>"; };
+		6A936E37289BFE4F9FCDDBCBB40D0E28 /* FoursquareAPIClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoursquareAPIClient-dummy.m"; sourceTree = "<group>"; };
+		6ACB09AE24BFDE88B2A8E013BEC2FFEC /* CombineCocoa-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CombineCocoa-umbrella.h"; sourceTree = "<group>"; };
+		6B800697D740A0EBBB827CC9CD9E92FE /* SwiftLocation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftLocation-umbrella.h"; sourceTree = "<group>"; };
+		6B903C75E610731DE4C4CD1F0E42A8EB /* ObjcDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjcDelegateProxy.h; path = Sources/Runtime/include/ObjcDelegateProxy.h; sourceTree = "<group>"; };
 		6E12CFCD20AE4440390C390370EBCEBD /* Pods_Restaurants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Restaurants.framework; path = "Pods-Restaurants.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F24CBF4E9F3E430045EB2C6DEA874A5 /* LocationProvider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LocationProvider-prefix.pch"; sourceTree = "<group>"; };
-		728F154FE01BDC60B5FDE300C29AEED2 /* UIButton+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIButton+Combine.swift"; sourceTree = "<group>"; };
-		741BC64830B451DF5EECFA1218331B4A /* DeviceLocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceLocationManager.swift; path = Sources/SwiftLocation/CLLocationManager/CLDeviceLocationManager/DeviceLocationManager.swift; sourceTree = "<group>"; };
-		747968F348CB6E193FDFCE8E667D5C1C /* JSONNetworkHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONNetworkHelper.swift; path = "Sources/SwiftLocation/Request/Support Structures/JSONNetworkHelper/JSONNetworkHelper.swift"; sourceTree = "<group>"; };
-		77F0298227071CDF4043AD66A678C85E /* BeaconBroadcaster.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconBroadcaster.swift; path = Sources/SwiftLocation/Request/Requests/Beacon/BeaconBroadcaster.swift; sourceTree = "<group>"; };
-		7829B541877D13958F7FC4DFE4DBDB6F /* SwiftLocation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftLocation-prefix.pch"; sourceTree = "<group>"; };
-		79741E719835329C18EC09612972E75C /* ObjcDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjcDelegateProxy.h; path = Sources/Runtime/include/ObjcDelegateProxy.h; sourceTree = "<group>"; };
-		848FF3A4B5A7929736E1B1AF4DA84EDE /* IPLocation-IPData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPData.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPData.swift"; sourceTree = "<group>"; };
-		88316A05A9845A0B079ED9CC972E0A22 /* Autocomplete-Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Autocomplete-Apple.swift"; path = "Sources/SwiftLocation/Request/Requests/Autocomplete/Services/Autocomplete-Apple.swift"; sourceTree = "<group>"; };
-		89621879C434BA71C320C04341726AB8 /* SwiftLocation+Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftLocation+Errors.swift"; path = "Sources/SwiftLocation/SwiftLocation+Errors.swift"; sourceTree = "<group>"; };
+		6FA6F648A1B0748009B1A4F6D2D35BB8 /* RequestProtocol+Support.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RequestProtocol+Support.swift"; path = "Sources/SwiftLocation/Request/Abstract Request/RequestProtocol+Support.swift"; sourceTree = "<group>"; };
+		708B720E2F39D024097DE4C5669714E7 /* AnimatedAssignSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedAssignSubscriber.swift; path = Sources/CombineCocoa/AnimatedAssignSubscriber.swift; sourceTree = "<group>"; };
+		731F7230502E08BA861AF7E7265566A0 /* UIButton+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIButton+Combine.swift"; sourceTree = "<group>"; };
+		742F583FEDECEB101FDAD88AC35136AA /* BeaconRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconRequest.swift; path = Sources/SwiftLocation/Request/Requests/Beacon/BeaconRequest.swift; sourceTree = "<group>"; };
+		78A56C046E1269234759BB2CA4EA23DA /* PartialAddressMatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PartialAddressMatch.swift; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch.swift"; sourceTree = "<group>"; };
+		79986F68E6688DE0F9F3245B44CDD936 /* UIPageControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPageControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIPageControl+Combine.swift"; sourceTree = "<group>"; };
+		7D20AB41CE82BD1C0B8A1F6567AD851D /* AutocompleteProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutocompleteProtocol.swift; path = Sources/SwiftLocation/Request/Requests/Autocomplete/AutocompleteProtocol.swift; sourceTree = "<group>"; };
+		81E729701AE668008D8098A1A7DE80FC /* UISearchBar+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchBar+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISearchBar+Combine.swift"; sourceTree = "<group>"; };
+		822B01875647FF828676E899B84C91E9 /* GSMessages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GSMessages.h; path = GSMessages/GSMessages.h; sourceTree = "<group>"; };
+		844227043C1CCB2EAED084E2A4229EA7 /* GeoLocation+MapBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+MapBox.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+MapBox.swift"; sourceTree = "<group>"; };
+		849A78183702D46B33C984B9D17C8B7E /* Geocoder-Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-Apple.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-Apple.swift"; sourceTree = "<group>"; };
+		84D494DE88317CB3C5978EE099D78289 /* LocationProvider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LocationProvider-dummy.m"; sourceTree = "<group>"; };
 		8983A73C90EE4D828BFDD4C51BB19176 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
-		8B7996D97608BB68A0753A19292E2F06 /* GeoLocation+Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+Google.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+Google.swift"; sourceTree = "<group>"; };
-		8F1DA2A2E1AC9B789BB0AC1BCEF0FFE2 /* UIControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIControl+Combine.swift"; sourceTree = "<group>"; };
-		9607CE212EAC96BD78EAAF491B1977F4 /* GeofencingRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeofencingRequest.swift; path = Sources/SwiftLocation/Request/Requests/Geofencing/GeofencingRequest.swift; sourceTree = "<group>"; };
-		9A7D10DE2E0573F9F477ACB2E51892CD /* GeoLocation+OpenStreet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+OpenStreet.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+OpenStreet.swift"; sourceTree = "<group>"; };
-		9A998A1DF85EFC2E4076A3D44DB4AFFA /* SwiftLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLocation.release.xcconfig; sourceTree = "<group>"; };
-		9AC995EF4456381531D628E114A1A73D /* GSMessages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GSMessages.debug.xcconfig; sourceTree = "<group>"; };
+		89A13A366D92A6AF74C2B5D6CF7E3C68 /* ObjcDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjcDelegateProxy.m; path = Sources/Runtime/ObjcDelegateProxy.m; sourceTree = "<group>"; };
+		8A02DB7B5076D38D02DF08E6D757C23D /* GeoLocation+Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+Apple.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+Apple.swift"; sourceTree = "<group>"; };
+		8E5F2FD6ECB29C9EBD3E19F4F3005811 /* DelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxy.swift; path = Sources/CombineCocoa/DelegateProxy/DelegateProxy.swift; sourceTree = "<group>"; };
+		90D385DA6DD1785A0F155E34B71BDCBB /* LocationProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LocationProvider.debug.xcconfig; sourceTree = "<group>"; };
+		910AFEF04878DDC0344D06446457F91E /* RequestProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestProtocol.swift; path = "Sources/SwiftLocation/Request/Abstract Request/RequestProtocol.swift"; sourceTree = "<group>"; };
+		9176CC686B4DB42DB23084522D1533AD /* SwiftLocation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftLocation-prefix.pch"; sourceTree = "<group>"; };
+		91B00EA4D91A63D601E8FAEDAF3EB973 /* GSMessages-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GSMessages-dummy.m"; sourceTree = "<group>"; };
+		92CF9A6113B9F94F69D1F7475678E8F6 /* CombineCocoa-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CombineCocoa-Info.plist"; sourceTree = "<group>"; };
+		9327F71EE08F394662C7B75721E1D2B8 /* PartialAddressMatch+Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PartialAddressMatch+Google.swift"; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch+Google.swift"; sourceTree = "<group>"; };
+		95C946E7E1C5C655C786F3B20E3B8ABF /* IPLocation-IPInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPInfo.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPInfo.swift"; sourceTree = "<group>"; };
+		976C883A56AB9E8EF6F2031E7A5D2EC5 /* BeaconBroadcaster.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconBroadcaster.swift; path = Sources/SwiftLocation/Request/Requests/Beacon/BeaconBroadcaster.swift; sourceTree = "<group>"; };
+		994884988572AAF59F59B9D73CDD9290 /* SwiftLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLocation.release.xcconfig; sourceTree = "<group>"; };
+		9985472CD5E74E12A7720AB474429A00 /* Geocoder-Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-Google.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-Google.swift"; sourceTree = "<group>"; };
+		9C078E81F5EEE4030D1189D729F73D46 /* Autocomplete-Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Autocomplete-Google.swift"; path = "Sources/SwiftLocation/Request/Requests/Autocomplete/Services/Autocomplete-Google.swift"; sourceTree = "<group>"; };
+		9CE093F0FB8555D263BEB674CBCD6E94 /* FoursquareAPIClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoursquareAPIClient.swift; path = FoursquareAPIClient/FoursquareAPIClient.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DBB2F47D7EC66C37AE43F441F38BB76 /* GeoLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeoLocation.swift; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation.swift"; sourceTree = "<group>"; };
-		9E9A4BA139917A4D2E6AC7AF0F565D3F /* CombineControlEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombineControlEvent.swift; path = Sources/CombineCocoa/CombineControlEvent.swift; sourceTree = "<group>"; };
-		9EC169B7C8A2E32707AB1C93D8026672 /* AutocompleteRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutocompleteRequest.swift; path = Sources/SwiftLocation/Request/Requests/Autocomplete/AutocompleteRequest.swift; sourceTree = "<group>"; };
-		9F3292026C25B0616B9786A763F92094 /* PartialAddressMatch+Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PartialAddressMatch+Here.swift"; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch+Here.swift"; sourceTree = "<group>"; };
+		9E7203725F805A5578D7262C5480DDD3 /* CombineCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CombineCocoa.release.xcconfig; sourceTree = "<group>"; };
 		9F5F2C1D6FFD33BECA85FC1C927201FA /* Pods-Restaurants-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Restaurants-umbrella.h"; sourceTree = "<group>"; };
 		9FC6BFCE39AF288F7A9B560DB975683D /* LocationProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LocationProvider.framework; path = LocationProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A472586F29C5F58E5D87B0E2C2F0B724 /* CombineCocoa-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CombineCocoa-Info.plist"; sourceTree = "<group>"; };
-		A4792C09E151D1684F9F85CAE7E53FDE /* Autocomplete-Here.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Autocomplete-Here.swift"; path = "Sources/SwiftLocation/Request/Requests/Autocomplete/Services/Autocomplete-Here.swift"; sourceTree = "<group>"; };
+		9FE569E64CFD9AA51830EA9636ADC6AB /* Geocoder-MapBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-MapBox.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-MapBox.swift"; sourceTree = "<group>"; };
+		A06A0E4BBE4EAF7D16B55B55C9886916 /* SwiftLocation+Credentials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftLocation+Credentials.swift"; path = "Sources/SwiftLocation/SwiftLocation+Credentials.swift"; sourceTree = "<group>"; };
+		A0D63EE77B4F254AE5E8DF15A2039E66 /* GeofencingRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeofencingRequest.swift; path = Sources/SwiftLocation/Request/Requests/Geofencing/GeofencingRequest.swift; sourceTree = "<group>"; };
+		A32B5DF881C521A42FA686EB5760C293 /* UISegmentedControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISegmentedControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISegmentedControl+Combine.swift"; sourceTree = "<group>"; };
 		A50DF946BBB70D6EC75B8A71B99DFE66 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Combine.framework; sourceTree = DEVELOPER_DIR; };
-		AD6789B1CDB2595E3BD83B47AFDB3772 /* UISegmentedControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISegmentedControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UISegmentedControl+Combine.swift"; sourceTree = "<group>"; };
-		B1BEEEEA4BCF46CD6E13D9EFDD61EDFA /* Foundation+Extras.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Foundation+Extras.swift"; path = "Sources/SwiftLocation/Extensions/Foundation+Extras.swift"; sourceTree = "<group>"; };
+		A7D9541E145DBFFEB41CD7BFB2DDF21E /* SwiftLocation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftLocation-Info.plist"; sourceTree = "<group>"; };
+		AACAFBE53A24CC0CE24A97DACBCE2162 /* PartialAddressMatch+Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PartialAddressMatch+Apple.swift"; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch+Apple.swift"; sourceTree = "<group>"; };
+		AB29BD1C8D4665ED13EA7D31C0703F06 /* CombineControlTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombineControlTarget.swift; path = Sources/CombineCocoa/CombineControlTarget.swift; sourceTree = "<group>"; };
+		AC7FD807E2031001B65BE149A6041639 /* UIGestureRecognizer+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIGestureRecognizer+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIGestureRecognizer+Combine.swift"; sourceTree = "<group>"; };
+		ADEB10736471A304A1ED38E01D0563B1 /* IPLocation-IPGeolocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPGeolocation.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPGeolocation.swift"; sourceTree = "<group>"; };
+		B0042260A31C70ED5BB91A3E3C59D4D9 /* VisitsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VisitsRequest.swift; path = Sources/SwiftLocation/Request/Requests/Visits/VisitsRequest.swift; sourceTree = "<group>"; };
 		B2C955D702FB0BEB5DAEB7056A434A21 /* Pods-Restaurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Restaurants.release.xcconfig"; sourceTree = "<group>"; };
-		B495AF2726B8D520988D8926C2F649F4 /* UICollectionView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UICollectionView+Combine.swift"; sourceTree = "<group>"; };
+		B2DD13102AF086DE823AD9134D5B168A /* FoursquareAPIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoursquareAPIClient.debug.xcconfig; sourceTree = "<group>"; };
+		B4520187C29936E158FF42E9E2AEC90E /* GSMessages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GSMessages.modulemap; sourceTree = "<group>"; };
 		B6032120DF35B860E20777EBC61869E7 /* Pods-Restaurants-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Restaurants-acknowledgements.plist"; sourceTree = "<group>"; };
-		B62AC611C58FDCB8E96EAB8261491724 /* SwiftLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLocation.debug.xcconfig; sourceTree = "<group>"; };
+		B66089A6491CFD188248009DC86F5270 /* FoursquareAPIClient-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FoursquareAPIClient-Info.plist"; sourceTree = "<group>"; };
 		B9F4DA3AF9DE6A122CB6CFE668497250 /* Pods-Restaurants-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Restaurants-Info.plist"; sourceTree = "<group>"; };
-		BA092DD76ECE13BFFF254E0A114F3530 /* IPLocation-IPInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPInfo.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPInfo.swift"; sourceTree = "<group>"; };
-		BB0EF3311D64A6995E2D841D07DED8CB /* UIBarButtonItem+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIBarButtonItem+Combine.swift"; sourceTree = "<group>"; };
-		BB2F85339F0ABC94FD3339C3513D72AA /* Geocoder-OpenStreet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-OpenStreet.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-OpenStreet.swift"; sourceTree = "<group>"; };
-		BD29B80C0E1CAB89F54A032BF4CD2B30 /* SwiftLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftLocation.swift; path = Sources/SwiftLocation/SwiftLocation.swift; sourceTree = "<group>"; };
-		C0182690FDFDA2A4989F90C1572C3FC4 /* UIScrollView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIScrollView+Combine.swift"; sourceTree = "<group>"; };
-		C18A4EFD40D33CCD70DFD18AABD28E77 /* GSMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GSMessages.release.xcconfig; sourceTree = "<group>"; };
-		C1A7559C4728191EF2A183733B076C81 /* UIRefreshControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIRefreshControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIRefreshControl+Combine.swift"; sourceTree = "<group>"; };
-		C346FDB736ADF9044B8045F1E4DCCC8E /* PartialAddressMatch+Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PartialAddressMatch+Apple.swift"; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch+Apple.swift"; sourceTree = "<group>"; };
-		C4C7C371D039E8F250CFF84AE08CD671 /* CombineCocoa.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CombineCocoa.modulemap; sourceTree = "<group>"; };
-		C5C647AC198BD86CCB6F4F860456E415 /* Autocomplete-Google.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Autocomplete-Google.swift"; path = "Sources/SwiftLocation/Request/Requests/Autocomplete/Services/Autocomplete-Google.swift"; sourceTree = "<group>"; };
-		C5F5A86EECF8B3CCC311642DBC1BE438 /* UITextView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UITextView+Combine.swift"; sourceTree = "<group>"; };
-		C8D0B74D3AA82F9DD1F4F168D5B078D1 /* VisitsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VisitsRequest.swift; path = Sources/SwiftLocation/Request/Requests/Visits/VisitsRequest.swift; sourceTree = "<group>"; };
-		CB84A6175E8D84DB69B18BEC3080E6D6 /* NSTextStorage+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextStorage+Combine.swift"; path = "Sources/CombineCocoa/Controls/NSTextStorage+Combine.swift"; sourceTree = "<group>"; };
-		CC100D3CB4B599C12F7C57B758516377 /* UIStepper+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStepper+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIStepper+Combine.swift"; sourceTree = "<group>"; };
-		CD21D99C03F30DB3B3BD122322669A15 /* LocationProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationProvider.swift; path = Sources/LocationProvider/LocationProvider.swift; sourceTree = "<group>"; };
-		CEE7702813377A5471EFF9AD3B12697E /* GeocoderRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeocoderRequest.swift; path = Sources/SwiftLocation/Request/Requests/Geocoder/GeocoderRequest.swift; sourceTree = "<group>"; };
-		D26052DEB88403DEF0ED73B657A92233 /* LocationManagerImpProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationManagerImpProtocol.swift; path = Sources/SwiftLocation/CLLocationManager/LocationManagerImpProtocol.swift; sourceTree = "<group>"; };
-		D2B58EAA879B59BFEB3CF9F10ABE6FFD /* Geocoder-MapBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder-MapBox.swift"; path = "Sources/SwiftLocation/Request/Requests/Geocoder/Services/Geocoder-MapBox.swift"; sourceTree = "<group>"; };
-		D6428034B0F3FFF82903084F1BECDF41 /* LocationProvider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LocationProvider-Info.plist"; sourceTree = "<group>"; };
-		D723EB230BB9FEB200A9A8476A20B8F9 /* LocationProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LocationProvider.release.xcconfig; sourceTree = "<group>"; };
-		D7B4DA6F73372E963DADE763771FB888 /* UIPageControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPageControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIPageControl+Combine.swift"; sourceTree = "<group>"; };
+		C03C5FC1F8C5B08E69A2C67BFABBF12D /* LocationProvider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LocationProvider-umbrella.h"; sourceTree = "<group>"; };
+		C227A2C86184D42502F0EC41AACABF23 /* GSMessages-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GSMessages-Info.plist"; sourceTree = "<group>"; };
+		C3B940BF2BF220C9DB5544F3B29912D9 /* GeofencingOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeofencingOptions.swift; path = Sources/SwiftLocation/Request/Requests/Geofencing/GeofencingOptions.swift; sourceTree = "<group>"; };
+		C6BD88926A2458F88EA675DB23FF8118 /* SwiftLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLocation.debug.xcconfig; sourceTree = "<group>"; };
+		C7529B9A0FE6332A9ED4525F408FA5D4 /* UIDatePicker+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDatePicker+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIDatePicker+Combine.swift"; sourceTree = "<group>"; };
+		CB4AFC2B1A8B2879C6B1365676B0B639 /* SwiftLocation+Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftLocation+Errors.swift"; path = "Sources/SwiftLocation/SwiftLocation+Errors.swift"; sourceTree = "<group>"; };
+		CC2D1186FE9218965F16E870BF3BF025 /* GeocoderRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeocoderRequest.swift; path = Sources/SwiftLocation/Request/Requests/Geocoder/GeocoderRequest.swift; sourceTree = "<group>"; };
+		D0E2C4476466B317DDF6979EF1E66A03 /* FoursquareAPIClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FoursquareAPIClient.modulemap; sourceTree = "<group>"; };
+		D12E422064477BCC8C75FFA4BB74FA3D /* LocationProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationProvider.swift; path = Sources/LocationProvider/LocationProvider.swift; sourceTree = "<group>"; };
+		D22A548EA53ED6D148E8A71312BF4823 /* SwiftLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftLocation.swift; path = Sources/SwiftLocation/SwiftLocation.swift; sourceTree = "<group>"; };
+		D2A489E92479CC66A93F15CFAFDA94DA /* LocationProvider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LocationProvider.modulemap; sourceTree = "<group>"; };
+		D3366323B84917F72C2FF8FECF047E56 /* SwiftLocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftLocation-dummy.m"; sourceTree = "<group>"; };
 		D9F3E9A489D21F50C1554C92C779C776 /* Pods-Restaurants-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Restaurants-dummy.m"; sourceTree = "<group>"; };
-		DAAC34543C995DAF814FEAE1C1A81298 /* CombineControlProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombineControlProperty.swift; path = Sources/CombineCocoa/CombineControlProperty.swift; sourceTree = "<group>"; };
-		DC9945042E41DAEF18E90E626927BD4B /* GPSLocationOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPSLocationOptions.swift; path = Sources/SwiftLocation/Request/Requests/GPSLocation/GPSLocationOptions.swift; sourceTree = "<group>"; };
-		DD175C2CF26642F8B1C02A5CBFCCD692 /* GSMessages.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GSMessages.modulemap; sourceTree = "<group>"; };
+		DA78812619CA12C1E50C11ABF0E0D161 /* CLLocationManager+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CLLocationManager+Extension.swift"; path = "Sources/SwiftLocation/Extensions/CLLocationManager+Extension.swift"; sourceTree = "<group>"; };
+		DCB995B5EA1C1E8EBC504C114E9B0A4F /* GSMessages-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSMessages-prefix.pch"; sourceTree = "<group>"; };
 		DF12C2D94C69FD0021EE02F6149C4F92 /* Pods-Restaurants-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Restaurants-frameworks.sh"; sourceTree = "<group>"; };
-		DF20956BFC7690BDADE453AA58298F58 /* CombineCocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CombineCocoa.debug.xcconfig; sourceTree = "<group>"; };
-		E40706A354DD5430B67BB5AEA11C6C24 /* UITableView+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Combine.swift"; path = "Sources/CombineCocoa/Controls/UITableView+Combine.swift"; sourceTree = "<group>"; };
-		E45E59CD28A9A1D8CEFE3DB84B4CEFE9 /* IPLocation-IPIpify.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPIpify.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPIpify.swift"; sourceTree = "<group>"; };
-		E5DA0A2C9AA20F72D35576B1CC5279AD /* CombineCocoa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CombineCocoa.h; path = Sources/CombineCocoa/CombineCocoa.h; sourceTree = "<group>"; };
-		E8F6F1A37EBBA9B42B19B2F112E1986D /* IPServiceProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPServiceProtocol.swift; path = Sources/SwiftLocation/Request/Requests/IPLocation/IPServiceProtocol.swift; sourceTree = "<group>"; };
-		E96455EF69DE9C30906757139115E9AB /* CombineCocoa-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CombineCocoa-prefix.pch"; sourceTree = "<group>"; };
-		E9A94AAA2D292C9D08C2C606F7D8B63C /* SwiftLocation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftLocation-Info.plist"; sourceTree = "<group>"; };
+		DF2AD5EBE8070290EB352B8FD8A974D2 /* JSONNetworkHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONNetworkHelper.swift; path = "Sources/SwiftLocation/Request/Support Structures/JSONNetworkHelper/JSONNetworkHelper.swift"; sourceTree = "<group>"; };
+		E079E3493246F9344FB4D596FF847F8F /* IPServiceProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPServiceProtocol.swift; path = Sources/SwiftLocation/Request/Requests/IPLocation/IPServiceProtocol.swift; sourceTree = "<group>"; };
+		E3B8354768D7EA72D10AAD10E96F0C20 /* CombineCocoa.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CombineCocoa.modulemap; sourceTree = "<group>"; };
+		E3F834AD42DE8AB9B6410DE5DD4CD41D /* CombineCocoa-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CombineCocoa-dummy.m"; sourceTree = "<group>"; };
+		E5E7195037B2C4635FB8F0D01B45D646 /* CombineControlProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombineControlProperty.swift; path = Sources/CombineCocoa/CombineControlProperty.swift; sourceTree = "<group>"; };
+		E97F659538BD88F698BC81DEF0BC3A89 /* IPLocation-IPApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPApi.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPApi.swift"; sourceTree = "<group>"; };
 		EAC91070C4196357785C6A157C24782A /* CombineCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CombineCocoa.framework; path = CombineCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB4868BE394C5342E81260CE49D9F064 /* RequestProtocol+Support.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RequestProtocol+Support.swift"; path = "Sources/SwiftLocation/Request/Abstract Request/RequestProtocol+Support.swift"; sourceTree = "<group>"; };
 		ED8E8509914E92A79AD124928D644003 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		EEE20AE6EA3442F05304C0F3B8E1FAE4 /* LocationProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LocationProvider.debug.xcconfig; sourceTree = "<group>"; };
-		EFFD2BC763E7B3C7F9383E93BCE24364 /* PartialAddressMatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PartialAddressMatch.swift; path = "Sources/SwiftLocation/Request/Support Structures/AddressMatch/PartialAddressMatch.swift"; sourceTree = "<group>"; };
-		F0C8DC1DC724CE3991224D2D43D85B47 /* GSMessages-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GSMessages-prefix.pch"; sourceTree = "<group>"; };
-		F3B2993B74F79EF9199861E3B2028ACA /* UIGestureRecognizer+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIGestureRecognizer+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIGestureRecognizer+Combine.swift"; sourceTree = "<group>"; };
+		F271257EC861D51862D0550936A38AD7 /* FoursquareAuthViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoursquareAuthViewController.swift; path = FoursquareAPIClient/FoursquareAuthViewController.swift; sourceTree = "<group>"; };
 		F5311EACCDCB896EAFD27292D50F7859 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		FF1546912C160D6103DE7930CB7E1366 /* GeoLocation+Apple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+Apple.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+Apple.swift"; sourceTree = "<group>"; };
-		FF16C229B47D374410F65AE638FD0130 /* AnimatedAssignSubscriber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedAssignSubscriber.swift; path = Sources/CombineCocoa/AnimatedAssignSubscriber.swift; sourceTree = "<group>"; };
+		F59B0C7BA00864D267FFDCB4357E524F /* UIControl+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIControl+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIControl+Combine.swift"; sourceTree = "<group>"; };
+		F7CED86423F49BECF074C3259428198A /* DelegateProxyType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxyType.swift; path = Sources/CombineCocoa/DelegateProxy/DelegateProxyType.swift; sourceTree = "<group>"; };
+		F9AAF7DCB146CCCB9695671D7C59166F /* GeoLocation+OpenStreet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GeoLocation+OpenStreet.swift"; path = "Sources/SwiftLocation/Request/Support Structures/GeoLocation/GeoLocation+OpenStreet.swift"; sourceTree = "<group>"; };
+		FAA6C1C43B9F52CB8C75FE9E09AC554D /* SwiftLocation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftLocation.modulemap; sourceTree = "<group>"; };
+		FAF7DF40C3CA9CD194F3F3E3E4A03C9D /* NSTextStorage+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextStorage+Combine.swift"; path = "Sources/CombineCocoa/Controls/NSTextStorage+Combine.swift"; sourceTree = "<group>"; };
+		FB1971366775491B6240D8B7C4C892C1 /* IPLocation-IPData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IPLocation-IPData.swift"; path = "Sources/SwiftLocation/Request/Requests/IPLocation/Services/IPLocation-IPData.swift"; sourceTree = "<group>"; };
+		FEDD0C1B4CB0B46A0FB1E45A1DC34FD5 /* UIStepper+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStepper+Combine.swift"; path = "Sources/CombineCocoa/Controls/UIStepper+Combine.swift"; sourceTree = "<group>"; };
 		FFFA1E9C8E77AD540DE75F1776DD52EF /* Pods-Restaurants-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Restaurants-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5FE1EF7D4210A7427BFF25A4E1136199 /* Frameworks */ = {
+		038B2F4D1B770B1F27C8AB70FE114B0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C74930C23B7E98BF8F6FBAFB586E7888 /* Foundation.framework in Frameworks */,
+				CB01D3BE3984793A0088C98D206D6AEB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D703F4F96693161874DC4C06914B3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				955D974C67A61E62F4C94034D2729777 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,18 +347,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		004F366B9F1D9F655F1B461E1106E384 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EAC91070C4196357785C6A157C24782A /* CombineCocoa.framework */,
-				3D4168388EDAE7B3A797680A24646B84 /* GSMessages.framework */,
-				9FC6BFCE39AF288F7A9B560DB975683D /* LocationProvider.framework */,
-				6E12CFCD20AE4440390C390370EBCEBD /* Pods_Restaurants.framework */,
-				4C678B4A8CAADE71D75DA8311295097A /* SwiftLocation.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		0DDDC0B9E84E726951D943AEEB0041D2 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,96 +366,112 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3176452A45DC5F47F816B481797B454A /* GSMessages */ = {
+		302E236E94792DDB547C32BFD3353576 /* FoursquareAPIClient */ = {
 			isa = PBXGroup;
 			children = (
-				5FCF2A183308FC48251E886C6AF4C175 /* GSMessage.swift */,
-				65480F11042ED966002C344AB09865FC /* GSMessages.h */,
-				3C1DA4244D2B6AA54639C3DAAE35F125 /* Support Files */,
+				9CE093F0FB8555D263BEB674CBCD6E94 /* FoursquareAPIClient.swift */,
+				515553A39ACEA51E9C860CD8FF23683B /* FoursquareAuthClient.swift */,
+				F271257EC861D51862D0550936A38AD7 /* FoursquareAuthViewController.swift */,
+				D26707520B04407960BB5E537E23B56D /* Support Files */,
+			);
+			name = FoursquareAPIClient;
+			path = FoursquareAPIClient;
+			sourceTree = "<group>";
+		};
+		36D67E369EFAF09DFA4CBE6DD932F43E /* GSMessages */ = {
+			isa = PBXGroup;
+			children = (
+				0D2B8D3A50A3F317176E7E8A64E16406 /* GSMessage.swift */,
+				822B01875647FF828676E899B84C91E9 /* GSMessages.h */,
+				B03A53E8FAEE873EB2A4139A9B7FC3FF /* Support Files */,
 			);
 			name = GSMessages;
 			path = GSMessages;
 			sourceTree = "<group>";
 		};
-		3C1DA4244D2B6AA54639C3DAAE35F125 /* Support Files */ = {
+		3FE1BD831050647DB4A4F76186E7BE7C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD175C2CF26642F8B1C02A5CBFCCD692 /* GSMessages.modulemap */,
-				5B74F55394A8FF8EBBDA18500B86396A /* GSMessages-dummy.m */,
-				41EECA583A970DE751F48D00E1B5C9B3 /* GSMessages-Info.plist */,
-				F0C8DC1DC724CE3991224D2D43D85B47 /* GSMessages-prefix.pch */,
-				281C478A08A455B2B8C8624D3C578F4C /* GSMessages-umbrella.h */,
-				9AC995EF4456381531D628E114A1A73D /* GSMessages.debug.xcconfig */,
-				C18A4EFD40D33CCD70DFD18AABD28E77 /* GSMessages.release.xcconfig */,
+				FAA6C1C43B9F52CB8C75FE9E09AC554D /* SwiftLocation.modulemap */,
+				D3366323B84917F72C2FF8FECF047E56 /* SwiftLocation-dummy.m */,
+				A7D9541E145DBFFEB41CD7BFB2DDF21E /* SwiftLocation-Info.plist */,
+				9176CC686B4DB42DB23084522D1533AD /* SwiftLocation-prefix.pch */,
+				6B800697D740A0EBBB827CC9CD9E92FE /* SwiftLocation-umbrella.h */,
+				C6BD88926A2458F88EA675DB23FF8118 /* SwiftLocation.debug.xcconfig */,
+				994884988572AAF59F59B9D73CDD9290 /* SwiftLocation.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/GSMessages";
+			path = "../Target Support Files/SwiftLocation";
 			sourceTree = "<group>";
 		};
-		50E4E3731D511D418C28FF796D4C3828 /* Support Files */ = {
+		588D45B6C12A789262E99439550DFD7C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4E4B1191684D9F010F874B43C47322B2 /* LocationProvider.modulemap */,
-				11547333F19BDEA94F5138AA2F6F18E8 /* LocationProvider-dummy.m */,
-				D6428034B0F3FFF82903084F1BECDF41 /* LocationProvider-Info.plist */,
-				6F24CBF4E9F3E430045EB2C6DEA874A5 /* LocationProvider-prefix.pch */,
-				1D78B7CDB44FD88F46196E51821A39A5 /* LocationProvider-umbrella.h */,
-				EEE20AE6EA3442F05304C0F3B8E1FAE4 /* LocationProvider.debug.xcconfig */,
-				D723EB230BB9FEB200A9A8476A20B8F9 /* LocationProvider.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LocationProvider";
-			sourceTree = "<group>";
-		};
-		598A75CFD23F3828D1D74DC475B584B3 /* LocationProvider */ = {
-			isa = PBXGroup;
-			children = (
-				CD21D99C03F30DB3B3BD122322669A15 /* LocationProvider.swift */,
-				50E4E3731D511D418C28FF796D4C3828 /* Support Files */,
-			);
-			name = LocationProvider;
-			path = LocationProvider;
-			sourceTree = "<group>";
-		};
-		75EE0CAF7B47EFD3C1E3801811050AC0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C82F39BCCDB35B3D96B9165D97DBDD3D /* CombineCocoa */,
-				3176452A45DC5F47F816B481797B454A /* GSMessages */,
-				598A75CFD23F3828D1D74DC475B584B3 /* LocationProvider */,
-				EFE3D0F24E3D5DC116AF70197CDCE5F3 /* SwiftLocation */,
+				A1E4C0B28E0F4D6DA9B8951EC68C8008 /* CombineCocoa */,
+				302E236E94792DDB547C32BFD3353576 /* FoursquareAPIClient */,
+				36D67E369EFAF09DFA4CBE6DD932F43E /* GSMessages */,
+				EEB99623BEB47810209E4EEEA1619061 /* LocationProvider */,
+				5C539B4E5A9CB1A0304C98F152054148 /* SwiftLocation */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7ACC4038BD0879D3B6475F4BC0727D19 /* Support Files */ = {
+		5C539B4E5A9CB1A0304C98F152054148 /* SwiftLocation */ = {
 			isa = PBXGroup;
 			children = (
-				C4C7C371D039E8F250CFF84AE08CD671 /* CombineCocoa.modulemap */,
-				68319863BFF6B7E55F9BD76CA4FF58EF /* CombineCocoa-dummy.m */,
-				A472586F29C5F58E5D87B0E2C2F0B724 /* CombineCocoa-Info.plist */,
-				E96455EF69DE9C30906757139115E9AB /* CombineCocoa-prefix.pch */,
-				657CA9E99AB8090B6E25C16C438343A2 /* CombineCocoa-umbrella.h */,
-				DF20956BFC7690BDADE453AA58298F58 /* CombineCocoa.debug.xcconfig */,
-				3D20B0F624FB168E9A9120E64A4BBD58 /* CombineCocoa.release.xcconfig */,
+				5283E172FE44C4307A35ADF3D7679592 /* Autocomplete-Apple.swift */,
+				9C078E81F5EEE4030D1189D729F73D46 /* Autocomplete-Google.swift */,
+				41DBC84F6CD78A99C56E7CC3DF158FA4 /* Autocomplete-Here.swift */,
+				7D20AB41CE82BD1C0B8A1F6567AD851D /* AutocompleteProtocol.swift */,
+				61B077CA3E679C51FE0847B8504E8A67 /* AutocompleteRequest.swift */,
+				976C883A56AB9E8EF6F2031E7A5D2EC5 /* BeaconBroadcaster.swift */,
+				742F583FEDECEB101FDAD88AC35136AA /* BeaconRequest.swift */,
+				DA78812619CA12C1E50C11ABF0E0D161 /* CLLocationManager+Extension.swift */,
+				453CF08636600723A6AC4A5F4E642230 /* DeviceLocationManager.swift */,
+				520E986EAC335FA61A63C9193DAB79B6 /* Foundation+Extras.swift */,
+				849A78183702D46B33C984B9D17C8B7E /* Geocoder-Apple.swift */,
+				9985472CD5E74E12A7720AB474429A00 /* Geocoder-Google.swift */,
+				5F782A294640CB2B17FFFB655B83BB04 /* Geocoder-Here.swift */,
+				9FE569E64CFD9AA51830EA9636ADC6AB /* Geocoder-MapBox.swift */,
+				218F7BF6226BF887EAB62B33DF55C462 /* Geocoder-OpenStreet.swift */,
+				CC2D1186FE9218965F16E870BF3BF025 /* GeocoderRequest.swift */,
+				1169A87AC26AFA23C0321946441FA0DE /* GeocoderServiceProtocol.swift */,
+				C3B940BF2BF220C9DB5544F3B29912D9 /* GeofencingOptions.swift */,
+				A0D63EE77B4F254AE5E8DF15A2039E66 /* GeofencingRequest.swift */,
+				09E24B76E7EEFEC90AAE1E5C96BC3F0E /* GeoLocation.swift */,
+				8A02DB7B5076D38D02DF08E6D757C23D /* GeoLocation+Apple.swift */,
+				41B1CBB08C1871AF85730DDB375045CE /* GeoLocation+Google.swift */,
+				2994D8D953507A5CEE47367D006402F6 /* GeoLocation+Here.swift */,
+				844227043C1CCB2EAED084E2A4229EA7 /* GeoLocation+MapBox.swift */,
+				F9AAF7DCB146CCCB9695671D7C59166F /* GeoLocation+OpenStreet.swift */,
+				197C00A597CD4D42718B95873D1460B3 /* GPSLocationOptions.swift */,
+				04C346E9DFB2CF9527C09F7BF6FAA98E /* GPSLocationRequest.swift */,
+				17797793F07AA0E66AE29D2E0C1FA62B /* IPLocation+Data.swift */,
+				E97F659538BD88F698BC81DEF0BC3A89 /* IPLocation-IPApi.swift */,
+				FB1971366775491B6240D8B7C4C892C1 /* IPLocation-IPData.swift */,
+				ADEB10736471A304A1ED38E01D0563B1 /* IPLocation-IPGeolocation.swift */,
+				95C946E7E1C5C655C786F3B20E3B8ABF /* IPLocation-IPInfo.swift */,
+				26EB207A549369C07DDBCE2BD741E020 /* IPLocation-IPIpify.swift */,
+				197C32FEF26317246E451595F0D5B621 /* IPLocation-IPStack.swift */,
+				68A6876371FDF002D70169EAE45955CC /* IPLocationRequest.swift */,
+				E079E3493246F9344FB4D596FF847F8F /* IPServiceProtocol.swift */,
+				DF2AD5EBE8070290EB352B8FD8A974D2 /* JSONNetworkHelper.swift */,
+				3735EED71FE214F0784C3CC788B33581 /* LocationManagerImpProtocol.swift */,
+				78A56C046E1269234759BB2CA4EA23DA /* PartialAddressMatch.swift */,
+				AACAFBE53A24CC0CE24A97DACBCE2162 /* PartialAddressMatch+Apple.swift */,
+				9327F71EE08F394662C7B75721E1D2B8 /* PartialAddressMatch+Google.swift */,
+				1F2D9A50EC03B7F9E5E5C7B5F45284C7 /* PartialAddressMatch+Here.swift */,
+				910AFEF04878DDC0344D06446457F91E /* RequestProtocol.swift */,
+				321EF4C14CD2DA87CAA772432B794969 /* RequestProtocol+Extension.swift */,
+				6FA6F648A1B0748009B1A4F6D2D35BB8 /* RequestProtocol+Support.swift */,
+				D22A548EA53ED6D148E8A71312BF4823 /* SwiftLocation.swift */,
+				A06A0E4BBE4EAF7D16B55B55C9886916 /* SwiftLocation+Credentials.swift */,
+				CB4AFC2B1A8B2879C6B1365676B0B639 /* SwiftLocation+Errors.swift */,
+				B0042260A31C70ED5BB91A3E3C59D4D9 /* VisitsRequest.swift */,
+				3FE1BD831050647DB4A4F76186E7BE7C /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/CombineCocoa";
-			sourceTree = "<group>";
-		};
-		84536F1D8B52391439B5449591F66E96 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0EFD658E9CDC87022B7994AFCE30B09A /* SwiftLocation.modulemap */,
-				522F50A19C1A6D0ED7E25AEC622B6A44 /* SwiftLocation-dummy.m */,
-				E9A94AAA2D292C9D08C2C606F7D8B63C /* SwiftLocation-Info.plist */,
-				7829B541877D13958F7FC4DFE4DBDB6F /* SwiftLocation-prefix.pch */,
-				633DAC7360E8BC4B5EB15B200DC7C62E /* SwiftLocation-umbrella.h */,
-				B62AC611C58FDCB8E96EAB8261491724 /* SwiftLocation.debug.xcconfig */,
-				9A998A1DF85EFC2E4076A3D44DB4AFFA /* SwiftLocation.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftLocation";
+			name = SwiftLocation;
+			path = SwiftLocation;
 			sourceTree = "<group>";
 		};
 		84CD8C26CEA1DFBBF51FB8BDF8405FE5 /* Pods-Restaurants */ = {
@@ -455,6 +491,58 @@
 			path = "Target Support Files/Pods-Restaurants";
 			sourceTree = "<group>";
 		};
+		A1E4C0B28E0F4D6DA9B8951EC68C8008 /* CombineCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				708B720E2F39D024097DE4C5669714E7 /* AnimatedAssignSubscriber.swift */,
+				2C094CD78B99E3A81A6D6D6CDEA8E70D /* CombineCocoa.h */,
+				6110EDF8E179978DDEA8803CE438206D /* CombineControlEvent.swift */,
+				E5E7195037B2C4635FB8F0D01B45D646 /* CombineControlProperty.swift */,
+				AB29BD1C8D4665ED13EA7D31C0703F06 /* CombineControlTarget.swift */,
+				8E5F2FD6ECB29C9EBD3E19F4F3005811 /* DelegateProxy.swift */,
+				2EBF0B688CDD80181682E803636ED1E0 /* DelegateProxyPublisher.swift */,
+				F7CED86423F49BECF074C3259428198A /* DelegateProxyType.swift */,
+				FAF7DF40C3CA9CD194F3F3E3E4A03C9D /* NSTextStorage+Combine.swift */,
+				6B903C75E610731DE4C4CD1F0E42A8EB /* ObjcDelegateProxy.h */,
+				89A13A366D92A6AF74C2B5D6CF7E3C68 /* ObjcDelegateProxy.m */,
+				1F155870C63B92193993494CFCC5181B /* UIBarButtonItem+Combine.swift */,
+				731F7230502E08BA861AF7E7265566A0 /* UIButton+Combine.swift */,
+				65ACD5DAEE72AAB89DFBA69FB3C93DDE /* UICollectionView+Combine.swift */,
+				F59B0C7BA00864D267FFDCB4357E524F /* UIControl+Combine.swift */,
+				C7529B9A0FE6332A9ED4525F408FA5D4 /* UIDatePicker+Combine.swift */,
+				AC7FD807E2031001B65BE149A6041639 /* UIGestureRecognizer+Combine.swift */,
+				79986F68E6688DE0F9F3245B44CDD936 /* UIPageControl+Combine.swift */,
+				0C066D74FB65126797CEEAE594310E1B /* UIRefreshControl+Combine.swift */,
+				1FD37EAB0EEF85554F2FA90C143DCD1D /* UIScrollView+Combine.swift */,
+				81E729701AE668008D8098A1A7DE80FC /* UISearchBar+Combine.swift */,
+				A32B5DF881C521A42FA686EB5760C293 /* UISegmentedControl+Combine.swift */,
+				586A9BF383B44CB57422525A4898905A /* UISlider+Combine.swift */,
+				FEDD0C1B4CB0B46A0FB1E45A1DC34FD5 /* UIStepper+Combine.swift */,
+				4087CF5422E9B1B74840C4160C5CA659 /* UISwitch+Combine.swift */,
+				3AC2DA31E0563F3F352643A59B70D9DB /* UITableView+Combine.swift */,
+				5F57892B60AD8125922CFAE586957F99 /* UITextField+Combine.swift */,
+				31F35DE041EC37F469071BEC60D1619D /* UITextView+Combine.swift */,
+				DC23C83464392D9287805014D278C80E /* Support Files */,
+			);
+			name = CombineCocoa;
+			path = CombineCocoa;
+			sourceTree = "<group>";
+		};
+		B03A53E8FAEE873EB2A4139A9B7FC3FF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4520187C29936E158FF42E9E2AEC90E /* GSMessages.modulemap */,
+				91B00EA4D91A63D601E8FAEDAF3EB973 /* GSMessages-dummy.m */,
+				C227A2C86184D42502F0EC41AACABF23 /* GSMessages-Info.plist */,
+				DCB995B5EA1C1E8EBC504C114E9B0A4F /* GSMessages-prefix.pch */,
+				2E511104047011703AD1152A13E18BA7 /* GSMessages-umbrella.h */,
+				2DFF22E8A07F2EAD84196F587FF80C72 /* GSMessages.debug.xcconfig */,
+				1DF2F974351B04DABF08C7306738D01F /* GSMessages.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GSMessages";
+			sourceTree = "<group>";
+		};
 		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,41 +551,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C82F39BCCDB35B3D96B9165D97DBDD3D /* CombineCocoa */ = {
+		CE410349A51B088A7EF2EF06975B4684 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FF16C229B47D374410F65AE638FD0130 /* AnimatedAssignSubscriber.swift */,
-				E5DA0A2C9AA20F72D35576B1CC5279AD /* CombineCocoa.h */,
-				9E9A4BA139917A4D2E6AC7AF0F565D3F /* CombineControlEvent.swift */,
-				DAAC34543C995DAF814FEAE1C1A81298 /* CombineControlProperty.swift */,
-				1D5166DEE5A071F2B49543385F03388A /* CombineControlTarget.swift */,
-				5C6F1DF68F30214F814E126847030CCA /* DelegateProxy.swift */,
-				4C78649042FA7B14229252BC1AE8BB75 /* DelegateProxyPublisher.swift */,
-				43A3B462FB72A11650B1EE9ADB73DA38 /* DelegateProxyType.swift */,
-				CB84A6175E8D84DB69B18BEC3080E6D6 /* NSTextStorage+Combine.swift */,
-				79741E719835329C18EC09612972E75C /* ObjcDelegateProxy.h */,
-				13B6701CE58DA74EAEB372464A47FC1B /* ObjcDelegateProxy.m */,
-				BB0EF3311D64A6995E2D841D07DED8CB /* UIBarButtonItem+Combine.swift */,
-				728F154FE01BDC60B5FDE300C29AEED2 /* UIButton+Combine.swift */,
-				B495AF2726B8D520988D8926C2F649F4 /* UICollectionView+Combine.swift */,
-				8F1DA2A2E1AC9B789BB0AC1BCEF0FFE2 /* UIControl+Combine.swift */,
-				2D2B8F50B4CF6A343E97CF9F48038981 /* UIDatePicker+Combine.swift */,
-				F3B2993B74F79EF9199861E3B2028ACA /* UIGestureRecognizer+Combine.swift */,
-				D7B4DA6F73372E963DADE763771FB888 /* UIPageControl+Combine.swift */,
-				C1A7559C4728191EF2A183733B076C81 /* UIRefreshControl+Combine.swift */,
-				C0182690FDFDA2A4989F90C1572C3FC4 /* UIScrollView+Combine.swift */,
-				0365496806D0C80DC58290A09062CCFF /* UISearchBar+Combine.swift */,
-				AD6789B1CDB2595E3BD83B47AFDB3772 /* UISegmentedControl+Combine.swift */,
-				0D4694167098D36D721E93F448122DB6 /* UISlider+Combine.swift */,
-				CC100D3CB4B599C12F7C57B758516377 /* UIStepper+Combine.swift */,
-				0CC8A99ACA9F6D37751DEF6011A56EE4 /* UISwitch+Combine.swift */,
-				E40706A354DD5430B67BB5AEA11C6C24 /* UITableView+Combine.swift */,
-				0F95797847E05ADC97F85F4F7C2E206D /* UITextField+Combine.swift */,
-				C5F5A86EECF8B3CCC311642DBC1BE438 /* UITextView+Combine.swift */,
-				7ACC4038BD0879D3B6475F4BC0727D19 /* Support Files */,
+				D2A489E92479CC66A93F15CFAFDA94DA /* LocationProvider.modulemap */,
+				84D494DE88317CB3C5978EE099D78289 /* LocationProvider-dummy.m */,
+				0F21C699DFBC8332D91276746BF9E482 /* LocationProvider-Info.plist */,
+				2408C98D4AA23D7867E0C1C835A5F79A /* LocationProvider-prefix.pch */,
+				C03C5FC1F8C5B08E69A2C67BFABBF12D /* LocationProvider-umbrella.h */,
+				90D385DA6DD1785A0F155E34B71BDCBB /* LocationProvider.debug.xcconfig */,
+				573047D3BC30813038C81AC2F7BFAB01 /* LocationProvider.release.xcconfig */,
 			);
-			name = CombineCocoa;
-			path = CombineCocoa;
+			name = "Support Files";
+			path = "../Target Support Files/LocationProvider";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -505,68 +571,63 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				75EE0CAF7B47EFD3C1E3801811050AC0 /* Pods */,
-				004F366B9F1D9F655F1B461E1106E384 /* Products */,
+				588D45B6C12A789262E99439550DFD7C /* Pods */,
+				E2B7968A82F8242DF2066BE9B6DEB902 /* Products */,
 				1B13E1A75B0BD3C09C9FDFF94C0568C3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		EFE3D0F24E3D5DC116AF70197CDCE5F3 /* SwiftLocation */ = {
+		D26707520B04407960BB5E537E23B56D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				88316A05A9845A0B079ED9CC972E0A22 /* Autocomplete-Apple.swift */,
-				C5C647AC198BD86CCB6F4F860456E415 /* Autocomplete-Google.swift */,
-				A4792C09E151D1684F9F85CAE7E53FDE /* Autocomplete-Here.swift */,
-				19A608B2E7174AADF0FE23AEB787DF86 /* AutocompleteProtocol.swift */,
-				9EC169B7C8A2E32707AB1C93D8026672 /* AutocompleteRequest.swift */,
-				77F0298227071CDF4043AD66A678C85E /* BeaconBroadcaster.swift */,
-				25424C58848B403FD5CD504A71E2B022 /* BeaconRequest.swift */,
-				2A9AE773122F207F4CA316F588BDB64B /* CLLocationManager+Extension.swift */,
-				741BC64830B451DF5EECFA1218331B4A /* DeviceLocationManager.swift */,
-				B1BEEEEA4BCF46CD6E13D9EFDD61EDFA /* Foundation+Extras.swift */,
-				4EC05DE055CB0B6049C686ADD9CAB5AA /* Geocoder-Apple.swift */,
-				0B0B430461AAA61C585CD9A4625E0872 /* Geocoder-Google.swift */,
-				6D289CB89642ACAAD1294C8CDC8E699C /* Geocoder-Here.swift */,
-				D2B58EAA879B59BFEB3CF9F10ABE6FFD /* Geocoder-MapBox.swift */,
-				BB2F85339F0ABC94FD3339C3513D72AA /* Geocoder-OpenStreet.swift */,
-				CEE7702813377A5471EFF9AD3B12697E /* GeocoderRequest.swift */,
-				07A7244B38D2A4A740AA7027628A1E7A /* GeocoderServiceProtocol.swift */,
-				26269E87567FEAE06587F2E0218AE601 /* GeofencingOptions.swift */,
-				9607CE212EAC96BD78EAAF491B1977F4 /* GeofencingRequest.swift */,
-				9DBB2F47D7EC66C37AE43F441F38BB76 /* GeoLocation.swift */,
-				FF1546912C160D6103DE7930CB7E1366 /* GeoLocation+Apple.swift */,
-				8B7996D97608BB68A0753A19292E2F06 /* GeoLocation+Google.swift */,
-				401ABFC79B24B12F39A170028EB5CF4F /* GeoLocation+Here.swift */,
-				6B36BD474BA32E4B4E8BBF3DC278B184 /* GeoLocation+MapBox.swift */,
-				9A7D10DE2E0573F9F477ACB2E51892CD /* GeoLocation+OpenStreet.swift */,
-				DC9945042E41DAEF18E90E626927BD4B /* GPSLocationOptions.swift */,
-				3806A285CDDE11B0A6818A2EA1E428E7 /* GPSLocationRequest.swift */,
-				650203CD51723A95EC769E81635A79A7 /* IPLocation+Data.swift */,
-				58E5BC89DD5873205ADB5E7564E09A47 /* IPLocation-IPApi.swift */,
-				848FF3A4B5A7929736E1B1AF4DA84EDE /* IPLocation-IPData.swift */,
-				0ABB791F1443825817415354E741A1EB /* IPLocation-IPGeolocation.swift */,
-				BA092DD76ECE13BFFF254E0A114F3530 /* IPLocation-IPInfo.swift */,
-				E45E59CD28A9A1D8CEFE3DB84B4CEFE9 /* IPLocation-IPIpify.swift */,
-				65C37BD3F9FEF59347AA35C405F84190 /* IPLocation-IPStack.swift */,
-				054C8103D098E1D58719614B5CDF0E7F /* IPLocationRequest.swift */,
-				E8F6F1A37EBBA9B42B19B2F112E1986D /* IPServiceProtocol.swift */,
-				747968F348CB6E193FDFCE8E667D5C1C /* JSONNetworkHelper.swift */,
-				D26052DEB88403DEF0ED73B657A92233 /* LocationManagerImpProtocol.swift */,
-				EFFD2BC763E7B3C7F9383E93BCE24364 /* PartialAddressMatch.swift */,
-				C346FDB736ADF9044B8045F1E4DCCC8E /* PartialAddressMatch+Apple.swift */,
-				5DC7162924E95D1B9B8212F321C8482F /* PartialAddressMatch+Google.swift */,
-				9F3292026C25B0616B9786A763F92094 /* PartialAddressMatch+Here.swift */,
-				4FBD55DBC21B90E1CCC71A8BDD373610 /* RequestProtocol.swift */,
-				343433DD9DBE3F703BAC9AA3FB977C77 /* RequestProtocol+Extension.swift */,
-				EB4868BE394C5342E81260CE49D9F064 /* RequestProtocol+Support.swift */,
-				BD29B80C0E1CAB89F54A032BF4CD2B30 /* SwiftLocation.swift */,
-				5BC97319CA810F8733CD4B048E8E9AE0 /* SwiftLocation+Credentials.swift */,
-				89621879C434BA71C320C04341726AB8 /* SwiftLocation+Errors.swift */,
-				C8D0B74D3AA82F9DD1F4F168D5B078D1 /* VisitsRequest.swift */,
-				84536F1D8B52391439B5449591F66E96 /* Support Files */,
+				D0E2C4476466B317DDF6979EF1E66A03 /* FoursquareAPIClient.modulemap */,
+				6A936E37289BFE4F9FCDDBCBB40D0E28 /* FoursquareAPIClient-dummy.m */,
+				B66089A6491CFD188248009DC86F5270 /* FoursquareAPIClient-Info.plist */,
+				59D195063AA0072E5FFC2ECFDBF54A30 /* FoursquareAPIClient-prefix.pch */,
+				5EB58FE57B6E4FCCB8FBCFA599850544 /* FoursquareAPIClient-umbrella.h */,
+				B2DD13102AF086DE823AD9134D5B168A /* FoursquareAPIClient.debug.xcconfig */,
+				3F01F8B5C0AD8D7B8383356992A0B134 /* FoursquareAPIClient.release.xcconfig */,
 			);
-			name = SwiftLocation;
-			path = SwiftLocation;
+			name = "Support Files";
+			path = "../Target Support Files/FoursquareAPIClient";
+			sourceTree = "<group>";
+		};
+		DC23C83464392D9287805014D278C80E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3B8354768D7EA72D10AAD10E96F0C20 /* CombineCocoa.modulemap */,
+				E3F834AD42DE8AB9B6410DE5DD4CD41D /* CombineCocoa-dummy.m */,
+				92CF9A6113B9F94F69D1F7475678E8F6 /* CombineCocoa-Info.plist */,
+				261ADE6DCAD07141F1DFED1BA397C376 /* CombineCocoa-prefix.pch */,
+				6ACB09AE24BFDE88B2A8E013BEC2FFEC /* CombineCocoa-umbrella.h */,
+				00CC5AB25C60656D7D758D48037553C9 /* CombineCocoa.debug.xcconfig */,
+				9E7203725F805A5578D7262C5480DDD3 /* CombineCocoa.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CombineCocoa";
+			sourceTree = "<group>";
+		};
+		E2B7968A82F8242DF2066BE9B6DEB902 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAC91070C4196357785C6A157C24782A /* CombineCocoa.framework */,
+				0C5260D5E73BCEAE077A0EB371FC7C9B /* FoursquareAPIClient.framework */,
+				3D4168388EDAE7B3A797680A24646B84 /* GSMessages.framework */,
+				9FC6BFCE39AF288F7A9B560DB975683D /* LocationProvider.framework */,
+				6E12CFCD20AE4440390C390370EBCEBD /* Pods_Restaurants.framework */,
+				4C678B4A8CAADE71D75DA8311295097A /* SwiftLocation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEB99623BEB47810209E4EEEA1619061 /* LocationProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D12E422064477BCC8C75FFA4BB74FA3D /* LocationProvider.swift */,
+				CE410349A51B088A7EF2EF06975B4684 /* Support Files */,
+			);
+			name = LocationProvider;
+			path = LocationProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -599,11 +660,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA6785AAADE57F449CF0475AFB5362CA /* Headers */ = {
+		885A7A3550C3F0A95BC43C918E9714E6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3652FD7CEF564BD35A73B4F8F5954E4F /* Pods-Restaurants-umbrella.h in Headers */,
+				EBCF818AE59F417361172BEFA334982A /* Pods-Restaurants-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A73CBFF97BBFE8E858D5144E7EC402E1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75DA8B808996CFEAA7F1303DB2A8279A /* FoursquareAPIClient-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +703,24 @@
 			name = CombineCocoa;
 			productName = CombineCocoa;
 			productReference = EAC91070C4196357785C6A157C24782A /* CombineCocoa.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		21E6F2BA6EDECB7A0CC549C3A1A6DD2B /* FoursquareAPIClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA882BBD8F589245D3238306D8D46E48 /* Build configuration list for PBXNativeTarget "FoursquareAPIClient" */;
+			buildPhases = (
+				A73CBFF97BBFE8E858D5144E7EC402E1 /* Headers */,
+				8BDA691E1245A1483AA0D3420B5504C6 /* Sources */,
+				22D703F4F96693161874DC4C06914B3D /* Frameworks */,
+				BD32F6204A6F829134861DEEA5FDB4BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoursquareAPIClient;
+			productName = FoursquareAPIClient;
+			productReference = 0C5260D5E73BCEAE077A0EB371FC7C9B /* FoursquareAPIClient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6190D0D27761CCF3C26503CD61890ED1 /* GSMessages */ = {
@@ -674,20 +761,21 @@
 		};
 		AA8F3BA2993BAC5DEC851B454F2C4668 /* Pods-Restaurants */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E27406A1C7851AEF9DAEB976A2011A7 /* Build configuration list for PBXNativeTarget "Pods-Restaurants" */;
+			buildConfigurationList = 5B31C4D7706497C28E6C048C2B105B09 /* Build configuration list for PBXNativeTarget "Pods-Restaurants" */;
 			buildPhases = (
-				DA6785AAADE57F449CF0475AFB5362CA /* Headers */,
-				F6E60A8EC6B9B205AC6DDA1F877B67C0 /* Sources */,
-				5FE1EF7D4210A7427BFF25A4E1136199 /* Frameworks */,
-				E0225F893F1CC24E2F4482EAA3F95DD9 /* Resources */,
+				885A7A3550C3F0A95BC43C918E9714E6 /* Headers */,
+				85D98BCBDD74A190BEB89C2B51F5BAD7 /* Sources */,
+				038B2F4D1B770B1F27C8AB70FE114B0C /* Frameworks */,
+				DF7BB73D335D0FE5444B542051ECD755 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4ABF69362F3E6144420435973B767FBB /* PBXTargetDependency */,
-				5B78F29DE11ED47A1F9FCF8963A378EE /* PBXTargetDependency */,
-				16DF5C7E5647E2E07D5ED8BAFB0BF61D /* PBXTargetDependency */,
-				C5BA4765CB07D3B74826EE0815457965 /* PBXTargetDependency */,
+				596D695D13DAAB3597982CEE5A0353EF /* PBXTargetDependency */,
+				4B226258C5AB80E3E79A36100A3FC3B7 /* PBXTargetDependency */,
+				E69E7607DC11D86BAFB6B317B386A44A /* PBXTargetDependency */,
+				02884DF1E749BB723259AA135A6B3B81 /* PBXTargetDependency */,
+				CD442670E94FC9D43C8DDBFEA9D00845 /* PBXTargetDependency */,
 			);
 			name = "Pods-Restaurants";
 			productName = "Pods-Restaurants";
@@ -730,11 +818,12 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 004F366B9F1D9F655F1B461E1106E384 /* Products */;
+			productRefGroup = E2B7968A82F8242DF2066BE9B6DEB902 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1C11E051A417486DA3B63E1333BABA34 /* CombineCocoa */,
+				21E6F2BA6EDECB7A0CC549C3A1A6DD2B /* FoursquareAPIClient */,
 				6190D0D27761CCF3C26503CD61890ED1 /* GSMessages */,
 				BCB15B20D457C3B8093800CB601891E1 /* LocationProvider */,
 				AA8F3BA2993BAC5DEC851B454F2C4668 /* Pods-Restaurants */,
@@ -765,6 +854,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD32F6204A6F829134861DEEA5FDB4BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2BFDB174B882C9859C1D5C261A942E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -772,7 +868,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0225F893F1CC24E2F4482EAA3F95DD9 /* Resources */ = {
+		DF7BB73D335D0FE5444B542051ECD755 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -891,47 +987,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6E60A8EC6B9B205AC6DDA1F877B67C0 /* Sources */ = {
+		85D98BCBDD74A190BEB89C2B51F5BAD7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83A4D15FE76E9E692FE8EFD2D6E57828 /* Pods-Restaurants-dummy.m in Sources */,
+				B5AF54157D64CEC03B5C9A33A3746680 /* Pods-Restaurants-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BDA691E1245A1483AA0D3420B5504C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53978168EA95F4F6107FD40CD1AEBBD1 /* FoursquareAPIClient-dummy.m in Sources */,
+				7BEEF73CF1222403C2BB7F62DD3A3209 /* FoursquareAPIClient.swift in Sources */,
+				71662D2855678C6E47F4B71370411C97 /* FoursquareAuthClient.swift in Sources */,
+				1AB03F8C7C500999E963A9C83BC3EDBD /* FoursquareAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		16DF5C7E5647E2E07D5ED8BAFB0BF61D /* PBXTargetDependency */ = {
+		02884DF1E749BB723259AA135A6B3B81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LocationProvider;
 			target = BCB15B20D457C3B8093800CB601891E1 /* LocationProvider */;
-			targetProxy = 405A5F7C9FFB6E3B2989EDA04F1850FB /* PBXContainerItemProxy */;
+			targetProxy = A467257553D11F35E83FF2C7044463D1 /* PBXContainerItemProxy */;
 		};
-		4ABF69362F3E6144420435973B767FBB /* PBXTargetDependency */ = {
+		4B226258C5AB80E3E79A36100A3FC3B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FoursquareAPIClient;
+			target = 21E6F2BA6EDECB7A0CC549C3A1A6DD2B /* FoursquareAPIClient */;
+			targetProxy = 1D33E1C9F3F88B086B871E3B41029964 /* PBXContainerItemProxy */;
+		};
+		596D695D13DAAB3597982CEE5A0353EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CombineCocoa;
 			target = 1C11E051A417486DA3B63E1333BABA34 /* CombineCocoa */;
-			targetProxy = 1BD3C31B439AF6FB21E8B73FEA471F0E /* PBXContainerItemProxy */;
+			targetProxy = 7E5E3269580CFBF98C868F35BFB81499 /* PBXContainerItemProxy */;
 		};
-		5B78F29DE11ED47A1F9FCF8963A378EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GSMessages;
-			target = 6190D0D27761CCF3C26503CD61890ED1 /* GSMessages */;
-			targetProxy = 08096B016D4F407707337F7D61FD633F /* PBXContainerItemProxy */;
-		};
-		C5BA4765CB07D3B74826EE0815457965 /* PBXTargetDependency */ = {
+		CD442670E94FC9D43C8DDBFEA9D00845 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLocation;
 			target = A77DC3FBE3DFD1D1CA8D8812A6CF0776 /* SwiftLocation */;
-			targetProxy = F22D55F48C64CF34E414A61BE93758A4 /* PBXContainerItemProxy */;
+			targetProxy = B92371340815E6604C71F176585FE82A /* PBXContainerItemProxy */;
+		};
+		E69E7607DC11D86BAFB6B317B386A44A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GSMessages;
+			target = 6190D0D27761CCF3C26503CD61890ED1 /* GSMessages */;
+			targetProxy = EA452102C56EEBDF99679E67A4B5FEB6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0D3328279121E13E978ED4F2C639B21A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D20B0F624FB168E9A9120E64A4BBD58 /* CombineCocoa.release.xcconfig */;
+			baseConfigurationReference = 9E7203725F805A5578D7262C5480DDD3 /* CombineCocoa.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -965,113 +1078,7 @@
 			};
 			name = Release;
 		};
-		24730E0335118BBE010DC74D0C2C505D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B62AC611C58FDCB8E96EAB8261491724 /* SwiftLocation.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftLocation/SwiftLocation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftLocation/SwiftLocation-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftLocation/SwiftLocation.modulemap";
-				PRODUCT_MODULE_NAME = SwiftLocation;
-				PRODUCT_NAME = SwiftLocation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2E07E7863F361A04932BA472DF268B55 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A998A1DF85EFC2E4076A3D44DB4AFFA /* SwiftLocation.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftLocation/SwiftLocation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftLocation/SwiftLocation-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftLocation/SwiftLocation.modulemap";
-				PRODUCT_MODULE_NAME = SwiftLocation;
-				PRODUCT_NAME = SwiftLocation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		41807499B02A26FBA21AC1E184EBA1C0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C18A4EFD40D33CCD70DFD18AABD28E77 /* GSMessages.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GSMessages/GSMessages-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GSMessages/GSMessages-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/GSMessages/GSMessages.modulemap";
-				PRODUCT_MODULE_NAME = GSMessages;
-				PRODUCT_NAME = GSMessages;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		485980E1B1C5382DE630863BB905030C /* Debug */ = {
+		11B393FDA1235754F924FE4769747532 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63B17C917F46C79C2FC84465C17B9A88 /* Pods-Restaurants.debug.xcconfig */;
 			buildSettings = {
@@ -1108,9 +1115,148 @@
 			};
 			name = Debug;
 		};
+		24730E0335118BBE010DC74D0C2C505D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6BD88926A2458F88EA675DB23FF8118 /* SwiftLocation.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftLocation/SwiftLocation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftLocation/SwiftLocation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftLocation/SwiftLocation.modulemap";
+				PRODUCT_MODULE_NAME = SwiftLocation;
+				PRODUCT_NAME = SwiftLocation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2E07E7863F361A04932BA472DF268B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 994884988572AAF59F59B9D73CDD9290 /* SwiftLocation.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftLocation/SwiftLocation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftLocation/SwiftLocation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftLocation/SwiftLocation.modulemap";
+				PRODUCT_MODULE_NAME = SwiftLocation;
+				PRODUCT_NAME = SwiftLocation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3836E133CEE2532E890C17E059C05197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2DD13102AF086DE823AD9134D5B168A /* FoursquareAPIClient.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient.modulemap";
+				PRODUCT_MODULE_NAME = FoursquareAPIClient;
+				PRODUCT_NAME = FoursquareAPIClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		41807499B02A26FBA21AC1E184EBA1C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DF2F974351B04DABF08C7306738D01F /* GSMessages.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GSMessages/GSMessages-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GSMessages/GSMessages-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GSMessages/GSMessages.modulemap";
+				PRODUCT_MODULE_NAME = GSMessages;
+				PRODUCT_NAME = GSMessages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5B3218E40561E7D1397519D800B4E6D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEE20AE6EA3442F05304C0F3B8E1FAE4 /* LocationProvider.debug.xcconfig */;
+			baseConfigurationReference = 90D385DA6DD1785A0F155E34B71BDCBB /* LocationProvider.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1204,9 +1350,43 @@
 			};
 			name = Release;
 		};
+		91D286F1B0F458A64E2BA82D0F1C5A6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F01F8B5C0AD8D7B8383356992A0B134 /* FoursquareAPIClient.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient.modulemap";
+				PRODUCT_MODULE_NAME = FoursquareAPIClient;
+				PRODUCT_NAME = FoursquareAPIClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9F468639B1A0060E28F2AD62ADEBCC53 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF20956BFC7690BDADE453AA58298F58 /* CombineCocoa.debug.xcconfig */;
+			baseConfigurationReference = 00CC5AB25C60656D7D758D48037553C9 /* CombineCocoa.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1239,9 +1419,47 @@
 			};
 			name = Debug;
 		};
+		AE7D58C10546FDCA96701A57B9DD0571 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2C955D702FB0BEB5DAEB7056A434A21 /* Pods-Restaurants.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Restaurants/Pods-Restaurants-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Restaurants/Pods-Restaurants.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		D34942DEDF900F723C2EB65132C18BD8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D723EB230BB9FEB200A9A8476A20B8F9 /* LocationProvider.release.xcconfig */;
+			baseConfigurationReference = 573047D3BC30813038C81AC2F7BFAB01 /* LocationProvider.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1342,7 +1560,7 @@
 		};
 		F1B57B1963FD42AEDC33F9BE23CBA0E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AC995EF4456381531D628E114A1A73D /* GSMessages.debug.xcconfig */;
+			baseConfigurationReference = 2DFF22E8A07F2EAD84196F587FF80C72 /* GSMessages.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1374,56 +1592,9 @@
 			};
 			name = Debug;
 		};
-		F81658F4D6FB64260B0A33DF1D6A9576 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2C955D702FB0BEB5DAEB7056A434A21 /* Pods-Restaurants.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Restaurants/Pods-Restaurants-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Restaurants/Pods-Restaurants.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E27406A1C7851AEF9DAEB976A2011A7 /* Build configuration list for PBXNativeTarget "Pods-Restaurants" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				485980E1B1C5382DE630863BB905030C /* Debug */,
-				F81658F4D6FB64260B0A33DF1D6A9576 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		34A789868CF8A9A3BF0B3654348B2D2D /* Build configuration list for PBXNativeTarget "LocationProvider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1438,6 +1609,15 @@
 			buildConfigurations = (
 				EEF25CDFE5981495667B2EF4925DC0C9 /* Debug */,
 				8C7FC025747B55D46DDEDEE5F4DFD2F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B31C4D7706497C28E6C048C2B105B09 /* Build configuration list for PBXNativeTarget "Pods-Restaurants" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11B393FDA1235754F924FE4769747532 /* Debug */,
+				AE7D58C10546FDCA96701A57B9DD0571 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1465,6 +1645,15 @@
 			buildConfigurations = (
 				F1B57B1963FD42AEDC33F9BE23CBA0E1 /* Debug */,
 				41807499B02A26FBA21AC1E184EBA1C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA882BBD8F589245D3238306D8D46E48 /* Build configuration list for PBXNativeTarget "FoursquareAPIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3836E133CEE2532E890C17E059C05197 /* Debug */,
+				91D286F1B0F458A64E2BA82D0F1C5A6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

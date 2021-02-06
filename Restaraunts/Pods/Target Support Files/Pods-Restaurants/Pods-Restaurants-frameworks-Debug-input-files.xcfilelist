@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-Restaurants/Pods-Restaurants-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CombineCocoa/CombineCocoa.framework
+${BUILT_PRODUCTS_DIR}/FoursquareAPIClient/FoursquareAPIClient.framework
 ${BUILT_PRODUCTS_DIR}/GSMessages/GSMessages.framework
 ${BUILT_PRODUCTS_DIR}/LocationProvider/LocationProvider.framework
 ${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework
