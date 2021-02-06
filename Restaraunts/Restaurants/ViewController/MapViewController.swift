@@ -60,6 +60,7 @@ enum ViewLifecycleEvent {
 protocol MapViewModelInput: ViewModelInput {
     func onSettingsAppOpeningRequest()
     func onCenteringRequest()
+    func onVisibleRegionChanged(regionCenter: CLLocationCoordinate2D, latDelta: CLLocationDegrees, lngDelta: CLLocationDegrees)
 }
 
 protocol MapViewModelOutput {
@@ -143,8 +144,10 @@ final class MapViewController: UIViewController, MKMapViewDelegate {
         }
         
         viewModelOutput.showPinsOnMap = { [weak self] annotations in
-            self?.mapView.addAnnotations(annotations)
+            guard let self = self else { return }
             
+            self.mapView.removeAnnotations(self.mapView.annotations)
+            self.mapView.addAnnotations(annotations)
         }
     }
     
@@ -194,9 +197,19 @@ final class MapViewController: UIViewController, MKMapViewDelegate {
         switch annotation {
         case is MKClusterAnnotation:
             return mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier, for: annotation)
+        case is MKUserLocation:
+            return nil
         default:
             return RestaurantAnnotationView(annotation: annotation, reuseIdentifier: "RestaurantID")
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        viewModelInput.onVisibleRegionChanged(
+            regionCenter: mapView.region.center,
+            latDelta: mapView.region.span.latitudeDelta,
+            lngDelta: mapView.region.span.longitudeDelta
+        )
     }
     
     // MARK: Alerts

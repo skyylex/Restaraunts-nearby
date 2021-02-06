@@ -15,6 +15,7 @@ import MapKit
 final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     struct Dependencies {
         let locationProvider: SimpleLocationProviding
+        let searchService: FourSquareServicing
     }
     
     struct Strings {
@@ -30,6 +31,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     }
     
     private let locationProvider: SimpleLocationProviding
+    private let searchService: FourSquareServicing
     
     // MARK: Subscriptions tokens
     private var startMonitoringEventsToken: AnyCancellable?
@@ -39,6 +41,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     
     init(dependencies: Dependencies) {
         locationProvider = dependencies.locationProvider
+        searchService = dependencies.searchService
         
         super.init()
         
@@ -93,7 +96,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         if let coordinate = locationProvider.lastKnownGPSCoordinate {
             centerMe(coordinate)
             
-            searchingToken = FourSquareService().search(with: coordinate).eraseToAnyPublisher().sink(receiveCompletion: { (completion) in
+            searchingToken = searchService.search(with: coordinate).eraseToAnyPublisher().sink(receiveCompletion: { (completion) in
                 switch completion {
                 case .failure(let error):
                     break
@@ -120,6 +123,20 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         // TODO: move to Coordinator
         let url = URL(string: UIApplication.openSettingsURLString)!
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    func onVisibleRegionChanged(regionCenter: CLLocationCoordinate2D, latDelta: CLLocationDegrees, lngDelta: CLLocationDegrees) {
+        searchingToken = searchService.search(with: regionCenter).eraseToAnyPublisher().sink(receiveCompletion: { (completion) in
+            switch completion {
+            case .failure(let error):
+                break
+            case .finished:
+                break
+            }
+        }, receiveValue: { (venues) in
+            let annotations = venues.map { $0.annotation() }
+            self.showPinsOnMap(annotations)
+        })
     }
     
     // ViewModelOutput:

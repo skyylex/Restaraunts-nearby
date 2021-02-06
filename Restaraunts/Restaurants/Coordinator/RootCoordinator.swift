@@ -15,7 +15,10 @@ final class RootCoordinator {
     /// Starts UX Flow with Map screen
     /// - Parameter window: UIWindow to render Map
     func start(with window: UIWindow) {
-        let dependencies = MapViewModel.Dependencies(locationProvider: SimpleLocationProvider())
+        let dependencies = MapViewModel.Dependencies(
+            locationProvider: SimpleLocationProvider(),
+            searchService: FourSquareService()
+        )
         let mapViewModel = MapViewModel(dependencies: dependencies)
         let rootViewController = MapViewController()
         rootViewController.viewModelInput = mapViewModel
