@@ -59,6 +59,7 @@ final class SimpleLocationProvider: SimpleLocationProviding {
     }
     
     func fetchCurrentLocation(completion: @escaping (Result<CLLocationCoordinate2D, Error>) -> Void) {
+        // TODO: replace SwiftLocation with LocationProvider completely
         SwiftLocation.gpsLocationWith({ (options) in
             options.subscription = .single
         }).then { (result) in

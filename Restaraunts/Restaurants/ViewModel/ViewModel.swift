@@ -23,17 +23,21 @@ open class ViewModel {
     
     // MARK: Shortcuts
     var viewDidAppearPublisher: AnyPublisher<NoValue, Never> {
+        // TODO: replace NoValue mapping with custom extension
         viewLifecyleEventsPublisher.compactMap { $0}.filter { $0 == .viewDidAppear }.map { _ in return NoValue.noValue }.eraseToAnyPublisher()
     }
     var viewDidDisappearPublisher: AnyPublisher<NoValue, Never> {
+        // TODO: replace NoValue mapping with custom extension
         viewLifecyleEventsPublisher.compactMap { $0}.filter { $0 == .viewDidDisappear }.map { _ in return NoValue.noValue }.eraseToAnyPublisher()
     }
     
     var appDidBecomeActive: AnyPublisher<NoValue, Never> {
+        // TODO: replace NoValue mapping with custom extension
         NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification).map { _ in return NoValue.noValue }.eraseToAnyPublisher()
     }
     
     var appWillResignActive: AnyPublisher<NoValue, Never> {
+        // TODO: replace NoValue mapping with custom extension
         NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification).map { _ in return NoValue.noValue }.eraseToAnyPublisher()
     }
 }
