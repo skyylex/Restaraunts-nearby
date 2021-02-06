@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreLocation
 import Combine
+import MapKit
 
 final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     struct Dependencies {
@@ -100,7 +101,8 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
                     break
                 }
             }, receiveValue: { (venues) in
-                print(venues)
+                let annotations = venues.map { $0.annotation() }
+                self.showPinsOnMap(annotations)
             })
         } else {
             locationProvider.fetchCurrentLocation { [weak self] (result) in
@@ -124,4 +126,5 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     var handleError: (MapViewError) -> Void = {_ in preconditionFailure("handleError: should be overriden by MapView") }
     var centerMe: (CLLocationCoordinate2D) -> Void = { _ in preconditionFailure("centerMe: should be overriden by MapView") }
     var updateUserLocationVisibility: (Bool) -> Void = { _ in preconditionFailure("showUserLocation: should be overriden by MapView") }
+    var showPinsOnMap: ([MKAnnotation]) -> Void = {  _ in preconditionFailure("showPinsOnMap: should be overriden by MapView")  }
 }

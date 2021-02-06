@@ -10,6 +10,7 @@ import Foundation
 import Argo
 import Curry
 import Runes
+import CoreLocation
 
 struct FourSquareLocation {
     let address: String
@@ -32,6 +33,12 @@ struct FourSquareVenue {
     let id: String
     let name: String
     let location: FourSquareLocation
+}
+
+extension FourSquareVenue {
+    func coordinate() -> CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng)
+    }
 }
 
 extension FourSquareVenue: Decodable {

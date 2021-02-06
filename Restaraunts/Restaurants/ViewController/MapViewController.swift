@@ -66,9 +66,10 @@ protocol MapViewModelOutput {
     var handleError: (MapViewError) -> Void { get set }
     var centerMe: (CLLocationCoordinate2D) -> Void { get set }
     var updateUserLocationVisibility: (Bool) -> Void { get set }
+    var showPinsOnMap: ([MKAnnotation]) -> Void { get set }
 }
 
-final class MapViewController: UIViewController {
+final class MapViewController: UIViewController, MKMapViewDelegate {
 
     private let mapView = MKMapView()
     private var centerButtonTapToken: AnyCancellable?
@@ -140,6 +141,11 @@ final class MapViewController: UIViewController {
 
             self?.mapView.showsUserLocation = isVisible
         }
+        
+        viewModelOutput.showPinsOnMap = { [weak self] annotations in
+            self?.mapView.addAnnotations(annotations)
+            
+        }
     }
     
     // MARK: Actions
@@ -176,6 +182,23 @@ final class MapViewController: UIViewController {
         ]
         
         NSLayoutConstraint.activate(constraints)
+        
+        mapView.delegate = self
+        
+        mapView.register(ClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+    }
+    
+    // MARK: MKMapViewDelegate
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        switch annotation {
+        case is MKClusterAnnotation:
+            return mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier, for: annotation)
+        default:
+            let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
+            pinAnnotationView.image = UIImage(named: "restaurant")
+            pinAnnotationView.clusteringIdentifier = "restaurant"
+            return pinAnnotationView
+        }
     }
     
     // MARK: Alerts
