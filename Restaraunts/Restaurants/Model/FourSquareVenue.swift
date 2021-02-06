@@ -13,8 +13,8 @@ import Runes
 
 struct FourSquareLocation {
     let address: String
-    let lat: Int
-    let lng: Int
+    let lat: Double
+    let lng: Double
     let formattedAddress: [String]
 }
 
