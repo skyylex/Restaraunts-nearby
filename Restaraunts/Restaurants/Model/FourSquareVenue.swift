@@ -13,19 +13,19 @@ import Runes
 import CoreLocation
 
 struct FourSquareLocation {
-    let address: String
     let lat: Double
     let lng: Double
-    let formattedAddress: [String]
+//    let address: String?
+//    let formattedAddress: [String]?
 }
 
 extension FourSquareLocation: Decodable {
     static func decode(_ json: JSON) -> Decoded<FourSquareLocation> {
         return curry(FourSquareLocation.init)
-            <^> json <| "address"
-            <*> json <| "lat"
+            <^> json <| "lat"
             <*> json <| "lng"
-            <*> json <|| "formattedAddress"
+//            <*> json <| "address"
+//            <*> json <|| "formattedAddress"
     }
 }
 

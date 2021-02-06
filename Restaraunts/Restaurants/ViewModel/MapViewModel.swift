@@ -95,18 +95,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         
         if let coordinate = locationProvider.lastKnownGPSCoordinate {
             centerMe(coordinate)
-            
-            searchingToken = searchService.search(with: coordinate).eraseToAnyPublisher().sink(receiveCompletion: { (completion) in
-                switch completion {
-                case .failure(let error):
-                    break
-                case .finished:
-                    break
-                }
-            }, receiveValue: { (venues) in
-                let annotations = venues.map { $0.annotation() }
-                self.showPinsOnMap(annotations)
-            })
+            searchRestaurants(near: coordinate)
         } else {
             locationProvider.fetchCurrentLocation { [weak self] (result) in
                 switch result {
@@ -126,7 +115,19 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     }
     
     func onVisibleRegionChanged(regionCenter: CLLocationCoordinate2D, latDelta: CLLocationDegrees, lngDelta: CLLocationDegrees) {
-        searchingToken = searchService.search(with: regionCenter).eraseToAnyPublisher().sink(receiveCompletion: { (completion) in
+        searchRestaurants(near: regionCenter)
+    }
+    
+    // ViewModelOutput:
+    var handleError: (MapViewError) -> Void = {_ in preconditionFailure("handleError: should be overriden by MapView") }
+    var centerMe: (CLLocationCoordinate2D) -> Void = { _ in preconditionFailure("centerMe: should be overriden by MapView") }
+    var updateUserLocationVisibility: (Bool) -> Void = { _ in preconditionFailure("showUserLocation: should be overriden by MapView") }
+    var showPinsOnMap: ([MKAnnotation]) -> Void = {  _ in preconditionFailure("showPinsOnMap: should be overriden by MapView")  }
+    
+    // MARK: Private
+    
+    private func searchRestaurants(near coordinate: CLLocationCoordinate2D) {
+        searchingToken = searchService.search(with: coordinate).eraseToAnyPublisher().sink(receiveCompletion: { (completion) in
             switch completion {
             case .failure(let error):
                 break
@@ -138,10 +139,4 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
             self.showPinsOnMap(annotations)
         })
     }
-    
-    // ViewModelOutput:
-    var handleError: (MapViewError) -> Void = {_ in preconditionFailure("handleError: should be overriden by MapView") }
-    var centerMe: (CLLocationCoordinate2D) -> Void = { _ in preconditionFailure("centerMe: should be overriden by MapView") }
-    var updateUserLocationVisibility: (Bool) -> Void = { _ in preconditionFailure("showUserLocation: should be overriden by MapView") }
-    var showPinsOnMap: ([MKAnnotation]) -> Void = {  _ in preconditionFailure("showPinsOnMap: should be overriden by MapView")  }
 }
