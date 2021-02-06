@@ -80,7 +80,7 @@ final class MapViewModelTests: XCTestCase {
         XCTAssertTrue(provider.isUpdating)
         
         viewModel.viewLifecyleEventsPublisher.value = ViewLifecycleEvent.viewDidDisappear
-        
+
         XCTAssertFalse(provider.isUpdating)
     }
     
@@ -111,7 +111,6 @@ final class MapViewModelTests: XCTestCase {
     
     func testFirstAppearanceCenteringWithCoordinate() {
         let provider = SimpleLocationProviderMock()
-        
         let dependencies = MapViewModel.Dependencies(locationProvider: provider)
         let viewModel = MapViewModel(dependencies: dependencies)
         
