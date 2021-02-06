@@ -1,0 +1,6 @@
+framework module LocationProvider {
+  umbrella header "LocationProvider-umbrella.h"
+
+  export *
+  module * { export * }
+}

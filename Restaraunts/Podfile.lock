@@ -1,11 +1,13 @@
 PODS:
   - CombineCocoa (0.2.2)
   - GSMessages (1.7.4)
+  - LocationProvider (1.5.0)
   - SwiftLocation (5.0.3)
 
 DEPENDENCIES:
   - CombineCocoa (~> 0.2)
   - GSMessages (~> 1.7)
+  - LocationProvider (from `https://github.com/skyylex/LocationProvider.git`, commit `5f9ba301b2f77c2cf5a0ed2b1ff1ea6e2912c6e3`)
   - SwiftLocation (~> 5.0)
 
 SPEC REPOS:
@@ -14,11 +16,22 @@ SPEC REPOS:
     - GSMessages
     - SwiftLocation
 
+EXTERNAL SOURCES:
+  LocationProvider:
+    :commit: 5f9ba301b2f77c2cf5a0ed2b1ff1ea6e2912c6e3
+    :git: https://github.com/skyylex/LocationProvider.git
+
+CHECKOUT OPTIONS:
+  LocationProvider:
+    :commit: 5f9ba301b2f77c2cf5a0ed2b1ff1ea6e2912c6e3
+    :git: https://github.com/skyylex/LocationProvider.git
+
 SPEC CHECKSUMS:
   CombineCocoa: 66c79441761907c096ecbd0021cefd8566acaf06
   GSMessages: 9a82cc40465b88cd5d5759bee1fe812c3c63cc3a
+  LocationProvider: fbf88f9b2cd544e1ab57a0472ad8858bfc0a504b
   SwiftLocation: bb31568141be88499a6d15b9dcd5d6bfea113a3b
 
-PODFILE CHECKSUM: f080bb516558e0f1d97bb53bbc389abd7b3c0fed
+PODFILE CHECKSUM: 104974dc75457af607f38c7fbb2c3722ed24fe3d
 
 COCOAPODS: 1.9.3

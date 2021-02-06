@@ -9,6 +9,8 @@
 import Foundation
 import CoreLocation
 import SwiftLocation
+import LocationProvider
+import Combine
 
 /// A simple wrapper over geo-positioning API  to obtain current user location
 protocol SimpleLocationProviding {
@@ -28,27 +30,32 @@ protocol SimpleLocationProviding {
     var lastKnownGPSCoordinate: CLLocationCoordinate2D? { get }
     
     /// Authorization status to use Location Services
-    var isAuthorized: Bool { get }
+    var authorizationStatus: CLAuthorizationStatus { get }
+    
+    var authorizationStatusPublisher: AnyPublisher<CLAuthorizationStatus, Never> { get }
 }
 
 /// Implementation of SimpleLocationProviding based on SwiftLocation
 final class SimpleLocationProvider: SimpleLocationProviding {
+    private var provider: LocationProvider = {
+        let provider = LocationProvider(allowsBackgroundLocationUpdates: false)
+        provider.onAuthorizationStatusDenied = {}
+        return provider
+    }()
+    
+    var authorizationStatusPublisher: AnyPublisher<CLAuthorizationStatus, Never> {
+        provider.$authorizationStatus.compactMap { $0}.eraseToAnyPublisher()
+    }
     
     private var lastLocationRequest: GPSLocationRequest?
     
     func startLocationUpdates() {
-        lastLocationRequest = SwiftLocation.gpsLocationWith({ (options) in
-            options.subscription = .continous
-        })
-        
-        lastLocationRequest?.then { _ in
-            // Do nothing, we're interested in `lastKnownGPSCoordinate` being up-to date
-        }
+        // Silencing errors, since we use direct access to authorizationStatus
+        try? provider.start()
     }
     
     func stopLocationUpdates() {
-        lastLocationRequest?.cancelRequest()
-        lastLocationRequest = nil
+        provider.stop()
     }
     
     func fetchCurrentLocation(completion: @escaping (Result<CLLocationCoordinate2D, Error>) -> Void) {
@@ -65,16 +72,11 @@ final class SimpleLocationProvider: SimpleLocationProviding {
     }
     
     var lastKnownGPSCoordinate: CLLocationCoordinate2D? {
-        guard isAuthorized else {
-            return nil
-        }
-        
-        return SwiftLocation.lastKnownGPSLocation?.coordinate
+        return provider.location?.coordinate
     }
     
-    var isAuthorized: Bool {
-        SwiftLocation.authorizationStatus == .authorizedAlways ||
-        SwiftLocation.authorizationStatus == .authorizedWhenInUse
+    var authorizationStatus: CLAuthorizationStatus {
+        return provider.authorizationStatus ?? .notDetermined
     }
     
 }

@@ -1,0 +1,20 @@
+{
+  "name": "LocationProvider",
+  "version": "1.5.0",
+  "summary": "A Combine-based CoreLocation provider.",
+  "homepage": "https://github.com/himbeles/LocationProvider",
+  "license": "MIT License",
+  "authors": {
+    "Luis R": "<lri@me.com>"
+  },
+  "platforms": {
+    "ios": "13.0",
+    "osx": "10.15"
+  },
+  "source": {
+    "git": "https://github.com/skyylex/LocationProvider.git"
+  },
+  "source_files": "Sources/LocationProvider/**/*.{swift}",
+  "swift_versions": "5.1",
+  "swift_version": "5.1"
+}

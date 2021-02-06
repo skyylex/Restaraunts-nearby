@@ -65,16 +65,12 @@ protocol MapViewModelInput: ViewModelInput {
 protocol MapViewModelOutput {
     var handleError: (MapViewError) -> Void { get set }
     var centerMe: (CLLocationCoordinate2D) -> Void { get set }
+    var updateUserLocationVisibility: (Bool) -> Void { get set }
 }
 
 final class MapViewController: UIViewController {
 
-    private let mapView: MKMapView = {
-        let mapView = MKMapView()
-        mapView.showsUserLocation = true
-        return mapView
-    }()
-    
+    private let mapView = MKMapView()
     private var centerButtonTapToken: AnyCancellable?
     private var centerButton: UIButton = {
         let offset: CGFloat = 5.0;
@@ -137,6 +133,12 @@ final class MapViewController: UIViewController {
         
         viewModelOutput.centerMe = { [weak self] coordinate in
             self?.mapView.centerCoordinate = coordinate
+        }
+        
+        viewModelOutput.updateUserLocationVisibility = { [weak self] isVisible in
+            guard self?.mapView.showsUserLocation != isVisible else { return }
+
+            self?.mapView.showsUserLocation = isVisible
         }
     }
     

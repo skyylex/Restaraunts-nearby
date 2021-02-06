@@ -62,22 +62,20 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     private var startMonitoringEventsToken: AnyCancellable?
     private var stopMonitoringEventsToken: AnyCancellable?
     private var centeringOnFirstAppearingToke: AnyCancellable?
-    private var errorReportingOnAppearingToken: AnyCancellable?
+    private var updatingUserLocationVisibilityToken: AnyCancellable?
     
     init(dependencies: Dependencies) {
         locationProvider = dependencies.locationProvider
         
         super.init()
         
-        errorReportingOnAppearingToken = viewDidAppearPublisher.first().sink { [weak self] _ in
+        updatingUserLocationVisibilityToken = locationProvider.authorizationStatusPublisher.sink { [weak self] status in
             guard let self = self else { return }
-            guard self.locationProvider.isAuthorized else {
-                self.handleError(.locationServicesNotAuthorized(
-                                    title: Strings.locationServicesAreDisabledTitle,
-                                    message: Strings.locationServicesAreDisabledMessage,
-                                    shouldBlockUI: true))
-                return
-            }
+            
+            let shouldBeVisible = status == .authorizedAlways || status == .authorizedWhenInUse
+            
+            // Updating visibility based on authorization to silence possible alerts from MapKit
+            self.updateUserLocationVisibility(shouldBeVisible)
         }
         
         centeringOnFirstAppearingToke = viewDidAppearPublisher.first().sink { [weak self] _ in
@@ -95,8 +93,12 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
             self.centeringOnFirstAppearingToke = nil
         }
         
-        startMonitoringEventsToken = viewDidAppearPublisher.merge(with: appDidBecomeActive).sink { [weak self] _ in
-            self?.locationProvider.startLocationUpdates()
+        startMonitoringEventsToken = viewDidAppearPublisher.merge(with: appDidBecomeActive).zip(locationProvider.authorizationStatusPublisher).sink { [weak self] (_, status) in
+            guard let self = self else { return }
+            
+            if status == .authorizedAlways || status == .authorizedWhenInUse || status == .notDetermined {
+                self.locationProvider.startLocationUpdates()
+            }
         }
         
         stopMonitoringEventsToken = viewDidDisappearPublisher.merge(with: appWillResignActive).sink { [weak self] _ in
@@ -106,21 +108,25 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     
     // ViewModelInput:
     func onCenteringRequest() {
-        guard locationProvider.isAuthorized else {
-            handleError(.locationServicesNotAuthorized(
-                            title: Strings.locationServicesAreDisabledTitle,
-                            message: Strings.locationServicesAreDisabledMessage,
-                            shouldBlockUI: true))
-            return
+        if self.locationProvider.authorizationStatus == .denied {
+            self.handleError(.locationServicesNotAuthorized(
+                                title: Strings.locationServicesAreDisabledTitle,
+                                message: Strings.locationServicesAreDisabledMessage,
+                                shouldBlockUI: true))
         }
         
-        guard let coordinate = locationProvider.lastKnownGPSCoordinate else {
-            handleError(.generic(title: nil,
-                                 message: Strings.cannotFetchGPSCoordinate,
-                                 shouldBlockUI: false))
-            return
+        if let coordinate = locationProvider.lastKnownGPSCoordinate {
+            centerMe(coordinate)
+        } else {
+            locationProvider.fetchCurrentLocation { [weak self] (result) in
+                switch result {
+                case .success(let coordinate):
+                    self?.centerMe(coordinate)
+                case .failure(let error):
+                    self?.handleError(.generic(title: nil, message: error.localizedDescription, shouldBlockUI: false))
+                }
+            }
         }
-        centerMe(coordinate)
     }
     
     func onSettingsAppOpeningRequest() {
@@ -132,4 +138,5 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     // ViewModelOutput:
     var handleError: (MapViewError) -> Void = {_ in preconditionFailure("handleError: should be overriden by MapView") }
     var centerMe: (CLLocationCoordinate2D) -> Void = { _ in preconditionFailure("centerMe: should be overriden by MapView") }
+    var updateUserLocationVisibility: (Bool) -> Void = { _ in preconditionFailure("showUserLocation: should be overriden by MapView") }
 }

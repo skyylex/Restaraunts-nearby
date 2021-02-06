@@ -8,9 +8,16 @@
 
 import Foundation
 import CoreLocation
+import Combine
 @testable import Restaurants
 
 class SimpleLocationProviderMock: SimpleLocationProviding {
+    @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
+    
+    lazy var authorizationStatusPublisher: AnyPublisher<CLAuthorizationStatus, Never> = {
+        return $authorizationStatus.eraseToAnyPublisher()
+    }()
+    
     var isAuthorized: Bool = true
     
     var isUpdating = false
