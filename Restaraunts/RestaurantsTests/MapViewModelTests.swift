@@ -49,10 +49,13 @@ final class MapViewModelTests: XCTestCase {
         
         let expectedHandleErrorCall = expectation(description: "Expected handleError call")
         
+        viewModel.updateUserLocationVisibility = { _ in }
         viewModel.centerMe = { _ in }
         viewModel.handleError = { coordinate in
             expectedHandleErrorCall.fulfill()
         }
+        
+        provider.internalAuthorizationStatus = .denied
         
         viewModel.onCenteringRequest()
         
@@ -63,6 +66,12 @@ final class MapViewModelTests: XCTestCase {
         let provider = SimpleLocationProviderMock()
         let dependencies = MapViewModel.Dependencies(locationProvider: provider)
         let viewModel = MapViewModel(dependencies: dependencies)
+        
+        viewModel.updateUserLocationVisibility = { _ in }
+        viewModel.centerMe = { _ in }
+        viewModel.handleError = { coordinate in }
+        
+        provider.internalAuthorizationStatus = .authorizedAlways
         
         XCTAssertFalse(provider.isUpdating)
         

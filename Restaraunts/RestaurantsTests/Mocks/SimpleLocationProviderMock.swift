@@ -12,10 +12,14 @@ import Combine
 @testable import Restaurants
 
 class SimpleLocationProviderMock: SimpleLocationProviding {
-    @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
+    @Published var internalAuthorizationStatus: CLAuthorizationStatus? = nil
+    
+    var authorizationStatus: CLAuthorizationStatus {
+        internalAuthorizationStatus ?? .notDetermined
+    }
     
     lazy var authorizationStatusPublisher: AnyPublisher<CLAuthorizationStatus, Never> = {
-        return $authorizationStatus.eraseToAnyPublisher()
+        return $internalAuthorizationStatus.compactMap { $0 }.eraseToAnyPublisher()
     }()
     
     var isAuthorized: Bool = true
