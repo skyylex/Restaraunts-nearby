@@ -20,6 +20,7 @@
 		947B65AF25CF028C0082180C /* FourSquareVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65AE25CF028C0082180C /* FourSquareVenue.swift */; };
 		947B65C125CF13580082180C /* FourSquareVenue+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */; };
 		947B65CA25CF341B0082180C /* ClusteringAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65C925CF341B0082180C /* ClusteringAnnotationView.swift */; };
+		947B65CE25CF3CFC0082180C /* RestaurantAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65CD25CF3CFC0082180C /* RestaurantAnnotationView.swift */; };
 		9491663C25CDF83C001ED057 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491663B25CDF83C001ED057 /* RootCoordinator.swift */; };
 		9491664125CDF99A001ED057 /* SimpleLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491664025CDF99A001ED057 /* SimpleLocationProvider.swift */; };
 		9491665825CDFCF3001ED057 /* RootCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491665725CDFCF3001ED057 /* RootCoordinatorTests.swift */; };
@@ -54,6 +55,7 @@
 		947B65AE25CF028C0082180C /* FourSquareVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareVenue.swift; sourceTree = "<group>"; };
 		947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FourSquareVenue+MKAnnotation.swift"; sourceTree = "<group>"; };
 		947B65C925CF341B0082180C /* ClusteringAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusteringAnnotationView.swift; sourceTree = "<group>"; };
+		947B65CD25CF3CFC0082180C /* RestaurantAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotationView.swift; sourceTree = "<group>"; };
 		9491663B25CDF83C001ED057 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		9491664025CDF99A001ED057 /* SimpleLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLocationProvider.swift; sourceTree = "<group>"; };
 		9491664825CDFCCC001ED057 /* RestaurantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				947B65C925CF341B0082180C /* ClusteringAnnotationView.swift */,
+				947B65CD25CF3CFC0082180C /* RestaurantAnnotationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				9446457A25CBE20500E247F6 /* AppDelegate.swift in Sources */,
 				947B65AF25CF028C0082180C /* FourSquareVenue.swift in Sources */,
 				9491663C25CDF83C001ED057 /* RootCoordinator.swift in Sources */,
+				947B65CE25CF3CFC0082180C /* RestaurantAnnotationView.swift in Sources */,
 				9446457C25CBE20500E247F6 /* SceneDelegate.swift in Sources */,
 				9439619F25CCB5C8000623A3 /* MapViewModel.swift in Sources */,
 				946A3B5F25CEDD5C00B21095 /* ViewModel.swift in Sources */,

@@ -186,6 +186,7 @@ final class MapViewController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
         
         mapView.register(ClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+        mapView.register(RestaurantAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
     }
     
     // MARK: MKMapViewDelegate
@@ -194,10 +195,7 @@ final class MapViewController: UIViewController, MKMapViewDelegate {
         case is MKClusterAnnotation:
             return mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier, for: annotation)
         default:
-            let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
-            pinAnnotationView.image = UIImage(named: "restaurant")
-            pinAnnotationView.clusteringIdentifier = "restaurant"
-            return pinAnnotationView
+            return RestaurantAnnotationView(annotation: annotation, reuseIdentifier: "RestaurantID")
         }
     }
     

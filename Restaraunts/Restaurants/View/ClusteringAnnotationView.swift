@@ -27,14 +27,13 @@ class ClusterAnnotationView: MKAnnotationView {
         super.prepareForDisplay()
         
         let brightBlue = UIColor(red: 26.0 / 255.0, green: 119.0 / 255.0, blue: 198.0 / 255.0, alpha: 1.0)
-        image = drawRatio(count: count(), fractionColor: brightBlue, wholeColor: UIColor.red)
+        image = drawImage(count: count(), stripeColor: brightBlue)
     }
 
-    private func drawRatio(count: Int, fractionColor: UIColor, wholeColor: UIColor) -> UIImage {
+    private func drawImage(count: Int, stripeColor: UIColor) -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 40, height: 40))
         return renderer.image { _ in
-            // Fill full circle with wholeColor
-            fractionColor.setFill()
+            stripeColor.setFill()
             UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 40, height: 40)).fill()
 
             // Fill inner circle with white color
