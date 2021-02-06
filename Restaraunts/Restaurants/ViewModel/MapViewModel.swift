@@ -79,6 +79,8 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     }
     
     // ViewModelInput:
+    private var searchingToken: AnyCancellable?
+    
     func onCenteringRequest() {
         if self.locationProvider.authorizationStatus == .denied {
             self.handleError(.locationServicesNotAuthorized(
@@ -90,7 +92,16 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         if let coordinate = locationProvider.lastKnownGPSCoordinate {
             centerMe(coordinate)
             
-            FourSquareService().search(with: coordinate)
+            searchingToken = FourSquareService().search(with: coordinate).eraseToAnyPublisher().sink(receiveCompletion: { (completion) in
+                switch completion {
+                case .failure(let error):
+                    break
+                case .finished:
+                    break
+                }
+            }, receiveValue: { (venues) in
+                print(venues)
+            })
         } else {
             locationProvider.fetchCurrentLocation { [weak self] (result) in
                 switch result {
