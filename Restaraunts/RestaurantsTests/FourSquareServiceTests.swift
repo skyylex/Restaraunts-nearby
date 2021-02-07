@@ -68,8 +68,91 @@ final class FourSquareServiceTests: XCTestCase {
         wait(for: [expectVenues], timeout: 0.1)
     }
     
+    func testAPIClientError() {
+        let apiMock = FoursquareAPIMock()
+        let service = FourSquareService(config: FourSquareConfig(), apiClient: apiMock)
+        
+        let expectError = expectation(description: "Expect error from API client")
+        
+        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch, coordinate: CLLocationCoordinate2D.newYork))
+        let cancellable = resultsPromise.sink { (result) in
+            guard case .failure(let error) = result else  {
+                XCTAssertFalse(true, "Expected an error completion")
+                return
+            }
+            
+            XCTAssertEqual(error.code, FourSquareServiceError.fetching(additionalInfo: "").code)
+            expectError.fulfill()
+        } receiveValue: { (venues) in
+            XCTAssertFalse(true, "No venues expected")
+        }
+        
+        let connectionError = NSError(domain: "TestNetworkDomain", code: 343, userInfo: nil)
+        apiMock.executedRequests.first?.completion(.failure(.connectionError(connectionError)))
+
+        wait(for: [expectError], timeout: 0.1)
+    }
+    
+    func testNoJSONError() {
+        let apiMock = FoursquareAPIMock()
+        let service = FourSquareService(config: FourSquareConfig(), apiClient: apiMock)
+        
+        let expectError = expectation(description: "Expect an error due to no JSON in the response data")
+        
+        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch, coordinate: CLLocationCoordinate2D.newYork))
+        let cancellable = resultsPromise.sink { (result) in
+            guard case .failure(let error) = result else  {
+                XCTAssertFalse(true, "Expected an error completion")
+                return
+            }
+            
+            XCTAssertEqual(error.code, FourSquareServiceError.jsonConversion(additionalInfo: "").code)
+            expectError.fulfill()
+        } receiveValue: { (venues) in
+            XCTAssertFalse(true, "No venues expected")
+        }
+        
+        apiMock.executedRequests.first?.completion(.success(Data()))
+
+        wait(for: [expectError], timeout: 0.1)
+    }
+    
+    func testInvalidJSONError() {
+        let apiMock = FoursquareAPIMock()
+        let service = FourSquareService(config: FourSquareConfig(), apiClient: apiMock)
+        
+        let expectError = expectation(description: "Expect an error due to invalid json")
+        
+        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch, coordinate: CLLocationCoordinate2D.newYork))
+        let cancellable = resultsPromise.sink { (result) in
+            guard case .failure(let error) = result else  {
+                XCTAssertFalse(true, "Expected an error completion")
+                return
+            }
+            
+            XCTAssertEqual(error.code, FourSquareServiceError.jsonConversion(additionalInfo: "").code)
+            expectError.fulfill()
+        } receiveValue: { (venues) in
+            XCTAssertFalse(true, "No venues expected")
+        }
+        
+        apiMock.executedRequests.first?.completion(.success(corruptedJsonData()))
+
+        wait(for: [expectError], timeout: 0.1)
+    }
+    
+    // MARK: Private
     private func jsonDataFromSuccessfullSearch() -> Data {
         guard let path = Bundle(for: FourSquareServiceTests.self).path(forResource: "foursquare-response", ofType: "json") else {
+            fatalError()
+        }
+        
+        return try! NSData(contentsOfFile: path) as Data
+    }
+    
+    // MARK: Private
+    private func corruptedJsonData() -> Data {
+        guard let path = Bundle(for: FourSquareServiceTests.self).path(forResource: "foursquare-corrupted-response", ofType: "json") else {
             fatalError()
         }
         

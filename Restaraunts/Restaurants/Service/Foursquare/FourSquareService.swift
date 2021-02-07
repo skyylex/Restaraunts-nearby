@@ -72,7 +72,7 @@ final class FourSquareService: FourSquareServicing {
             case .success(let response):
                 return .success(response.response.venues)
             case .failure(let error):
-                return .failure(.jsonConversion(additionalInfo: error.localizedDescription))
+                return .failure(.jsonConversion(additionalInfo: error.description))
             }
         } else {
             return .failure(FourSquareServiceError.jsonConversion(additionalInfo: "Data is not a JSON object"))
