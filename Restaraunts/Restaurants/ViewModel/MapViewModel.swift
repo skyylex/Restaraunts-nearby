@@ -43,9 +43,11 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     private var stopMonitoringEventsToken: AnyCancellable?
     private var centeringOnFirstAppearingToken: AnyCancellable?
     private var updatingUserLocationVisibilityToken: AnyCancellable?
-    private var restaurantsLoadingOnUserLocationUpdate: AnyCancellable?
+    private var restaurantsLoadingOnVisibleRegionUpdateToken: AnyCancellable?
     private var zoomingToUserLocationOnAppearingToken: AnyCancellable?
     private var showVenueDetailsCallback: (FourSquareVenue) -> Void
+    
+    private var searchRequestedPublisher = CurrentValueSubject<CLLocationCoordinate2D?, Never>(nil)
     
     init(dependencies: Dependencies) {
         locationProvider = dependencies.locationProvider
@@ -91,10 +93,29 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
             self?.locationProvider.stopLocationUpdates()
         }
         
-        restaurantsLoadingOnUserLocationUpdate = locationProvider.currentLocationPublisher.first().zip(viewDidAppearPublisher).sink { [weak self] (coordinate, _) in
-            self?.searchRestaurants(near: coordinate)
-        }
+        let validSearchRequestedPublisher = searchRequestedPublisher
+            .compactMap { $0 }
+            .subscribe(on: DispatchQueue.global())
+            .throttle(for: 0.5, scheduler: RunLoop.current, latest: true)
+            .eraseToAnyPublisher()
         
+        let searchOnFirstAppearingEventPublisher = validSearchRequestedPublisher
+            .zip(viewDidAppearPublisher)
+            .first()
+            .subscribe(on: DispatchQueue.global())
+            .eraseToAnyPublisher()
+        
+        restaurantsLoadingOnVisibleRegionUpdateToken = searchOnFirstAppearingEventPublisher
+            .subscribe(on: DispatchQueue.global())
+            .sink(receiveCompletion: { [weak self] (result) in
+            // Continue without waiting for appearing
+            self?.restaurantsLoadingOnVisibleRegionUpdateToken = validSearchRequestedPublisher.sink { [weak self] (coordinate) in
+                self?.searchRestaurants(near: coordinate)
+            }
+            
+        }, receiveValue: { [weak self] (coordinate, value) in
+            self?.searchRestaurants(near: coordinate)
+        })
     }
     
     // ViewModelInput:
@@ -131,7 +152,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     }
     
     func onVisibleRegionChanged(regionCenter: CLLocationCoordinate2D, latDelta: CLLocationDegrees, lngDelta: CLLocationDegrees) {
-        searchRestaurants(near: regionCenter)
+        searchRequestedPublisher.value = regionCenter
     }
     
     func onShowVenueDetails(with annotation: DataContainerAnnotation) {
@@ -171,11 +192,16 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
                 return annotation
             }
             
-            annotations.forEach { (annotation) in
-                self.cachedAnnotations.insert(annotation)
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                
+                annotations.forEach { (annotation) in
+                  self.cachedAnnotations.insert(annotation)
+                }
+                
+                self.showPinsOnMap(Array(self.cachedAnnotations))
             }
-            
-            self.showPinsOnMap(Array(self.cachedAnnotations))
         })
     }
+    
 }

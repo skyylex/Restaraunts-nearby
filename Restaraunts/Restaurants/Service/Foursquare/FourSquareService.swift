@@ -84,8 +84,6 @@ final class FourSquareService: FourSquareServicing {
     }
     
     private func requestVenuePhoto(with requestBuilder: FourSquareRequestBuilder) -> Future<FourSquareVenuePhotoItem?, Never> {
-        // TODO: reduce duplicate calls
-        
         let request = requestBuilder.build()
         return Future { [weak self] promise in
             guard let self = self else { return }
@@ -103,9 +101,6 @@ final class FourSquareService: FourSquareServicing {
     }
     
     private func requestVenues(with requestBuilder: FourSquareRequestBuilder) -> Future<[FourSquareVenue], FourSquareServiceError> {
-        // TODO: reduce duplicate calls
-        // TODO: apply throttling 0.5 to keep number of calls under quota limit
-        
         let request = requestBuilder.build()
         return Future { [weak self] promise in
             guard let self = self else { return }
