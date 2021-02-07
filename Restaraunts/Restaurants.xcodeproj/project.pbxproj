@@ -29,9 +29,9 @@
 		9473278425D0268100C0FEF0 /* UIColor-Predefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473278325D0268100C0FEF0 /* UIColor-Predefined.swift */; };
 		9473278825D0454200C0FEF0 /* VenueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473278725D0454200C0FEF0 /* VenueDetailsViewController.swift */; };
 		9473278C25D045DF00C0FEF0 /* VenueDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473278B25D045DF00C0FEF0 /* VenueDetailsCoordinator.swift */; };
-		947327A325D04E9900C0FEF0 /* IdentifiableAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947327A225D04E9900C0FEF0 /* IdentifiableAnnotation.swift */; };
 		947327A725D0619B00C0FEF0 /* VenueDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947327A625D0619B00C0FEF0 /* VenueDetailsViewModel.swift */; };
 		947327AB25D0730800C0FEF0 /* FourSquareVenuesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947327AA25D0730800C0FEF0 /* FourSquareVenuesResponse.swift */; };
+		947327CF25D0A08000C0FEF0 /* DataContainerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947327CE25D0A08000C0FEF0 /* DataContainerAnnotation.swift */; };
 		947B659825CEE0BB0082180C /* FourSquareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B659725CEE0BB0082180C /* FourSquareService.swift */; };
 		947B65AF25CF028C0082180C /* FourSquareVenueDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65AE25CF028C0082180C /* FourSquareVenueDetailResponse.swift */; };
 		947B65C125CF13580082180C /* FourSquareVenue+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */; };
@@ -79,9 +79,9 @@
 		9473278325D0268100C0FEF0 /* UIColor-Predefined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Predefined.swift"; sourceTree = "<group>"; };
 		9473278725D0454200C0FEF0 /* VenueDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsViewController.swift; sourceTree = "<group>"; };
 		9473278B25D045DF00C0FEF0 /* VenueDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsCoordinator.swift; sourceTree = "<group>"; };
-		947327A225D04E9900C0FEF0 /* IdentifiableAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableAnnotation.swift; sourceTree = "<group>"; };
 		947327A625D0619B00C0FEF0 /* VenueDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsViewModel.swift; sourceTree = "<group>"; };
 		947327AA25D0730800C0FEF0 /* FourSquareVenuesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareVenuesResponse.swift; sourceTree = "<group>"; };
+		947327CE25D0A08000C0FEF0 /* DataContainerAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainerAnnotation.swift; sourceTree = "<group>"; };
 		947B659725CEE0BB0082180C /* FourSquareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareService.swift; sourceTree = "<group>"; };
 		947B65AE25CF028C0082180C /* FourSquareVenueDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareVenueDetailResponse.swift; sourceTree = "<group>"; };
 		947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FourSquareVenue+MKAnnotation.swift"; sourceTree = "<group>"; };
@@ -237,9 +237,9 @@
 		947B65AD25CF02790082180C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				947327CE25D0A08000C0FEF0 /* DataContainerAnnotation.swift */,
 				947B65AE25CF028C0082180C /* FourSquareVenueDetailResponse.swift */,
 				947327AA25D0730800C0FEF0 /* FourSquareVenuesResponse.swift */,
-				947327A225D04E9900C0FEF0 /* IdentifiableAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -493,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947327CF25D0A08000C0FEF0 /* DataContainerAnnotation.swift in Sources */,
 				947B65CA25CF341B0082180C /* ClusteringAnnotationView.swift in Sources */,
 				947327AB25D0730800C0FEF0 /* FourSquareVenuesResponse.swift in Sources */,
 				9473278C25D045DF00C0FEF0 /* VenueDetailsCoordinator.swift in Sources */,
@@ -513,7 +514,6 @@
 				9446457C25CBE20500E247F6 /* SceneDelegate.swift in Sources */,
 				9439619F25CCB5C8000623A3 /* MapViewModel.swift in Sources */,
 				946A3B5F25CEDD5C00B21095 /* ViewModel.swift in Sources */,
-				947327A325D04E9900C0FEF0 /* IdentifiableAnnotation.swift in Sources */,
 				9473276825CFF96900C0FEF0 /* FourSquareConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

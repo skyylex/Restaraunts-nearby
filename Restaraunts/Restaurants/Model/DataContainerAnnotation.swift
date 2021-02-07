@@ -9,8 +9,7 @@
 import Foundation
 import MapKit
 
-protocol IdentifiableAnnotation: MKAnnotation {
-    var identifier: String { get }
-    
+/// A simple extension of original annotation with userInfo added
+protocol DataContainerAnnotation: MKAnnotation {
     var userInfo: Any?  { get set }
 }

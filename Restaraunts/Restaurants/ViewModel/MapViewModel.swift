@@ -134,7 +134,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         searchRestaurants(near: regionCenter)
     }
     
-    func onShowVenueDetails(with annotation: IdentifiableAnnotation) {
+    func onShowVenueDetails(with annotation: DataContainerAnnotation) {
         // MapViewModel placed and can safely retrieve data
         guard let venue = annotation.userInfo as? FourSquareVenue else { fatalError("Something change annotation data") }
         
@@ -144,11 +144,13 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     // ViewModelOutput:
     var handleError: (MapViewError) -> Void = {_ in preconditionFailure("handleError: should be overriden by MapView") }
     var updateUserLocationVisibility: (Bool) -> Void = { _ in preconditionFailure("showUserLocation: should be overriden by MapView") }
-    var showPinsOnMap: ([IdentifiableAnnotation]) -> Void = {  _ in preconditionFailure("showPinsOnMap: should be overriden by MapView")  }
+    var showPinsOnMap: ([DataContainerAnnotation]) -> Void = {  _ in preconditionFailure("showPinsOnMap: should be overriden by MapView")  }
     var updateZoomLevel: (Int, CLLocationCoordinate2D) -> Void = { _, _ in preconditionFailure("updateZoomLevel: should be overriden by MapView") }
 
     
     // MARK: Private
+    
+    private var cachedAnnotations = Set<MKAnnotationData>()
     
     private func searchRestaurants(near coordinate: CLLocationCoordinate2D) {
         print("[searchRestaurants] called")
@@ -162,12 +164,18 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
                 break
             }
         }, receiveValue: { [weak self] (venues) in
-            let annotations = venues.map { venue -> IdentifiableAnnotation in
+            guard let self = self else { return }
+            let annotations = venues.map { venue -> MKAnnotationData in
                 let annotation = venue.annotation()
                 annotation.userInfo = venue
                 return annotation
             }
-            self?.showPinsOnMap(annotations)
+            
+            annotations.forEach { (annotation) in
+                self.cachedAnnotations.insert(annotation)
+            }
+            
+            self.showPinsOnMap(Array(self.cachedAnnotations))
         })
     }
 }
