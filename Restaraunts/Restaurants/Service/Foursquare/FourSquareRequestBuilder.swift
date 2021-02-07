@@ -14,11 +14,11 @@ final class FourSquareRequestBuilder {
     struct Request {
         enum RequestType {
             case venuesSearch(coordinate: CLLocationCoordinate2D)
-            case venueDetails(identifier: String)
+            case venuePhoto(identifier: String)
             
             var path: String {
                 switch self {
-                case .venueDetails(_):
+                case .venuePhoto(_):
                     return "venues"
                 case .venuesSearch(_):
                     return "venues/search"
@@ -47,7 +47,7 @@ final class FourSquareRequestBuilder {
                 ParametersKeys.queryKey: PrefefinedQuery.restaurantQuery,
                 ParametersKeys.limitKey: "5", // FIXME:
             ]
-        case .venueDetails(let identifier):
+        case .venuePhoto(let identifier):
             return [
                 ParametersKeys.venueIDKey: identifier,
             ]

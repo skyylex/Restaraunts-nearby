@@ -1,8 +1,8 @@
 //
-//  Venue.swift
+//  FourSquareVenuesResponse.swift
 //  Restaurants
 //
-//  Created by Yury Lapitsky on 06/02/2021.
+//  Created by Yury Lapitsky on 07/02/2021.
 //  Copyright © 2021 Yury Lapitsky. All rights reserved.
 //
 
@@ -11,6 +11,30 @@ import Argo
 import Curry
 import Runes
 import CoreLocation
+
+struct FourSquareVenuesResponse {
+    let meta: FourSquareMetaInfo
+    let response: FourSquareVenuesInternalResponse
+}
+
+extension FourSquareVenuesResponse: Decodable {
+    static func decode(_ json: JSON) -> Decoded<FourSquareVenuesResponse> {
+        return curry(FourSquareVenuesResponse.init)
+            <^> json <| "meta"
+            <*> json <| "response"
+    }
+}
+
+struct FourSquareVenuesInternalResponse {
+    let venues: [FourSquareVenue]
+}
+
+extension FourSquareVenuesInternalResponse: Decodable {
+    static func decode(_ json: JSON) -> Decoded<FourSquareVenuesInternalResponse> {
+        return curry(FourSquareVenuesInternalResponse.init)
+            <^> json <|| "venues"
+    }
+}
 
 struct FourSquareLocation {
     let lat: Double
@@ -60,29 +84,5 @@ extension FourSquareMetaInfo: Decodable {
         return curry(FourSquareMetaInfo.init)
             <^> json <| "code"
             <*> json <| "requestId"
-    }
-}
-
-struct FourSquareInternalResponse {
-    let venues: [FourSquareVenue]
-}
-
-extension FourSquareInternalResponse: Decodable {
-    static func decode(_ json: JSON) -> Decoded<FourSquareInternalResponse> {
-        return curry(FourSquareInternalResponse.init)
-            <^> json <|| "venues"
-    }
-}
-
-struct FourSquareResponse {
-    let meta: FourSquareMetaInfo
-    let response: FourSquareInternalResponse
-}
-
-extension FourSquareResponse: Decodable {
-    static func decode(_ json: JSON) -> Decoded<FourSquareResponse> {
-        return curry(FourSquareResponse.init)
-            <^> json <| "meta"
-            <*> json <| "response"
     }
 }

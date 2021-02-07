@@ -13,7 +13,8 @@ import Argo
 import Combine
 
 protocol FourSquareServicing {
-    func search(with requestBuilder: FourSquareRequestBuilder) -> Future<[FourSquareVenue], FourSquareServiceError>
+    func searchVenues(near coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], FourSquareServiceError>
+    func fetchPhotos(with identifier: String) -> Future<FourSquareVenuePhotoItem?, FourSquareServiceError>
 }
 
 enum FourSquareServiceError: Error {
@@ -70,9 +71,37 @@ final class FourSquareService: FourSquareServicing {
         self.apiClient = apiClient
     }
     
-    func search(with requestBuilder: FourSquareRequestBuilder) -> Future<[FourSquareVenue], FourSquareServiceError> {
-        precondition(requestBuilder.build().path == FourSquareRequestBuilder.Request.RequestType.venuesSearch(coordinate: CLLocationCoordinate2D()).path)
+    func searchVenues(near coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], FourSquareServiceError> {
+        let builder = FourSquareRequestBuilder(type: .venuesSearch(coordinate: coordinate))
         
+        return requestVenues(with: builder)
+    }
+    
+    func fetchPhotos(with identifier: String) -> Future<FourSquareVenuePhotoItem?, FourSquareServiceError> {
+        let builder = FourSquareRequestBuilder(type: .venuePhoto(identifier: identifier))
+        
+        return requestVenuePhoto(with: builder)
+    }
+    
+    private func requestVenuePhoto(with requestBuilder: FourSquareRequestBuilder) -> Future<FourSquareVenuePhotoItem?, FourSquareServiceError> {
+        // TODO: reduce duplicate calls
+        
+        let request = requestBuilder.build()
+        return Future { [weak self] promise in
+            guard let self = self else { return }
+            
+            self.apiClient.request(path: request.path, method: .get, parameter: request.parameters) { (result) in
+                switch result {
+                case .failure(let error):
+                    promise(.failure(FourSquareServiceError.fetching(additionalInfo: error.description)))
+                case .success(let data):
+                    promise(self.venuePhoto(from: data))
+                }
+            }
+        }
+    }
+    
+    private func requestVenues(with requestBuilder: FourSquareRequestBuilder) -> Future<[FourSquareVenue], FourSquareServiceError> {
         // TODO: reduce duplicate calls
         // TODO: apply throttling 0.5 to keep number of calls under quota limit
         
@@ -91,10 +120,25 @@ final class FourSquareService: FourSquareServicing {
         }
     }
     
+    private func venuePhoto(from data: Data) -> Result<FourSquareVenuePhotoItem?, FourSquareServiceError> {
+        let json = try? JSONSerialization.jsonObject(with: data, options: [])
+        if let json = json {
+            let decoded: Decoded<FourSquareVenuePhotosResponse> = decode(json)
+            switch decoded {
+            case .success(let response):
+                return .success(response.response.photos.items.first)
+            case .failure(let error):
+                return .failure(.jsonConversion(additionalInfo: error.description))
+            }
+        } else {
+            return .failure(FourSquareServiceError.jsonConversion(additionalInfo: "Data is not a JSON object"))
+        }
+    }
+    
     private func venues(from data: Data) -> Result<[FourSquareVenue], FourSquareServiceError> {
         let json = try? JSONSerialization.jsonObject(with: data, options: [])
         if let json = json {
-            let decoded: Decoded<FourSquareResponse> = decode(json)
+            let decoded: Decoded<FourSquareVenuesResponse> = decode(json)
             switch decoded {
             case .success(let response):
                 return .success(response.response.venues)

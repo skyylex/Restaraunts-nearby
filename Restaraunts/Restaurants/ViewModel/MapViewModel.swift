@@ -151,11 +151,9 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     // MARK: Private
     
     private func searchRestaurants(near coordinate: CLLocationCoordinate2D) {
-        let requestBuilder = FourSquareRequestBuilder(type: .venuesSearch(coordinate: coordinate))
-        
         print("[searchRestaurants] called")
         
-        searchingToken = searchService.search(with: requestBuilder).eraseToAnyPublisher().sink(receiveCompletion: { [weak self] (completion) in
+        searchingToken = searchService.searchVenues(near: coordinate).eraseToAnyPublisher().sink(receiveCompletion: { [weak self] (completion) in
             switch completion {
             case .failure(let error):
                 print("[ERROR] restaurants search failed:\(error.debugMessage)")
