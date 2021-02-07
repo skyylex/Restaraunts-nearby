@@ -201,7 +201,17 @@ final class MapViewController: UIViewController, MKMapViewDelegate {
         case is MKClusterAnnotation:
             return mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier, for: annotation)
         case is MKUserLocation:
-            return nil
+            let reuseIdentifier = "userLocation"
+            if let existingView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier) {
+                return existingView
+            }
+            
+            let view = MKUserLocationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+            
+            view.zPriority = .max   // Show user location above other annotations
+            view.isEnabled = false  // Ignore touch events and do not show callout
+            
+            return view
         default:
             return RestaurantAnnotationView(annotation: annotation, reuseIdentifier: "RestaurantID")
         }
