@@ -18,7 +18,29 @@ struct FourSquareConfig {
 }
 
 protocol FourSquareServicing {
-    func search(with coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], Error>
+    func search(with coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], FourSquareServiceError>
+}
+enum FourSquareServiceError: Error {
+    case jsonConversion(additionalInfo: String)
+    case fetching(additionalInfo: String)
+    
+    var message: String {
+        switch self {
+        case .fetching:
+            return "Downloading error. Check your connection"
+        case .jsonConversion:
+            return "Cannot parse data about Restaurants"
+        }
+    }
+    
+    var code: Int {
+        switch self {
+        case .fetching(_):
+            return 301
+        case .jsonConversion(_):
+            return 302
+        }
+    }
 }
 
 /// Documentation for FourSquare search -  https://developer.foursquare.com/docs/api-reference/venues/search/
@@ -28,7 +50,7 @@ class FourSquareService: FourSquareServicing {
         apiClient = FoursquareAPIClient(clientId: config.clientId, clientSecret: config.clientSecret)
     }
     
-    func search(with coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], Error> {
+    func search(with coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], FourSquareServiceError> {
         let locationString = "\(coordinate.latitude),\(coordinate.longitude)"
         let parameters = [
             "ll": locationString,
@@ -39,7 +61,7 @@ class FourSquareService: FourSquareServicing {
             self.apiClient.request(path: "venues/search", parameter: parameters) { (result) in
                 switch result {
                 case .failure(let error):
-                    promise(.failure(error))
+                    promise(.failure(FourSquareServiceError.fetching(additionalInfo: error.localizedDescription)))
                 case .success(let data):
                     promise(self.venues(from: data))
                 }
@@ -47,7 +69,7 @@ class FourSquareService: FourSquareServicing {
         }
     }
     
-    private func venues(from data: Data) -> Result<[FourSquareVenue], Error> {
+    private func venues(from data: Data) -> Result<[FourSquareVenue], FourSquareServiceError> {
         let json = try? JSONSerialization.jsonObject(with: data, options: [])
         if let json = json {
             let decoded: Decoded<FourSquareResponse> = decode(json)
@@ -55,10 +77,10 @@ class FourSquareService: FourSquareServicing {
             case .success(let response):
                 return .success(response.response.venues)
             case .failure(let error):
-                return .failure(error)
+                return .failure(.jsonConversion(additionalInfo: error.localizedDescription))
             }
         } else {
-            return .failure(NSError(domain: "", code: 123, userInfo: nil))
+            return .failure(FourSquareServiceError.jsonConversion(additionalInfo: "Data is not a JSON object"))
         }
     }
 }
