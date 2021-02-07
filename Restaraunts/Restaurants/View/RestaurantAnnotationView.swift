@@ -10,6 +10,10 @@ import Foundation
 import MapKit
 
 class RestaurantAnnotationView: MKAnnotationView {
+    enum Mode {
+        case regular
+        case increased
+    }
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
@@ -26,24 +30,40 @@ class RestaurantAnnotationView: MKAnnotationView {
     override func prepareForDisplay() {
         super.prepareForDisplay()
         
-        let brightBlue = UIColor(red: 26.0 / 255.0, green: 119.0 / 255.0, blue: 198.0 / 255.0, alpha: 1.0)
-        // TODO: fix force unwrap
-        let icon = UIImage(named: "restaurant")?.withTintColor(UIColor.white)
-        image = drawImage(icon!, stripeColor: brightBlue)
+        image = draw(mode: (self.isSelected) ? .increased : .regular)
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        image = draw(mode: selected ? .increased : .regular)
     }
 
-    private func drawImage(_ iconImage: UIImage, stripeColor: UIColor) -> UIImage {
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 28, height: 28))
+    private func drawImage(_ iconImage: UIImage, stripeColor: UIColor, mode: Mode) -> UIImage {
+        let defaultSize = CGSize(width: 28.0, height: 28.0)
+        let increasedSize = CGSize(width: 48.0, height: 48.0)
+        
+        let totalSize = (mode == .increased) ? increasedSize : defaultSize
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: totalSize.width, height: totalSize.height))
         return renderer.image { _ in
             // Outer stripe is the first circle
             stripeColor.setFill()
-            UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 28, height: 28)).fill()
+            UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: totalSize.width, height: totalSize.height)).fill()
             
             // Draw icon
-            let size = CGSize(width: 14, height: 14)
-            let rect = CGRect(x: 14 - size.width / 2, y: 14 - size.height / 2, width: size.width, height: size.height)
+            let iconSize = CGSize(width: totalSize.width / 2, height: totalSize.height / 2)
+            let rect = CGRect(
+                x: iconSize.width - iconSize.width / 2,
+                y: iconSize.height - iconSize.height / 2,
+                width: iconSize.width,
+                height: iconSize.height
+            )
             iconImage.draw(in: rect)
         }
+    }
+    
+    private func draw(mode: Mode) -> UIImage {
+        // TODO: fix force unwrap
+        let icon = UIImage(named: "restaurant")?.withTintColor(UIColor.white)
+        return drawImage(icon!, stripeColor: UIColor.brightBlue, mode: mode)
     }
 
     private func count() -> Int {

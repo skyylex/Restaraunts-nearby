@@ -67,8 +67,9 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
                 switch result {
                 case .success(let coordinate):
                     self?.updateZoomLevel(ZoomLevel.cityLevel.rawValue, coordinate)
-                case .failure(let error):
-                    self?.handleError(.generic(title: nil, message: error.localizedDescription, shouldBlockUI: false))
+                case .failure(_):
+                    // Authorization errors are checked elsewhere
+                    self?.handleError(.generic(title: nil, message: Strings.cannotFetchGPSCoordinate, shouldBlockUI: false))
                 }
             }
             
@@ -112,8 +113,9 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
                 switch result {
                 case .success(let coordinate):
                     self?.centerMe(coordinate)
-                case .failure(let error):
-                    self?.handleError(.generic(title: nil, message: error.localizedDescription, shouldBlockUI: false))
+                case .failure(_):
+                    // Authorization errors are checked elsewhere
+                    self?.handleError(.generic(title: nil, message: Strings.cannotFetchGPSCoordinate, shouldBlockUI: false))
                 }
             }
         }
@@ -144,6 +146,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         searchingToken = searchService.search(with: requestBuilder).eraseToAnyPublisher().sink(receiveCompletion: { [weak self] (completion) in
             switch completion {
             case .failure(let error):
+                print("[ERROR] restaurants search failed:\(error.debugMessage)")
                 self?.handleError(.generic(title: nil, message: error.message, shouldBlockUI: false))
             case .finished:
                 break

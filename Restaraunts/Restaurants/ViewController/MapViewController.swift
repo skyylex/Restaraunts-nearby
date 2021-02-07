@@ -12,13 +12,9 @@ import Combine
 import CombineCocoa
 import GSMessages
 
-extension UIColor {
-    static let brightBlue = UIColor(red: 31.0 / 255.0, green: 116.0 / 255.0, blue: 252.0 / 255.0, alpha: 1.0)
-    static let almostWhite = UIColor(red: 239.0 / 255.0, green: 238.0 / 255.0, blue: 235.0 / 255.0, alpha: 1.0)
-}
-
 enum MapViewError {
     case generic(title: String?, message: String, shouldBlockUI: Bool)
+    case cannotGetLocation(title: String?, message: String, shouldBlockUI: Bool)
     case locationServicesNotAuthorized(title: String, message: String, shouldBlockUI: Bool)
 }
 
@@ -26,6 +22,8 @@ extension MapViewError {
     var shouldBlockUI: Bool {
         switch self {
         case .generic(_, _, let shouldBlockUI):
+            return shouldBlockUI
+        case .cannotGetLocation(_, _, let shouldBlockUI):
             return shouldBlockUI
         case .locationServicesNotAuthorized(_, _, let shouldBlockUI):
             return shouldBlockUI
@@ -38,6 +36,8 @@ extension MapViewError {
             return message
         case .locationServicesNotAuthorized(_, let message, _):
             return message
+        case .cannotGetLocation(_, let message,_):
+            return message
         }
     }
     
@@ -46,6 +46,8 @@ extension MapViewError {
         case .generic(let title,_ ,_):
             return title
         case .locationServicesNotAuthorized(let title,_,_):
+            return title
+        case .cannotGetLocation(let title, _,_):
             return title
         }
     }

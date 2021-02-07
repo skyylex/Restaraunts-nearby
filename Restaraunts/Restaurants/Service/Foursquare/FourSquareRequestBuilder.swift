@@ -27,6 +27,7 @@ final class FourSquareRequestBuilder {
     struct ParametersKeys {
         static let locationStringKey = "ll"
         static let queryKey = "query"
+        static let limitKey = "limit"
     }
     
     struct PrefefinedQuery {
@@ -62,6 +63,7 @@ final class FourSquareRequestBuilder {
             return [
                 ParametersKeys.locationStringKey: locationString(from: coordinate),
                 ParametersKeys.queryKey: PrefefinedQuery.restaurantQuery,
+                ParametersKeys.limitKey: "5",
             ]
         }
     }

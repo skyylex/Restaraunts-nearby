@@ -26,8 +26,7 @@ class ClusterAnnotationView: MKAnnotationView {
     override func prepareForDisplay() {
         super.prepareForDisplay()
         
-        let brightBlue = UIColor(red: 26.0 / 255.0, green: 119.0 / 255.0, blue: 198.0 / 255.0, alpha: 1.0)
-        image = drawImage(count: count(), stripeColor: brightBlue)
+        image = drawImage(count: count(), stripeColor: UIColor.brightBlue)
     }
 
     private func drawImage(count: Int, stripeColor: UIColor) -> UIImage {

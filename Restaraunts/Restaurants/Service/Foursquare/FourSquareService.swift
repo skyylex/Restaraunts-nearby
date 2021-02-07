@@ -23,9 +23,18 @@ enum FourSquareServiceError: Error {
     var message: String {
         switch self {
         case .fetching:
-            return "Downloading error. Check your connection"
+            return "Cannot download venues from Foursquare"
         case .jsonConversion:
             return "Cannot parse data about Restaurants"
+        }
+    }
+    
+    var debugMessage: String {
+        switch self {
+        case .fetching(let additionalMessage):
+            return "Cannot download venues from Foursquare: \(additionalMessage)"
+        case .jsonConversion(let additionalMessage):
+            return "Cannot parse data about Restaurants \(additionalMessage)"
         }
     }
     
@@ -35,6 +44,19 @@ enum FourSquareServiceError: Error {
             return 301
         case .jsonConversion(_):
             return 302
+        }
+    }
+}
+
+extension FoursquareClientError {
+    var description: String {
+        switch self {
+        case .apiError(let error):
+            return "[FoursquareClientError]: \(error.errorType) \(error.errorType)"
+        case .connectionError(let error):
+            return "[FoursquareClientError]: \(error.localizedDescription)"
+        case .responseParseError(let error):
+            return "[FoursquareClientError]: \(error.localizedDescription)"
         }
     }
 }
@@ -56,7 +78,7 @@ final class FourSquareService: FourSquareServicing {
             self.apiClient.request(path: request.path, method: .get, parameter: request.parameters) { (result) in
                 switch result {
                 case .failure(let error):
-                    promise(.failure(FourSquareServiceError.fetching(additionalInfo: error.localizedDescription)))
+                    promise(.failure(FourSquareServiceError.fetching(additionalInfo: error.description)))
                 case .success(let data):
                     promise(self.venues(from: data))
                 }
