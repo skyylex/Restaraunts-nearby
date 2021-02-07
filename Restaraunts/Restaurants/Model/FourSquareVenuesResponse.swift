@@ -39,8 +39,8 @@ extension FourSquareVenuesInternalResponse: Decodable {
 struct FourSquareLocation {
     let lat: Double
     let lng: Double
-//    let address: String?
-//    let formattedAddress: [String]?
+    let address: String?
+    let formattedAddress: [String]?
 }
 
 extension FourSquareLocation: Decodable {
@@ -48,8 +48,8 @@ extension FourSquareLocation: Decodable {
         return curry(FourSquareLocation.init)
             <^> json <| "lat"
             <*> json <| "lng"
-//            <*> json <| "address"
-//            <*> json <|| "formattedAddress"
+            <*> json <| "address"
+            <*> json <|| "formattedAddress"
     }
 }
 

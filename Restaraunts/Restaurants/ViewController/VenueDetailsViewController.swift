@@ -35,6 +35,7 @@ final class VenueDetailsViewController: BottomPopupViewController {
         setupView()
         attachImage()
         attachTitleLabel()
+        attachAddressLabel()
         attachActivityIndicator()
         attachImageNotLoadedLabel()
         setupViewModelOutput()
@@ -94,6 +95,25 @@ final class VenueDetailsViewController: BottomPopupViewController {
     }
     
     private let titleLabel = UILabel()
+    private let addressLabel = UILabel()
+    
+    private func attachAddressLabel() {
+        addressLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(addressLabel)
+        
+        let constraints = [
+            addressLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+            addressLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+            addressLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
+        ]
+        
+        NSLayoutConstraint.activate(constraints)
+        
+        addressLabel.textColor = .black
+        addressLabel.numberOfLines = 0
+        addressLabel.lineBreakMode = .byWordWrapping
+        addressLabel.font = UIFont.systemFont(ofSize: 14)
+    }
     
     private func attachTitleLabel() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -150,6 +170,7 @@ final class VenueDetailsViewController: BottomPopupViewController {
         
         viewModelOutput.showTextDetails = { [weak self] textDetails in
             self?.titleLabel.text = textDetails.title
+            self?.addressLabel.text = textDetails.address
         }
     }
 }

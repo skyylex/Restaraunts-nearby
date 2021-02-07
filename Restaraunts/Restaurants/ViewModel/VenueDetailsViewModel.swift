@@ -24,7 +24,16 @@ final class VenueDetailsViewModel: ViewModel, VenueDetailsViewModelOutput, Venue
         setDetailsToken = viewDidLoadPublisher.sink { [weak self] result in
             guard let self = self else { return }
             
-            self.showTextDetails(VenueTextDetails(title: self.venue.name, address: ""))
+            let address = self.venue.location.formattedAddress?.reduce("", { (result, current) -> String in
+                return "\(result)\(current)\n"
+            })
+            
+            let textDetails = VenueTextDetails(
+                title: self.venue.name,
+                address: address ?? ""
+            )
+            
+            self.showTextDetails(textDetails)
             self.setDetailsToken = nil
         }
         
