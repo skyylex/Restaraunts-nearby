@@ -18,8 +18,9 @@ struct FourSquareConfig {
 }
 
 protocol FourSquareServicing {
-    func search(with coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], FourSquareServiceError>
+    func search(with requestBuilder: FourSquareRequestBuilder) -> Future<[FourSquareVenue], FourSquareServiceError>
 }
+
 enum FourSquareServiceError: Error {
     case jsonConversion(additionalInfo: String)
     case fetching(additionalInfo: String)
@@ -43,22 +44,80 @@ enum FourSquareServiceError: Error {
     }
 }
 
-/// Documentation for FourSquare search -  https://developer.foursquare.com/docs/api-reference/venues/search/
-class FourSquareService: FourSquareServicing {
+final class FourSquareRequestBuilder {
+    struct Request {
+        enum RequestType {
+            case venuesSearch
+        }
+        
+        let path: String
+        let parameters: [String: String]
+    }
+    
+    enum Path: String {
+        case venuesSearch = "venues/search"
+    }
+    
+    struct ParametersKeys {
+        static let locationStringKey = "ll"
+        static let queryKey = "query"
+    }
+    
+    struct PrefefinedQuery {
+        static let restaurantQuery = "restaurant"
+    }
+    
+    let type: Request.RequestType
+    let coordinate: CLLocationCoordinate2D
+    
+    init(type: Request.RequestType, coordinate: CLLocationCoordinate2D) {
+        self.type = type
+        self.coordinate = coordinate
+    }
+    
+    func build() -> Request {
+        Request(
+            path: path(from: type).rawValue,
+            parameters: parameters(from: type)
+        )
+    }
+    
+    // MARK: Private
+    private func path(from type: Request.RequestType) -> Path {
+        switch type {
+        case .venuesSearch:
+            return .venuesSearch
+        }
+    }
+    
+    private func parameters(from type: Request.RequestType) -> [String: String] {
+        switch type {
+        case .venuesSearch:
+            return [
+                ParametersKeys.locationStringKey: locationString(from: coordinate),
+                ParametersKeys.queryKey: PrefefinedQuery.restaurantQuery,
+            ]
+        }
+    }
+    
+    private func locationString(from coordinate: CLLocationCoordinate2D) -> String {
+        return "\(coordinate.latitude),\(coordinate.longitude)"
+    }
+}
+
+/// Service to perform search requests to FourSquare
+/// - Note: Documentation for FourSquare search -  `https://developer.foursquare.com/docs/api-reference/venues/search/`
+final class FourSquareService: FourSquareServicing {
     private let apiClient: FoursquareAPIClient
+    
     init(config: FourSquareConfig = FourSquareConfig()) {
         apiClient = FoursquareAPIClient(clientId: config.clientId, clientSecret: config.clientSecret)
     }
     
-    func search(with coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], FourSquareServiceError> {
-        let locationString = "\(coordinate.latitude),\(coordinate.longitude)"
-        let parameters = [
-            "ll": locationString,
-            "query": "restaurant"
-        ];
-        
+    func search(with requestBuilder: FourSquareRequestBuilder) -> Future<[FourSquareVenue], FourSquareServiceError> {
+        let request = requestBuilder.build()
         return Future { promise in
-            self.apiClient.request(path: "venues/search", parameter: parameters) { (result) in
+            self.apiClient.request(path: request.path, parameter: request.parameters) { (result) in
                 switch result {
                 case .failure(let error):
                     promise(.failure(FourSquareServiceError.fetching(additionalInfo: error.localizedDescription)))

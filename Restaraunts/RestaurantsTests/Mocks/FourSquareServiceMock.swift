@@ -12,7 +12,7 @@ import Combine
 @testable import Restaurants
 
 final class FourSquareServiceMock: FourSquareServicing {
-    func search(with coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], FourSquareServiceError> {
+    func search(with requestBuilder: FourSquareRequestBuilder) -> Future<[FourSquareVenue], FourSquareServiceError> {
         return Future { promise in
             promise(.success([]))
         }
