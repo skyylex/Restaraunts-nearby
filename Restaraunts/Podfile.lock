@@ -12,7 +12,7 @@ PODS:
 DEPENDENCIES:
   - Argo (~> 5.0)
   - CombineCocoa (~> 0.2)
-  - Curry
+  - Curry (~> 5.0)
   - FoursquareAPIClient (~> 5.0)
   - GSMessages (~> 1.7)
   - LocationProvider (from `https://github.com/skyylex/LocationProvider.git`, commit `5f9ba301b2f77c2cf5a0ed2b1ff1ea6e2912c6e3`)
@@ -48,6 +48,6 @@ SPEC CHECKSUMS:
   Runes: c9634b39d102aa684a12deaa3611f2643a0bb0a1
   SwiftLocation: bb31568141be88499a6d15b9dcd5d6bfea113a3b
 
-PODFILE CHECKSUM: f20e0a2399ac554226de715dfbd9d86811912fa8
+PODFILE CHECKSUM: 2e5cda82be35703a910e83e62d78fd76fbe9b021
 
 COCOAPODS: 1.9.3

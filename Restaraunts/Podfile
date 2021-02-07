@@ -1,6 +1,6 @@
 platform :ios, '13.0'
 use_frameworks!
-
+  
 target 'Restaurants' do
   pod 'Argo', '~> 5.0'
   pod 'Curry', '~> 5.0'
@@ -9,4 +9,8 @@ target 'Restaurants' do
   pod 'CombineCocoa', '~> 0.2'
   pod 'GSMessages', '~> 1.7'
   pod 'LocationProvider', :git => 'https://github.com/skyylex/LocationProvider.git', :commit => '5f9ba301b2f77c2cf5a0ed2b1ff1ea6e2912c6e3'
+end
+
+target 'RestaurantsTests' do
+  pod 'FoursquareAPIClient', '~> 5.0'
 end

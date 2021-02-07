@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0808A65748FD0A47FD2E14C7 /* Pods_RestaurantsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB66310C1C4496B2F91AA495 /* Pods_RestaurantsTests.framework */; };
 		5E7D458C7E3C474D0467FB9A /* Pods_Restaurants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDEA48A01C61988BD6C6760 /* Pods_Restaurants.framework */; };
 		9439619F25CCB5C8000623A3 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9439619E25CCB5C8000623A3 /* MapViewModel.swift */; };
 		9446457A25CBE20500E247F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9446457925CBE20500E247F6 /* AppDelegate.swift */; };
@@ -17,6 +18,10 @@
 		946A3B5F25CEDD5C00B21095 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A3B5E25CEDD5C00B21095 /* ViewModel.swift */; };
 		946A3B6325CEDDD500B21095 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A3B6225CEDDD500B21095 /* ViewModelTests.swift */; };
 		9473273A25CFEE5400C0FEF0 /* FourSquareServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473273925CFEE5400C0FEF0 /* FourSquareServiceMock.swift */; };
+		9473275025CFF5AA00C0FEF0 /* FourSquareRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473274F25CFF5AA00C0FEF0 /* FourSquareRequestBuilder.swift */; };
+		9473275425CFF63B00C0FEF0 /* FourSquareServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473275325CFF63B00C0FEF0 /* FourSquareServiceTests.swift */; };
+		9473276425CFF82E00C0FEF0 /* FoursquareAPIClient+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473276325CFF82E00C0FEF0 /* FoursquareAPIClient+Protocols.swift */; };
+		9473276825CFF96900C0FEF0 /* FourSquareConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473276725CFF96900C0FEF0 /* FourSquareConfig.swift */; };
 		947B659825CEE0BB0082180C /* FourSquareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B659725CEE0BB0082180C /* FourSquareService.swift */; };
 		947B65AF25CF028C0082180C /* FourSquareVenue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65AE25CF028C0082180C /* FourSquareVenue.swift */; };
 		947B65C125CF13580082180C /* FourSquareVenue+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */; };
@@ -53,6 +58,10 @@
 		946A3B5E25CEDD5C00B21095 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		946A3B6225CEDDD500B21095 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		9473273925CFEE5400C0FEF0 /* FourSquareServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareServiceMock.swift; sourceTree = "<group>"; };
+		9473274F25CFF5AA00C0FEF0 /* FourSquareRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareRequestBuilder.swift; sourceTree = "<group>"; };
+		9473275325CFF63B00C0FEF0 /* FourSquareServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareServiceTests.swift; sourceTree = "<group>"; };
+		9473276325CFF82E00C0FEF0 /* FoursquareAPIClient+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoursquareAPIClient+Protocols.swift"; sourceTree = "<group>"; };
+		9473276725CFF96900C0FEF0 /* FourSquareConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareConfig.swift; sourceTree = "<group>"; };
 		947B659725CEE0BB0082180C /* FourSquareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareService.swift; sourceTree = "<group>"; };
 		947B65AE25CF028C0082180C /* FourSquareVenue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareVenue.swift; sourceTree = "<group>"; };
 		947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FourSquareVenue+MKAnnotation.swift"; sourceTree = "<group>"; };
@@ -65,7 +74,10 @@
 		9491665725CDFCF3001ED057 /* RootCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorTests.swift; sourceTree = "<group>"; };
 		9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
 		9491666425CE026E001ED057 /* SimpleLocationProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLocationProviderMock.swift; sourceTree = "<group>"; };
+		AB66310C1C4496B2F91AA495 /* Pods_RestaurantsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C313FB0C2608CEF53359BE /* Pods-Restaurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurants.release.xcconfig"; path = "Target Support Files/Pods-Restaurants/Pods-Restaurants.release.xcconfig"; sourceTree = "<group>"; };
+		EB94F7FCC545E6C5582DA597 /* Pods-RestaurantsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantsTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantsTests/Pods-RestaurantsTests.release.xcconfig"; sourceTree = "<group>"; };
+		EEA669745CD4A3B704813E09 /* Pods-RestaurantsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantsTests.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantsTests/Pods-RestaurantsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0808A65748FD0A47FD2E14C7 /* Pods_RestaurantsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				4EDEA48A01C61988BD6C6760 /* Pods_Restaurants.framework */,
+				AB66310C1C4496B2F91AA495 /* Pods_RestaurantsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,6 +114,8 @@
 			children = (
 				173A05F6AE04AA1737B68C5F /* Pods-Restaurants.debug.xcconfig */,
 				B6C313FB0C2608CEF53359BE /* Pods-Restaurants.release.xcconfig */,
+				EEA669745CD4A3B704813E09 /* Pods-RestaurantsTests.debug.xcconfig */,
+				EB94F7FCC545E6C5582DA597 /* Pods-RestaurantsTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -161,10 +177,20 @@
 			path = Restaurants;
 			sourceTree = "<group>";
 		};
-		947B659625CEE0A80082180C /* Service */ = {
+		9473274E25CFF58F00C0FEF0 /* Foursquare */ = {
 			isa = PBXGroup;
 			children = (
 				947B659725CEE0BB0082180C /* FourSquareService.swift */,
+				9473274F25CFF5AA00C0FEF0 /* FourSquareRequestBuilder.swift */,
+				9473276725CFF96900C0FEF0 /* FourSquareConfig.swift */,
+			);
+			path = Foursquare;
+			sourceTree = "<group>";
+		};
+		947B659625CEE0A80082180C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9473274E25CFF58F00C0FEF0 /* Foursquare */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -181,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */,
+				9473276325CFF82E00C0FEF0 /* FoursquareAPIClient+Protocols.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +243,7 @@
 				9491664C25CDFCCC001ED057 /* Info.plist */,
 				9491665725CDFCF3001ED057 /* RootCoordinatorTests.swift */,
 				9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */,
+				9473275325CFF63B00C0FEF0 /* FourSquareServiceTests.swift */,
 				946A3B6225CEDDD500B21095 /* ViewModelTests.swift */,
 				9491666325CE0253001ED057 /* Mocks */,
 			);
@@ -257,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9491664F25CDFCCC001ED057 /* Build configuration list for PBXNativeTarget "RestaurantsTests" */;
 			buildPhases = (
+				BC90A5BD7E2D3A8D07B67587 /* [CP] Check Pods Manifest.lock */,
 				9491664425CDFCCC001ED057 /* Sources */,
 				9491664525CDFCCC001ED057 /* Frameworks */,
 				9491664625CDFCCC001ED057 /* Resources */,
+				A51857E65396C2B281D927E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,6 +382,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A51857E65396C2B281D927E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestaurantsTests/Pods-RestaurantsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestaurantsTests/Pods-RestaurantsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestaurantsTests/Pods-RestaurantsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A9A41BD5235F4CA4B983F85B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +416,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Restaurants/Pods-Restaurants-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BC90A5BD7E2D3A8D07B67587 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RestaurantsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -384,10 +453,13 @@
 				9446457A25CBE20500E247F6 /* AppDelegate.swift in Sources */,
 				947B65AF25CF028C0082180C /* FourSquareVenue.swift in Sources */,
 				9491663C25CDF83C001ED057 /* RootCoordinator.swift in Sources */,
+				9473276425CFF82E00C0FEF0 /* FoursquareAPIClient+Protocols.swift in Sources */,
+				9473275025CFF5AA00C0FEF0 /* FourSquareRequestBuilder.swift in Sources */,
 				947B65CE25CF3CFC0082180C /* RestaurantAnnotationView.swift in Sources */,
 				9446457C25CBE20500E247F6 /* SceneDelegate.swift in Sources */,
 				9439619F25CCB5C8000623A3 /* MapViewModel.swift in Sources */,
 				946A3B5F25CEDD5C00B21095 /* ViewModel.swift in Sources */,
+				9473276825CFF96900C0FEF0 /* FourSquareConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +471,7 @@
 				9473273A25CFEE5400C0FEF0 /* FourSquareServiceMock.swift in Sources */,
 				9491666525CE026E001ED057 /* SimpleLocationProviderMock.swift in Sources */,
 				946A3B6325CEDDD500B21095 /* ViewModelTests.swift in Sources */,
+				9473275425CFF63B00C0FEF0 /* FourSquareServiceTests.swift in Sources */,
 				9491666025CDFDE9001ED057 /* MapViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +652,7 @@
 		};
 		9491665025CDFCCC001ED057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEA669745CD4A3B704813E09 /* Pods-RestaurantsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -603,6 +677,7 @@
 		};
 		9491665125CDFCCC001ED057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB94F7FCC545E6C5582DA597 /* Pods-RestaurantsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
