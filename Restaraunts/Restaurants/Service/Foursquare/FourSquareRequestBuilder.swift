@@ -45,7 +45,7 @@ final class FourSquareRequestBuilder {
             return [
                 ParametersKeys.locationStringKey: locationString(from: coordinate),
                 ParametersKeys.queryKey: PrefefinedQuery.restaurantQuery,
-                ParametersKeys.limitKey: "5", // FIXME:
+                ParametersKeys.limitKey: "30",
             ]
         case .venuePhoto(let identifier):
             return [
