@@ -68,6 +68,7 @@ protocol MapViewModelOutput {
     var centerMe: (CLLocationCoordinate2D) -> Void { get set }
     var updateUserLocationVisibility: (Bool) -> Void { get set }
     var showPinsOnMap: ([MKAnnotation]) -> Void { get set }
+    var updateZoomLevel: (Int, CLLocationCoordinate2D) -> Void { get set }
 }
 
 final class MapViewController: UIViewController, MKMapViewDelegate {
@@ -148,6 +149,10 @@ final class MapViewController: UIViewController, MKMapViewDelegate {
             
             self.mapView.removeAnnotations(self.mapView.annotations)
             self.mapView.addAnnotations(annotations)
+        }
+        
+        viewModelOutput.updateZoomLevel = { [weak self] zoomLevel, center in
+            self?.mapView.setCenterCoordinate(fromCoordinate: center, atZoomLevel: zoomLevel, animated: true)
         }
     }
     

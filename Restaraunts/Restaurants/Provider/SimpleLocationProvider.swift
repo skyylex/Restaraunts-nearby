@@ -32,7 +32,11 @@ protocol SimpleLocationProviding {
     /// Authorization status to use Location Services
     var authorizationStatus: CLAuthorizationStatus { get }
     
+    /// Streams changes of Location services authorization status
     var authorizationStatusPublisher: AnyPublisher<CLAuthorizationStatus, Never> { get }
+    
+    /// Streams changes of current user location
+    var currentLocationPublisher: AnyPublisher<CLLocationCoordinate2D, Never> { get }
 }
 
 /// Implementation of SimpleLocationProviding based on SwiftLocation
@@ -45,6 +49,10 @@ final class SimpleLocationProvider: SimpleLocationProviding {
     
     var authorizationStatusPublisher: AnyPublisher<CLAuthorizationStatus, Never> {
         provider.$authorizationStatus.compactMap { $0}.eraseToAnyPublisher()
+    }
+    
+    var currentLocationPublisher: AnyPublisher<CLLocationCoordinate2D, Never> {
+        provider.$location.compactMap { $0?.coordinate }.eraseToAnyPublisher()
     }
     
     private var lastLocationRequest: GPSLocationRequest?

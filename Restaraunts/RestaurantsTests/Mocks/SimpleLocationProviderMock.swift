@@ -13,6 +13,11 @@ import Combine
 
 class SimpleLocationProviderMock: SimpleLocationProviding {
     @Published var internalAuthorizationStatus: CLAuthorizationStatus? = nil
+    @Published var internalCurrentLocation : CLLocationCoordinate2D? = nil
+    
+    var currentLocationPublisher: AnyPublisher<CLLocationCoordinate2D, Never> {
+        $internalCurrentLocation.compactMap { $0 }.eraseToAnyPublisher()
+    }
     
     var authorizationStatus: CLAuthorizationStatus {
         internalAuthorizationStatus ?? .notDetermined

@@ -12,6 +12,10 @@ import CoreLocation
 import Combine
 import MapKit
 
+enum ZoomLevel: Int {
+    case cityLevel = 11
+}
+
 final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     struct Dependencies {
         let locationProvider: SimpleLocationProviding
@@ -36,8 +40,10 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     // MARK: Subscriptions tokens
     private var startMonitoringEventsToken: AnyCancellable?
     private var stopMonitoringEventsToken: AnyCancellable?
-    private var centeringOnFirstAppearingToke: AnyCancellable?
+    private var centeringOnFirstAppearingToken: AnyCancellable?
     private var updatingUserLocationVisibilityToken: AnyCancellable?
+    private var restaurantsLoadingOnUserLocationUpdate: AnyCancellable?
+    private var zoomingToUserLocationOnAppearingToken: AnyCancellable?
     
     init(dependencies: Dependencies) {
         locationProvider = dependencies.locationProvider
@@ -54,19 +60,19 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
             self.updateUserLocationVisibility(shouldBeVisible)
         }
         
-        centeringOnFirstAppearingToke = viewDidAppearPublisher.first().sink { [weak self] _ in
+        centeringOnFirstAppearingToken = viewDidAppearPublisher.first().sink { [weak self] _ in
             guard let self = self else { return }
             
             self.locationProvider.fetchCurrentLocation { [weak self] (result) in
                 switch result {
                 case .success(let coordinate):
-                    self?.centerMe(coordinate)
+                    self?.updateZoomLevel(ZoomLevel.cityLevel.rawValue, coordinate)
                 case .failure(let error):
                     self?.handleError(.generic(title: nil, message: error.localizedDescription, shouldBlockUI: false))
                 }
             }
             
-            self.centeringOnFirstAppearingToke = nil
+            self.centeringOnFirstAppearingToken = nil
         }
         
         startMonitoringEventsToken = viewDidAppearPublisher.merge(with: appDidBecomeActive).zip(locationProvider.authorizationStatusPublisher).sink { [weak self] (_, status) in
@@ -80,6 +86,11 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         stopMonitoringEventsToken = viewDidDisappearPublisher.merge(with: appWillResignActive).sink { [weak self] _ in
             self?.locationProvider.stopLocationUpdates()
         }
+        
+        restaurantsLoadingOnUserLocationUpdate = locationProvider.currentLocationPublisher.first().zip(viewDidAppearPublisher).sink { [weak self] (coordinate, _) in
+            self?.searchRestaurants(near: coordinate)
+        }
+        
     }
     
     // ViewModelInput:
@@ -94,7 +105,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         }
         
         if let coordinate = locationProvider.lastKnownGPSCoordinate {
-            centerMe(coordinate)
+            updateZoomLevel(ZoomLevel.cityLevel.rawValue, coordinate)
             searchRestaurants(near: coordinate)
         } else {
             locationProvider.fetchCurrentLocation { [weak self] (result) in
@@ -123,6 +134,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     var centerMe: (CLLocationCoordinate2D) -> Void = { _ in preconditionFailure("centerMe: should be overriden by MapView") }
     var updateUserLocationVisibility: (Bool) -> Void = { _ in preconditionFailure("showUserLocation: should be overriden by MapView") }
     var showPinsOnMap: ([MKAnnotation]) -> Void = {  _ in preconditionFailure("showPinsOnMap: should be overriden by MapView")  }
+    var updateZoomLevel: (Int, CLLocationCoordinate2D) -> Void = { _, _ in preconditionFailure("updateZoomLevel: should be overriden by MapView") }
     
     // MARK: Private
     
