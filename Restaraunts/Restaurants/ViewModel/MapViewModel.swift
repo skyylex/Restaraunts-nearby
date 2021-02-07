@@ -129,16 +129,16 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     private func searchRestaurants(near coordinate: CLLocationCoordinate2D) {
         let requestBuilder = FourSquareRequestBuilder(type: .venuesSearch, coordinate: coordinate)
         
-        searchingToken = searchService.search(with: requestBuilder).eraseToAnyPublisher().sink(receiveCompletion: { (completion) in
+        searchingToken = searchService.search(with: requestBuilder).eraseToAnyPublisher().sink(receiveCompletion: { [weak self] (completion) in
             switch completion {
             case .failure(let error):
-                break
+                self?.handleError(.generic(title: nil, message: error.message, shouldBlockUI: false))
             case .finished:
                 break
             }
-        }, receiveValue: { (venues) in
+        }, receiveValue: { [weak self] (venues) in
             let annotations = venues.map { $0.annotation() }
-            self.showPinsOnMap(annotations)
+            self?.showPinsOnMap(annotations)
         })
     }
 }
