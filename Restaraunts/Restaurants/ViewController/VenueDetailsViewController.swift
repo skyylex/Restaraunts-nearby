@@ -9,6 +9,11 @@
 import Foundation
 import BottomPopup
 
+struct VenueTextDetails {
+    let title: String
+    let address: String
+}
+
 protocol VenueDetailsViewModelInput: ViewModelInput {
     
 }
@@ -17,6 +22,7 @@ protocol VenueDetailsViewModelOutput {
     var showVenueImage: (UIImage?) -> Void { get set }
     var startSpinner: () -> Void { get set }
     var stopSpinner: () -> Void { get set }
+    var showTextDetails: (VenueTextDetails) -> Void { get set }
 }
 
 final class VenueDetailsViewController: BottomPopupViewController {
@@ -28,6 +34,7 @@ final class VenueDetailsViewController: BottomPopupViewController {
         
         setupView()
         attachImage()
+        attachTitleLabel()
         attachActivityIndicator()
         attachImageNotLoadedLabel()
         setupViewModelOutput()
@@ -86,6 +93,24 @@ final class VenueDetailsViewController: BottomPopupViewController {
         imageNotLoadedLabel.isHidden = true
     }
     
+    private let titleLabel = UILabel()
+    
+    private func attachTitleLabel() {
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(titleLabel)
+        
+        let constraints = [
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+            titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
+        ]
+        
+        NSLayoutConstraint.activate(constraints)
+        
+        titleLabel.textColor = .black
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
+    }
+    
     private func attachImage() {
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .black
@@ -121,6 +146,10 @@ final class VenueDetailsViewController: BottomPopupViewController {
         
         viewModelOutput.stopSpinner = { [weak self] in
             self?.activityIndicator.stopAnimating()
+        }
+        
+        viewModelOutput.showTextDetails = { [weak self] textDetails in
+            self?.titleLabel.text = textDetails.title
         }
     }
 }

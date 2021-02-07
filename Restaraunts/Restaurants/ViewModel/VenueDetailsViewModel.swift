@@ -13,16 +13,24 @@ import Combine
 final class VenueDetailsViewModel: ViewModel, VenueDetailsViewModelOutput, VenueDetailsViewModelInput {
     private let venue: FourSquareVenue
     private var photosFetchToken: AnyCancellable?
-    private var startLoadingSpinnerToken: AnyCancellable?
+    private var setDetailsToken: AnyCancellable?
+    private var startSpinnerToken: AnyCancellable?
     
     init(venue: FourSquareVenue, fourSquareService: FourSquareServicing) {
         self.venue = venue
         
         super.init()
         
-        startLoadingSpinnerToken = viewDidLoadPublisher.sink { [weak self] result in
+        setDetailsToken = viewDidLoadPublisher.sink { [weak self] result in
+            guard let self = self else { return }
+            
+            self.showTextDetails(VenueTextDetails(title: self.venue.name, address: ""))
+            self.setDetailsToken = nil
+        }
+        
+        startSpinnerToken = viewDidLoadPublisher.sink { [weak self] result in
             self?.startSpinner()
-            self?.startLoadingSpinnerToken = nil
+            self?.startSpinnerToken = nil
         }
         
         let photoResultsPublisher = fourSquareService.fetchPhoto(with: venue.id).eraseToAnyPublisher()
@@ -49,5 +57,6 @@ final class VenueDetailsViewModel: ViewModel, VenueDetailsViewModelOutput, Venue
     var showVenueImage: (UIImage?) -> Void = { _ in fatalError("showVenueImage should be overriden by view") }
     var startSpinner: () -> Void = { fatalError("startSpinner should be overriden by view") }
     var stopSpinner: () -> Void = { fatalError("stopSpinner should be overriden by view") }
+    var showTextDetails: (VenueTextDetails) -> Void = { _ in fatalError("showTextDetails should be overriden by view") }
     
 }
