@@ -31,6 +31,17 @@ class RestaurantAnnotationView: MKAnnotationView {
         super.prepareForDisplay()
         
         image = draw(mode: (self.isSelected) ? .increased : .regular)
+        
+        let label = createLabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(label)
+        
+        let constraints = [
+            bottomAnchor.constraint(equalTo: label.topAnchor),
+            centerXAnchor.constraint(equalTo: label.centerXAnchor),
+        ]
+        
+        NSLayoutConstraint.activate(constraints)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,6 +52,14 @@ class RestaurantAnnotationView: MKAnnotationView {
         }
         
         image = draw(mode: selected ? .increased : .regular)
+    }
+    
+    private func createLabel() -> UILabel {
+        let label = UILabel()
+        label.text = annotation?.title ?? ""
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = .brightBlue
+        return label
     }
 
     private func drawImage(_ iconImage: UIImage, stripeColor: UIColor, mode: Mode) -> UIImage {
