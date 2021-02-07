@@ -48,8 +48,8 @@ extension FourSquareLocation: Decodable {
         return curry(FourSquareLocation.init)
             <^> json <| "lat"
             <*> json <| "lng"
-            <*> json <| "address"
-            <*> json <|| "formattedAddress"
+            <*> json <|? "address"
+            <*> json <||? "formattedAddress"
     }
 }
 
