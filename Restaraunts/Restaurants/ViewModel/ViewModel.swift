@@ -22,10 +22,17 @@ open class ViewModel {
     let viewLifecyleEventsPublisher = CurrentValueSubject<ViewLifecycleEvent?, Never>(nil)
     
     // MARK: Shortcuts
+    
+    var viewDidLoadPublisher: AnyPublisher<NoValue, Never> {
+        // TODO: replace NoValue mapping with custom extension
+        viewLifecyleEventsPublisher.compactMap { $0}.filter { $0 == .viewDidLoad }.map { _ in return NoValue.noValue }.eraseToAnyPublisher()
+    }
+    
     var viewDidAppearPublisher: AnyPublisher<NoValue, Never> {
         // TODO: replace NoValue mapping with custom extension
         viewLifecyleEventsPublisher.compactMap { $0}.filter { $0 == .viewDidAppear }.map { _ in return NoValue.noValue }.eraseToAnyPublisher()
     }
+    
     var viewDidDisappearPublisher: AnyPublisher<NoValue, Never> {
         // TODO: replace NoValue mapping with custom extension
         viewLifecyleEventsPublisher.compactMap { $0}.filter { $0 == .viewDidDisappear }.map { _ in return NoValue.noValue }.eraseToAnyPublisher()

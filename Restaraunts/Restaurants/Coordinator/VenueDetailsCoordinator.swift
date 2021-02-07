@@ -8,11 +8,17 @@
 
 import Foundation
 import UIKit
+import FoursquareAPIClient
 
 final class VenueDetailsCoordinator: Coordinator {
     func start(with venue: FourSquareVenue, currentVC: UIViewController) {
         let venueDetailsVC = VenueDetailsViewController()
-        let venueViewModel = VenueDetailsViewModel(venue: venue)
+        let config = FourSquareConfig()
+        let apiClient = FoursquareAPIClient(clientId: config.clientId, clientSecret: config.clientSecret)
+        let venueViewModel = VenueDetailsViewModel(
+            venue: venue,
+            fourSquareService: FourSquareService(apiClient: apiClient)
+        )
         
         venueDetailsVC.viewModelInput = venueViewModel
         venueDetailsVC.viewModelOutput = venueViewModel

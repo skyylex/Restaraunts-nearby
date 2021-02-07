@@ -16,6 +16,14 @@ struct FourSquareVenuePhotoItem {
     let id: String
     let prefix: String
     let suffix: String
+    let height: Int
+    let width: Int
+}
+
+extension FourSquareVenuePhotoItem {
+    func url() -> URL? {
+        return URL(string: "\(prefix)\(width)x\(height)\(suffix)")
+    }
 }
 
 extension FourSquareVenuePhotoItem: Decodable {
@@ -24,6 +32,8 @@ extension FourSquareVenuePhotoItem: Decodable {
             <^> json <| "id"
             <*> json <| "prefix"
             <*> json <| "suffix"
+            <*> json <| "width"
+            <*> json <| "height"
     }
 }
 

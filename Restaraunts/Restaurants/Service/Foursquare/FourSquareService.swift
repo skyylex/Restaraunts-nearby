@@ -14,7 +14,7 @@ import Combine
 
 protocol FourSquareServicing {
     func searchVenues(near coordinate: CLLocationCoordinate2D) -> Future<[FourSquareVenue], FourSquareServiceError>
-    func fetchPhotos(with identifier: String) -> Future<FourSquareVenuePhotoItem?, FourSquareServiceError>
+    func fetchPhoto(with identifier: String) -> Future<FourSquareVenuePhotoItem?, Never>
 }
 
 enum FourSquareServiceError: Error {
@@ -77,13 +77,13 @@ final class FourSquareService: FourSquareServicing {
         return requestVenues(with: builder)
     }
     
-    func fetchPhotos(with identifier: String) -> Future<FourSquareVenuePhotoItem?, FourSquareServiceError> {
+    func fetchPhoto(with identifier: String) -> Future<FourSquareVenuePhotoItem?, Never> {
         let builder = FourSquareRequestBuilder(type: .venuePhoto(identifier: identifier))
         
         return requestVenuePhoto(with: builder)
     }
     
-    private func requestVenuePhoto(with requestBuilder: FourSquareRequestBuilder) -> Future<FourSquareVenuePhotoItem?, FourSquareServiceError> {
+    private func requestVenuePhoto(with requestBuilder: FourSquareRequestBuilder) -> Future<FourSquareVenuePhotoItem?, Never> {
         // TODO: reduce duplicate calls
         
         let request = requestBuilder.build()
@@ -93,7 +93,8 @@ final class FourSquareService: FourSquareServicing {
             self.apiClient.request(path: request.path, method: .get, parameter: request.parameters) { (result) in
                 switch result {
                 case .failure(let error):
-                    promise(.failure(FourSquareServiceError.fetching(additionalInfo: error.description)))
+                    print("[ERROR] requestVenuePhoto: \(error)")
+                    promise(.success(nil))
                 case .success(let data):
                     promise(self.venuePhoto(from: data))
                 }
@@ -120,7 +121,7 @@ final class FourSquareService: FourSquareServicing {
         }
     }
     
-    private func venuePhoto(from data: Data) -> Result<FourSquareVenuePhotoItem?, FourSquareServiceError> {
+    private func venuePhoto(from data: Data) -> Result<FourSquareVenuePhotoItem?, Never> {
         let json = try? JSONSerialization.jsonObject(with: data, options: [])
         if let json = json {
             let decoded: Decoded<FourSquareVenuePhotosResponse> = decode(json)
@@ -128,10 +129,12 @@ final class FourSquareService: FourSquareServicing {
             case .success(let response):
                 return .success(response.response.photos.items.first)
             case .failure(let error):
-                return .failure(.jsonConversion(additionalInfo: error.description))
+                print("[ERROR] venuePhoto: \(error)")
+                return .success(nil)
             }
         } else {
-            return .failure(FourSquareServiceError.jsonConversion(additionalInfo: "Data is not a JSON object"))
+            print("[ERROR] venuePhoto: no json")
+            return .success(nil)
         }
     }
     

@@ -18,8 +18,8 @@ final class FourSquareRequestBuilder {
             
             var path: String {
                 switch self {
-                case .venuePhoto(_):
-                    return "venues"
+                case .venuePhoto(let identifier):
+                    return "venues/\(identifier)/photos"
                 case .venuesSearch(_):
                     return "venues/search"
                 }
