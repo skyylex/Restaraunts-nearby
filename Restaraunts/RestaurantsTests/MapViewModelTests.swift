@@ -20,20 +20,22 @@ final class MapViewModelTests: XCTestCase {
         let provider = SimpleLocationProviderMock()
         provider.lastKnownGPSCoordinate = hanoi
         
-        let dependencies = MapViewModel.Dependencies(locationProvider: provider, searchService: FourSquareServiceMock())
+        let dependencies = MapViewModel.Dependencies(locationProvider: provider,
+                                                     searchService: FourSquareServiceMock(),
+                                                     showVenueDetailsCallback: { _ in})
         let viewModel = MapViewModel(dependencies: dependencies)
         
         let expectCoordinateForCentering = expectation(description: "Expected a centerMe call")
         
-        viewModel.updateUserLocationVisibility = { _ in}
-        viewModel.showPinsOnMap = { _ in }
-        viewModel.handleError = { _ in }
-        viewModel.centerMe = { coordinate in
+        viewModel.updateZoomLevel = { (_, coordinate) in
             XCTAssertEqual(coordinate.latitude, CLLocationCoordinate2D.hanoiCity.latitude, accuracy: accuracy)
             XCTAssertEqual(coordinate.longitude, CLLocationCoordinate2D.hanoiCity.longitude, accuracy: accuracy)
             
             expectCoordinateForCentering.fulfill()
         }
+        viewModel.updateUserLocationVisibility = { _ in}
+        viewModel.showPinsOnMap = { _ in }
+        viewModel.handleError = { _ in }
         
         viewModel.onCenteringRequest()
         
@@ -42,14 +44,16 @@ final class MapViewModelTests: XCTestCase {
     
     func testCenteringRequestErrored() {
         let provider = SimpleLocationProviderMock()
-        let dependencies = MapViewModel.Dependencies(locationProvider: provider, searchService: FourSquareServiceMock())
+        let dependencies = MapViewModel.Dependencies(locationProvider: provider,
+                                                     searchService: FourSquareServiceMock(),
+                                                     showVenueDetailsCallback: { _ in})
         let viewModel = MapViewModel(dependencies: dependencies)
         
         let expectedHandleErrorCall = expectation(description: "Expected handleError call")
         
+        viewModel.updateZoomLevel = { (_, _) in }
         viewModel.updateUserLocationVisibility = { _ in}
         viewModel.showPinsOnMap = { _ in }
-        viewModel.centerMe = { _ in }
         viewModel.handleError = { coordinate in
             expectedHandleErrorCall.fulfill()
         }
@@ -63,12 +67,15 @@ final class MapViewModelTests: XCTestCase {
     
     func testLocationUpdatesDuringLifecycleEvents() {
         let provider = SimpleLocationProviderMock()
-        let dependencies = MapViewModel.Dependencies(locationProvider: provider, searchService: FourSquareServiceMock())
+        let dependencies = MapViewModel.Dependencies(locationProvider: provider,
+                                                     searchService: FourSquareServiceMock(),
+                                                     showVenueDetailsCallback: { _ in})
         let viewModel = MapViewModel(dependencies: dependencies)
         
+        viewModel.updateZoomLevel = { (_, _) in }
         viewModel.updateUserLocationVisibility = { _ in}
         viewModel.showPinsOnMap = { _ in }
-        viewModel.centerMe = { _ in }
+        
         viewModel.handleError = { coordinate in }
         
         provider.internalAuthorizationStatus = .authorizedAlways
@@ -86,16 +93,16 @@ final class MapViewModelTests: XCTestCase {
     
     func testFirstAppearanceCenteringWithError() {
         let provider = SimpleLocationProviderMock()
-        let dependencies = MapViewModel.Dependencies(locationProvider: provider, searchService: FourSquareServiceMock())
+        let dependencies = MapViewModel.Dependencies(locationProvider: provider,
+                                                     searchService: FourSquareServiceMock(),
+                                                     showVenueDetailsCallback: { _ in})
         let viewModel = MapViewModel(dependencies: dependencies)
         
         let expectErrorHandlingCall = expectation(description: "Expect handleError call when provider returns error")
         
+        viewModel.updateZoomLevel = { (_, _) in }
         viewModel.updateUserLocationVisibility = { _ in }
         viewModel.showPinsOnMap = { _ in }
-        viewModel.centerMe = { _ in
-            XCTAssertFalse(true, "Should not be called if no location exists")
-        }
         viewModel.handleError = { _ in
             expectErrorHandlingCall.fulfill()
         }
@@ -113,17 +120,18 @@ final class MapViewModelTests: XCTestCase {
     
     func testFirstAppearanceCenteringWithCoordinate() {
         let provider = SimpleLocationProviderMock()
-        let dependencies = MapViewModel.Dependencies(locationProvider: provider, searchService: FourSquareServiceMock())
+        let dependencies = MapViewModel.Dependencies(locationProvider: provider,
+                                                     searchService: FourSquareServiceMock(),
+                                                     showVenueDetailsCallback: { _ in})
         let viewModel = MapViewModel(dependencies: dependencies)
         
         let expectCenterMeCall = expectation(description: "Expected centerMe call when provider has a coordinate")
         
-        
-        viewModel.updateUserLocationVisibility = { _ in}
-        viewModel.showPinsOnMap = { _ in }
-        viewModel.centerMe = { _ in
+        viewModel.updateZoomLevel = { (_, _) in
             expectCenterMeCall.fulfill()
         }
+        viewModel.updateUserLocationVisibility = { _ in}
+        viewModel.showPinsOnMap = { _ in }
         viewModel.handleError = { _ in
             XCTAssertFalse(true, "Should not be called if no error occured")
         }

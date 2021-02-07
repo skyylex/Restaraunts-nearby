@@ -12,6 +12,10 @@ import UIKit
 final class VenueDetailsCoordinator: Coordinator {
     func start(with venue: FourSquareVenue, currentVC: UIViewController) {
         let venueDetailsVC = VenueDetailsViewController()
+        let venueViewModel = VenueDetailsViewModel(venue: venue)
+        
+        venueDetailsVC.viewModelInput = venueViewModel
+        venueDetailsVC.viewModelOutput = venueViewModel
         
         venueDetailsVC.attach(coordinator: self)
         

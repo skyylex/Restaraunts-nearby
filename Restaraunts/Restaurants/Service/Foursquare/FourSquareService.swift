@@ -71,6 +71,8 @@ final class FourSquareService: FourSquareServicing {
     }
     
     func search(with requestBuilder: FourSquareRequestBuilder) -> Future<[FourSquareVenue], FourSquareServiceError> {
+        precondition(requestBuilder.build().path == FourSquareRequestBuilder.Request.RequestType.venuesSearch(coordinate: CLLocationCoordinate2D()).path)
+        
         // TODO: reduce duplicate calls
         // TODO: apply throttling 0.5 to keep number of calls under quota limit
         

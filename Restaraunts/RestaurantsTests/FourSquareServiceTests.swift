@@ -41,7 +41,7 @@ final class FourSquareServiceTests: XCTestCase {
         
         XCTAssertEqual(apiMock.executedRequests.count, 0)
         
-        _ = service.search(with: FourSquareRequestBuilder(type: .venuesSearch, coordinate: CLLocationCoordinate2D.hanoiCity))
+        _ = service.search(with: FourSquareRequestBuilder(type: .venuesSearch(coordinate: CLLocationCoordinate2D.hanoiCity)))
         
         XCTAssertEqual(apiMock.executedRequests.count, 1)
         XCTAssertNotNil(apiMock.executedRequests.first?.completion)
@@ -56,7 +56,7 @@ final class FourSquareServiceTests: XCTestCase {
         
         let expectVenues = expectation(description: "Expect successfully loaded venues objects")
         
-        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch, coordinate: CLLocationCoordinate2D.newYork))
+        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch(coordinate: CLLocationCoordinate2D.newYork)))
         let cancellable = resultsPromise.sink { (result) in } receiveValue: { (venues) in
             XCTAssertEqual(venues.count, 1)
             XCTAssertEqual(venues.first?.name, "Mr. Purple")
@@ -74,7 +74,7 @@ final class FourSquareServiceTests: XCTestCase {
         
         let expectError = expectation(description: "Expect error from API client")
         
-        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch, coordinate: CLLocationCoordinate2D.newYork))
+        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch(coordinate: CLLocationCoordinate2D.newYork)))
         let cancellable = resultsPromise.sink { (result) in
             guard case .failure(let error) = result else  {
                 XCTAssertFalse(true, "Expected an error completion")
@@ -99,7 +99,7 @@ final class FourSquareServiceTests: XCTestCase {
         
         let expectError = expectation(description: "Expect an error due to no JSON in the response data")
         
-        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch, coordinate: CLLocationCoordinate2D.newYork))
+        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch(coordinate: CLLocationCoordinate2D.newYork)))
         let cancellable = resultsPromise.sink { (result) in
             guard case .failure(let error) = result else  {
                 XCTAssertFalse(true, "Expected an error completion")
@@ -123,7 +123,7 @@ final class FourSquareServiceTests: XCTestCase {
         
         let expectError = expectation(description: "Expect an error due to invalid json")
         
-        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch, coordinate: CLLocationCoordinate2D.newYork))
+        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch(coordinate: CLLocationCoordinate2D.newYork)))
         let cancellable = resultsPromise.sink { (result) in
             guard case .failure(let error) = result else  {
                 XCTAssertFalse(true, "Expected an error completion")

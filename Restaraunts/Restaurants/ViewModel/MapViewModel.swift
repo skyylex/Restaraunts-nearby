@@ -115,7 +115,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
             locationProvider.fetchCurrentLocation { [weak self] (result) in
                 switch result {
                 case .success(let coordinate):
-                    self?.centerMe(coordinate)
+                    self?.updateZoomLevel(ZoomLevel.cityLevel.rawValue, coordinate)
                 case .failure(_):
                     // Authorization errors are checked elsewhere
                     self?.handleError(.generic(title: nil, message: Strings.cannotFetchGPSCoordinate, shouldBlockUI: false))
@@ -143,7 +143,6 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     
     // ViewModelOutput:
     var handleError: (MapViewError) -> Void = {_ in preconditionFailure("handleError: should be overriden by MapView") }
-    var centerMe: (CLLocationCoordinate2D) -> Void = { _ in preconditionFailure("centerMe: should be overriden by MapView") }
     var updateUserLocationVisibility: (Bool) -> Void = { _ in preconditionFailure("showUserLocation: should be overriden by MapView") }
     var showPinsOnMap: ([IdentifiableAnnotation]) -> Void = {  _ in preconditionFailure("showPinsOnMap: should be overriden by MapView")  }
     var updateZoomLevel: (Int, CLLocationCoordinate2D) -> Void = { _, _ in preconditionFailure("updateZoomLevel: should be overriden by MapView") }
@@ -152,7 +151,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     // MARK: Private
     
     private func searchRestaurants(near coordinate: CLLocationCoordinate2D) {
-        let requestBuilder = FourSquareRequestBuilder(type: .venuesSearch, coordinate: coordinate)
+        let requestBuilder = FourSquareRequestBuilder(type: .venuesSearch(coordinate: coordinate))
         
         print("[searchRestaurants] called")
         

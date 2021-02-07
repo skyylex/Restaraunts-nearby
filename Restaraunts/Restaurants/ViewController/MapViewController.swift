@@ -68,7 +68,6 @@ protocol MapViewModelInput: ViewModelInput {
 
 protocol MapViewModelOutput {
     var handleError: (MapViewError) -> Void { get set }
-    var centerMe: (CLLocationCoordinate2D) -> Void { get set }
     var updateUserLocationVisibility: (Bool) -> Void { get set }
     var showPinsOnMap: ([IdentifiableAnnotation]) -> Void { get set }
     var updateZoomLevel: (Int, CLLocationCoordinate2D) -> Void { get set }
@@ -135,10 +134,6 @@ final class MapViewController: UIViewController, MKMapViewDelegate {
             } else {
                 self?.showToastMessage(message: error.message)
             }
-        }
-        
-        viewModelOutput.centerMe = { [weak self] coordinate in
-            self?.mapView.centerCoordinate = coordinate
         }
         
         viewModelOutput.updateUserLocationVisibility = { [weak self] isVisible in
