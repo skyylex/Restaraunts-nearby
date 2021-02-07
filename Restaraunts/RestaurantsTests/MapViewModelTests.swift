@@ -11,10 +11,6 @@ import XCTest
 import CoreLocation
 @testable import Restaurants
 
-extension CLLocationCoordinate2D {
-    static var hanoiCity: CLLocationCoordinate2D { CLLocationCoordinate2D(latitude: 19.820689, longitude: -155.468038) }
-}
-
 final class MapViewModelTests: XCTestCase {
     
     func testCenteringRequestSuccessfull() {

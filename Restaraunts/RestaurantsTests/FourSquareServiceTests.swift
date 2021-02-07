@@ -35,7 +35,7 @@ class FoursquareAPIMock: FoursquareAPI {
 }
 
 final class FourSquareServiceTests: XCTestCase {
-    func testBasicSearch() {
+    func testSearchRequest() {
         let apiMock = FoursquareAPIMock()
         let service = FourSquareService(config: FourSquareConfig(), apiClient: apiMock)
         
@@ -48,5 +48,31 @@ final class FourSquareServiceTests: XCTestCase {
         XCTAssertNotNil(apiMock.executedRequests.first?.method)
         XCTAssertNotNil(apiMock.executedRequests.first?.parameter)
         XCTAssertNotNil(apiMock.executedRequests.first?.path)
+    }
+    
+    func testSuccessullSearch() {
+        let apiMock = FoursquareAPIMock()
+        let service = FourSquareService(config: FourSquareConfig(), apiClient: apiMock)
+        
+        let expectVenues = expectation(description: "Expect successfully loaded venues objects")
+        
+        let resultsPromise = service.search(with: FourSquareRequestBuilder(type: .venuesSearch, coordinate: CLLocationCoordinate2D.newYork))
+        let cancellable = resultsPromise.sink { (result) in } receiveValue: { (venues) in
+            XCTAssertEqual(venues.count, 1)
+            XCTAssertEqual(venues.first?.name, "Mr. Purple")
+            expectVenues.fulfill()
+        }
+        
+        apiMock.executedRequests.first?.completion(.success(jsonDataFromSuccessfullSearch()))
+
+        wait(for: [expectVenues], timeout: 0.1)
+    }
+    
+    private func jsonDataFromSuccessfullSearch() -> Data {
+        guard let path = Bundle(for: FourSquareServiceTests.self).path(forResource: "foursquare-response", ofType: "json") else {
+            fatalError()
+        }
+        
+        return try! NSData(contentsOfFile: path) as Data
     }
 }
