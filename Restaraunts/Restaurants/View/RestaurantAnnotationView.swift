@@ -34,6 +34,12 @@ class RestaurantAnnotationView: MKAnnotationView {
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
+        if animated {
+            UIView.animate(withDuration: 0.3) {
+                self.image = self.draw(mode: selected ? .increased : .regular)
+            }
+        }
+        
         image = draw(mode: selected ? .increased : .regular)
     }
 

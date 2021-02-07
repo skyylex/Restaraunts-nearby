@@ -71,6 +71,9 @@ final class FourSquareService: FourSquareServicing {
     }
     
     func search(with requestBuilder: FourSquareRequestBuilder) -> Future<[FourSquareVenue], FourSquareServiceError> {
+        // TODO: reduce duplicate calls
+        // TODO: apply throttling 0.5 to keep number of calls under quota limit
+        
         let request = requestBuilder.build()
         return Future { [weak self] promise in
             guard let self = self else { return }
