@@ -26,7 +26,6 @@ class RestaurantAnnotationView: MKAnnotationView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /// - Tag: CustomCluster
     override func prepareForDisplay() {
         super.prepareForDisplay()
         

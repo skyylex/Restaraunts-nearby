@@ -10,7 +10,10 @@ import Foundation
 import MapKit
 
 extension FourSquareVenue {
-    private class MKAnnotationData: NSObject, MKAnnotation {
+    private class MKAnnotationData: NSObject, IdentifiableAnnotation {
+        let identifier = UUID().uuidString
+        var userInfo: Any?
+        
         var coordinate: CLLocationCoordinate2D
         var title: String?
         var subtitle: String?
@@ -23,7 +26,7 @@ extension FourSquareVenue {
         }
     }
     
-    func annotation() -> MKAnnotation {
+    func annotation() -> IdentifiableAnnotation {
         MKAnnotationData(coordinate: coordinate(), title: name)
     }
 }

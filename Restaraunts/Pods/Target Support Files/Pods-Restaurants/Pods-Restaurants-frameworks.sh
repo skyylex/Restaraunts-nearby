@@ -198,6 +198,7 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Argo/Argo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BottomPopup/BottomPopup.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CombineCocoa/CombineCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Curry/Curry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FoursquareAPIClient/FoursquareAPIClient.framework"
@@ -208,6 +209,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Argo/Argo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BottomPopup/BottomPopup.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CombineCocoa/CombineCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Curry/Curry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FoursquareAPIClient/FoursquareAPIClient.framework"

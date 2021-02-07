@@ -63,13 +63,14 @@ protocol MapViewModelInput: ViewModelInput {
     func onSettingsAppOpeningRequest()
     func onCenteringRequest()
     func onVisibleRegionChanged(regionCenter: CLLocationCoordinate2D, latDelta: CLLocationDegrees, lngDelta: CLLocationDegrees)
+    func onShowVenueDetails(with annotation: IdentifiableAnnotation)
 }
 
 protocol MapViewModelOutput {
     var handleError: (MapViewError) -> Void { get set }
     var centerMe: (CLLocationCoordinate2D) -> Void { get set }
     var updateUserLocationVisibility: (Bool) -> Void { get set }
-    var showPinsOnMap: ([MKAnnotation]) -> Void { get set }
+    var showPinsOnMap: ([IdentifiableAnnotation]) -> Void { get set }
     var updateZoomLevel: (Int, CLLocationCoordinate2D) -> Void { get set }
 }
 
@@ -209,6 +210,17 @@ final class MapViewController: UIViewController, MKMapViewDelegate {
         default:
             return RestaurantAnnotationView(annotation: annotation, reuseIdentifier: "RestaurantID")
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if view.annotation is MKUserLocation { return }
+        if view is ClusterAnnotationView { return }
+        
+        guard let identifiableAnnotation = view.annotation as? IdentifiableAnnotation else {
+            fatalError("Unknown type of annotation was selected")
+        }
+        
+        viewModelInput.onShowVenueDetails(with: identifiableAnnotation)
     }
     
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {

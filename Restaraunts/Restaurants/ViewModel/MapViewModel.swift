@@ -20,6 +20,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     struct Dependencies {
         let locationProvider: SimpleLocationProviding
         let searchService: FourSquareServicing
+        let showVenueDetailsCallback: (FourSquareVenue) -> Void
     }
     
     struct Strings {
@@ -44,10 +45,12 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     private var updatingUserLocationVisibilityToken: AnyCancellable?
     private var restaurantsLoadingOnUserLocationUpdate: AnyCancellable?
     private var zoomingToUserLocationOnAppearingToken: AnyCancellable?
+    private var showVenueDetailsCallback: (FourSquareVenue) -> Void
     
     init(dependencies: Dependencies) {
         locationProvider = dependencies.locationProvider
         searchService = dependencies.searchService
+        showVenueDetailsCallback = dependencies.showVenueDetailsCallback
         
         super.init()
         
@@ -131,12 +134,20 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         searchRestaurants(near: regionCenter)
     }
     
+    func onShowVenueDetails(with annotation: IdentifiableAnnotation) {
+        // MapViewModel placed and can safely retrieve data
+        guard let venue = annotation.userInfo as? FourSquareVenue else { fatalError("Something change annotation data") }
+        
+        showVenueDetailsCallback(venue)
+    }
+    
     // ViewModelOutput:
     var handleError: (MapViewError) -> Void = {_ in preconditionFailure("handleError: should be overriden by MapView") }
     var centerMe: (CLLocationCoordinate2D) -> Void = { _ in preconditionFailure("centerMe: should be overriden by MapView") }
     var updateUserLocationVisibility: (Bool) -> Void = { _ in preconditionFailure("showUserLocation: should be overriden by MapView") }
-    var showPinsOnMap: ([MKAnnotation]) -> Void = {  _ in preconditionFailure("showPinsOnMap: should be overriden by MapView")  }
+    var showPinsOnMap: ([IdentifiableAnnotation]) -> Void = {  _ in preconditionFailure("showPinsOnMap: should be overriden by MapView")  }
     var updateZoomLevel: (Int, CLLocationCoordinate2D) -> Void = { _, _ in preconditionFailure("updateZoomLevel: should be overriden by MapView") }
+
     
     // MARK: Private
     
@@ -154,7 +165,11 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
                 break
             }
         }, receiveValue: { [weak self] (venues) in
-            let annotations = venues.map { $0.annotation() }
+            let annotations = venues.map { venue -> IdentifiableAnnotation in
+                let annotation = venue.annotation()
+                annotation.userInfo = venue
+                return annotation
+            }
             self?.showPinsOnMap(annotations)
         })
     }

@@ -2,6 +2,7 @@ platform :ios, '13.0'
 use_frameworks!
   
 target 'Restaurants' do
+  pod 'BottomPopup', '~> 0.6'
   pod 'Argo', '~> 5.0'
   pod 'Curry', '~> 5.0'
   pod 'FoursquareAPIClient', '~> 5.0'

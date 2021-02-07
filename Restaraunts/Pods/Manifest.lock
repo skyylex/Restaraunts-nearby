@@ -1,6 +1,7 @@
 PODS:
   - Argo (5.0.0):
     - Runes (>= 5.0.0)
+  - BottomPopup (0.6.0)
   - CombineCocoa (0.2.2)
   - Curry (5.0.0)
   - FoursquareAPIClient (5.0.1)
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - Argo (~> 5.0)
+  - BottomPopup (~> 0.6)
   - CombineCocoa (~> 0.2)
   - Curry (~> 5.0)
   - FoursquareAPIClient (~> 5.0)
@@ -21,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Argo
+    - BottomPopup
     - CombineCocoa
     - Curry
     - FoursquareAPIClient
@@ -40,6 +43,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Argo: 9c73ffc87202ad7db82580786cca054153249624
+  BottomPopup: 1d5649a3b29396238f0e8f3c82075a7bfcf37ba7
   CombineCocoa: 66c79441761907c096ecbd0021cefd8566acaf06
   Curry: 9807b3a3e5056d73c38c7eeb3cf846cd88cd3d2a
   FoursquareAPIClient: 83c932298e905634e0c0cce90e3f1d6897c7a7a9
@@ -48,6 +52,6 @@ SPEC CHECKSUMS:
   Runes: c9634b39d102aa684a12deaa3611f2643a0bb0a1
   SwiftLocation: bb31568141be88499a6d15b9dcd5d6bfea113a3b
 
-PODFILE CHECKSUM: 2e5cda82be35703a910e83e62d78fd76fbe9b021
+PODFILE CHECKSUM: 6bea601435cf4c9dc08cfa2e5401377d1de0ef37
 
 COCOAPODS: 1.9.3
