@@ -25,7 +25,7 @@ final class MapViewCoordinator: Coordinator {
         let showVenueDetailsCallback: (FourSquareVenue) -> Void = { [weak self] venue in
             guard let self = self else { return }
             
-            let detailsCoordinator = VenueDetailsCoordinator()
+            let detailsCoordinator = VenueDetailsViewCoordinator()
             self.addChild(detailsCoordinator)
             detailsCoordinator.start(with: venue, currentVC: rootViewController)
         }

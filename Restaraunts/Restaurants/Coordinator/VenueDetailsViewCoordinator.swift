@@ -1,5 +1,5 @@
 //
-//  VenueDetailsCoordinator.swift
+//  VenueDetailsViewCoordinator.swift
 //  Restaurants
 //
 //  Created by Yury Lapitsky on 07/02/2021.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FoursquareAPIClient
 
-final class VenueDetailsCoordinator: Coordinator {
+final class VenueDetailsViewCoordinator: Coordinator {
     func start(with venue: FourSquareVenue, currentVC: UIViewController) {
         let venueDetailsVC = VenueDetailsViewController()
         let config = FourSquareConfig()
