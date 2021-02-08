@@ -2,7 +2,7 @@
 
 ### Installation & Usage
 
-- Requirements: Xcode 12.5 
+- Requirements: Xcode 12.4 
 - All dependencies are managed by Cocoapods and stored in the repo. 
 - To develop the app just open `Restaurants.xcworkspace` in the Xcode.
 
