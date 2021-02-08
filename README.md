@@ -1,5 +1,11 @@
 ## Restaurants
 
+### Installation & Usage
+
+- Requirements: Xcode 12.5 
+- All dependencies are managed by Cocoapods and stored in the repo. 
+- To develop the app just open `Restaurants.xcworkspace` in the Xcode.
+
 ### Features implemented
 
 - **Map rendering.** Apple Maps is used to draw a map as a standard and yet sufficient way to visualize a map.
