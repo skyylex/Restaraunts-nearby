@@ -232,6 +232,25 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9473282225D12A8800C0FEF0 /* CoordinatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				9491665725CDFCF3001ED057 /* MapViewCoordinatorTests.swift */,
+				9473281825D124B700C0FEF0 /* VenueDetailsViewCoordinatorTests.swift */,
+			);
+			path = CoordinatorTests;
+			sourceTree = "<group>";
+		};
+		9473282325D12A9700C0FEF0 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */,
+				9473281E25D126FB00C0FEF0 /* VenueDetailsViewModelTests.swift */,
+				946A3B6225CEDDD500B21095 /* ViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
 		947B659625CEE0A80082180C /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,13 +310,10 @@
 		9491664925CDFCCC001ED057 /* RestaurantsTests */ = {
 			isa = PBXGroup;
 			children = (
+				9473282325D12A9700C0FEF0 /* ViewModelTests */,
+				9473282225D12A8800C0FEF0 /* CoordinatorTests */,
 				9491664C25CDFCCC001ED057 /* Info.plist */,
-				9491665725CDFCF3001ED057 /* MapViewCoordinatorTests.swift */,
-				9473281825D124B700C0FEF0 /* VenueDetailsViewCoordinatorTests.swift */,
-				9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */,
-				9473281E25D126FB00C0FEF0 /* VenueDetailsViewModelTests.swift */,
 				9473275325CFF63B00C0FEF0 /* FourSquareServiceTests.swift */,
-				946A3B6225CEDDD500B21095 /* ViewModelTests.swift */,
 				9473277225CFFF9300C0FEF0 /* Extensions */,
 				9473276B25CFFBE800C0FEF0 /* Resources */,
 				9491666325CE0253001ED057 /* Mocks */,
