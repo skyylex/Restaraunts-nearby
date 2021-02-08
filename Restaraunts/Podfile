@@ -1,4 +1,4 @@
-platform :ios, '13.0'
+platform :ios, '14.1'
 use_frameworks!
 inhibit_all_warnings!
 
@@ -15,4 +15,12 @@ end
 
 target 'RestaurantsTests' do
   pod 'FoursquareAPIClient', '~> 5.0'
+end
+
+post_install do |pi|
+    pi.pods_project.targets.each do |t|
+      t.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.1'
+      end
+    end
 end
