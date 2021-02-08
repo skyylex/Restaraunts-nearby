@@ -11,14 +11,14 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var rootCoordinator: RootCoordinator?
+    var rootCoordinator: MapViewCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
         
-        rootCoordinator = RootCoordinator()
+        rootCoordinator = MapViewCoordinator()
         rootCoordinator?.start(with: window)
         
         self.window = window

@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-/// - Tag: ClusterAnnotationView
+/// Represents combine venues on a map with a number inside (a number of venues inside cluster)
 class ClusterAnnotationView: MKAnnotationView {
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {

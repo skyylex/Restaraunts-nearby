@@ -9,6 +9,7 @@
 import Foundation
 import MapKit
 
+/// Represents a venue on a map
 class RestaurantAnnotationView: MKAnnotationView {
     enum Mode {
         case regular
@@ -85,9 +86,10 @@ class RestaurantAnnotationView: MKAnnotationView {
     }
     
     private func draw(mode: Mode) -> UIImage {
-        // TODO: fix force unwrap
-        let icon = UIImage(named: "restaurant")?.withTintColor(UIColor.white)
-        return drawImage(icon!, stripeColor: UIColor.brightBlue, mode: mode)
+        guard let icon = UIImage(named: "restaurant")?.withTintColor(UIColor.white) else {
+            fatalError("`restaurant` image should be available")
+        }
+        return drawImage(icon, stripeColor: UIColor.brightBlue, mode: mode)
     }
 
     private func count() -> Int {

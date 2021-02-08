@@ -12,7 +12,7 @@ import FoursquareAPIClient
 import CombineCocoa
 
 /// Initiates application UX flow
-final class RootCoordinator: Coordinator {
+final class MapViewCoordinator: Coordinator {
     
     /// Starts UX Flow with Map screen
     /// - Parameter window: UIWindow to render Map

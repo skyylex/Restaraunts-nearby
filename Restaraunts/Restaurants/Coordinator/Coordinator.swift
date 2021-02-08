@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// Base coordinator that  enables Coordinator hierarchy
 class Coordinator {
     private (set) var children = [Coordinator]()
     weak var parent: Coordinator?

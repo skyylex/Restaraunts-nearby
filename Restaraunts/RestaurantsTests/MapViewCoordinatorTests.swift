@@ -15,10 +15,13 @@ final class RootCoordinatorTests: XCTestCase {
     
     func testStart() {
         let window = UIWindow()
-        let coordinator = RootCoordinator()
+        let coordinator = MapViewCoordinator()
         coordinator.start(with: window)
         
         XCTAssertNotNil(window.rootViewController)
+        XCTAssertTrue(window.rootViewController is MapViewController)
+        XCTAssertNotNil((window.rootViewController as? MapViewController)?.viewModelInput)
+        XCTAssertNotNil((window.rootViewController as? MapViewController)?.viewModelOutput)
     }
     
 }

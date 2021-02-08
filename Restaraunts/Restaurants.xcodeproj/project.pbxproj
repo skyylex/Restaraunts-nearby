@@ -38,9 +38,9 @@
 		947B65C125CF13580082180C /* FourSquareVenue+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */; };
 		947B65CA25CF341B0082180C /* ClusteringAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65C925CF341B0082180C /* ClusteringAnnotationView.swift */; };
 		947B65CE25CF3CFC0082180C /* RestaurantAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65CD25CF3CFC0082180C /* RestaurantAnnotationView.swift */; };
-		9491663C25CDF83C001ED057 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491663B25CDF83C001ED057 /* RootCoordinator.swift */; };
+		9491663C25CDF83C001ED057 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491663B25CDF83C001ED057 /* MapViewCoordinator.swift */; };
 		9491664125CDF99A001ED057 /* SimpleLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491664025CDF99A001ED057 /* SimpleLocationProvider.swift */; };
-		9491665825CDFCF3001ED057 /* RootCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491665725CDFCF3001ED057 /* RootCoordinatorTests.swift */; };
+		9491665825CDFCF3001ED057 /* MapViewCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491665725CDFCF3001ED057 /* MapViewCoordinatorTests.swift */; };
 		9491666025CDFDE9001ED057 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */; };
 		9491666525CE026E001ED057 /* SimpleLocationProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491666425CE026E001ED057 /* SimpleLocationProviderMock.swift */; };
 /* End PBXBuildFile section */
@@ -89,11 +89,11 @@
 		947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FourSquareVenue+MKAnnotation.swift"; sourceTree = "<group>"; };
 		947B65C925CF341B0082180C /* ClusteringAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusteringAnnotationView.swift; sourceTree = "<group>"; };
 		947B65CD25CF3CFC0082180C /* RestaurantAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotationView.swift; sourceTree = "<group>"; };
-		9491663B25CDF83C001ED057 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		9491663B25CDF83C001ED057 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
 		9491664025CDF99A001ED057 /* SimpleLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLocationProvider.swift; sourceTree = "<group>"; };
 		9491664825CDFCCC001ED057 /* RestaurantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9491664C25CDFCCC001ED057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9491665725CDFCF3001ED057 /* RootCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorTests.swift; sourceTree = "<group>"; };
+		9491665725CDFCF3001ED057 /* MapViewCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinatorTests.swift; sourceTree = "<group>"; };
 		9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
 		9491666425CE026E001ED057 /* SimpleLocationProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLocationProviderMock.swift; sourceTree = "<group>"; };
 		AB66310C1C4496B2F91AA495 /* Pods_RestaurantsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,7 +269,7 @@
 		9491663A25CDF825001ED057 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				9491663B25CDF83C001ED057 /* RootCoordinator.swift */,
+				9491663B25CDF83C001ED057 /* MapViewCoordinator.swift */,
 				9473280A25D11FB200C0FEF0 /* Coordinator.swift */,
 				9473278B25D045DF00C0FEF0 /* VenueDetailsCoordinator.swift */,
 			);
@@ -288,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				9491664C25CDFCCC001ED057 /* Info.plist */,
-				9491665725CDFCF3001ED057 /* RootCoordinatorTests.swift */,
+				9491665725CDFCF3001ED057 /* MapViewCoordinatorTests.swift */,
 				9491665F25CDFDE9001ED057 /* MapViewModelTests.swift */,
 				9473275325CFF63B00C0FEF0 /* FourSquareServiceTests.swift */,
 				946A3B6225CEDDD500B21095 /* ViewModelTests.swift */,
@@ -509,7 +509,7 @@
 				947B65C125CF13580082180C /* FourSquareVenue+MKAnnotation.swift in Sources */,
 				9446457A25CBE20500E247F6 /* AppDelegate.swift in Sources */,
 				947B65AF25CF028C0082180C /* FourSquareVenuePhoto.swift in Sources */,
-				9491663C25CDF83C001ED057 /* RootCoordinator.swift in Sources */,
+				9491663C25CDF83C001ED057 /* MapViewCoordinator.swift in Sources */,
 				9473276425CFF82E00C0FEF0 /* FoursquareAPIClient+Protocols.swift in Sources */,
 				9473275025CFF5AA00C0FEF0 /* FourSquareRequestBuilder.swift in Sources */,
 				9473278825D0454200C0FEF0 /* VenueDetailsViewController.swift in Sources */,
@@ -527,7 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9473277425CFFFAF00C0FEF0 /* CLLocationCoordinate2D+Cities.swift in Sources */,
-				9491665825CDFCF3001ED057 /* RootCoordinatorTests.swift in Sources */,
+				9491665825CDFCF3001ED057 /* MapViewCoordinatorTests.swift in Sources */,
 				9473273A25CFEE5400C0FEF0 /* FourSquareServiceMock.swift in Sources */,
 				9491666525CE026E001ED057 /* SimpleLocationProviderMock.swift in Sources */,
 				946A3B6325CEDDD500B21095 /* ViewModelTests.swift in Sources */,
