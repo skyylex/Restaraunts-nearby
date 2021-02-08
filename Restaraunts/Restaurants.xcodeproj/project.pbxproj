@@ -35,6 +35,7 @@
 		9473280B25D11FB300C0FEF0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473280A25D11FB200C0FEF0 /* Coordinator.swift */; };
 		9473281925D124B700C0FEF0 /* VenueDetailsViewCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473281825D124B700C0FEF0 /* VenueDetailsViewCoordinatorTests.swift */; };
 		9473281F25D126FB00C0FEF0 /* VenueDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473281E25D126FB00C0FEF0 /* VenueDetailsViewModelTests.swift */; };
+		9473282525D12AE400C0FEF0 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9473282425D12AE400C0FEF0 /* CoordinatorTests.swift */; };
 		947B659825CEE0BB0082180C /* FourSquareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B659725CEE0BB0082180C /* FourSquareService.swift */; };
 		947B65AF25CF028C0082180C /* FourSquareVenuePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65AE25CF028C0082180C /* FourSquareVenuePhoto.swift */; };
 		947B65C125CF13580082180C /* FourSquareVenue+MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */; };
@@ -88,6 +89,7 @@
 		9473280A25D11FB200C0FEF0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9473281825D124B700C0FEF0 /* VenueDetailsViewCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsViewCoordinatorTests.swift; sourceTree = "<group>"; };
 		9473281E25D126FB00C0FEF0 /* VenueDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		9473282425D12AE400C0FEF0 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		947B659725CEE0BB0082180C /* FourSquareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareService.swift; sourceTree = "<group>"; };
 		947B65AE25CF028C0082180C /* FourSquareVenuePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareVenuePhoto.swift; sourceTree = "<group>"; };
 		947B65C025CF13580082180C /* FourSquareVenue+MKAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FourSquareVenue+MKAnnotation.swift"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				9491665725CDFCF3001ED057 /* MapViewCoordinatorTests.swift */,
+				9473282425D12AE400C0FEF0 /* CoordinatorTests.swift */,
 				9473281825D124B700C0FEF0 /* VenueDetailsViewCoordinatorTests.swift */,
 			);
 			path = CoordinatorTests;
@@ -554,6 +557,7 @@
 				9491666525CE026E001ED057 /* SimpleLocationProviderMock.swift in Sources */,
 				9473281925D124B700C0FEF0 /* VenueDetailsViewCoordinatorTests.swift in Sources */,
 				946A3B6325CEDDD500B21095 /* ViewModelTests.swift in Sources */,
+				9473282525D12AE400C0FEF0 /* CoordinatorTests.swift in Sources */,
 				9473275425CFF63B00C0FEF0 /* FourSquareServiceTests.swift in Sources */,
 				9491666025CDFDE9001ED057 /* MapViewModelTests.swift in Sources */,
 				9473281F25D126FB00C0FEF0 /* VenueDetailsViewModelTests.swift in Sources */,
