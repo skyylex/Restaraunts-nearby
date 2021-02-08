@@ -10,6 +10,12 @@ import Foundation
 import Combine
 import UIKit
 
+enum ViewLifecycleEvent {
+    case viewDidLoad
+    case viewDidAppear
+    case viewDidDisappear
+}
+
 @frozen enum NoValue {
     case noValue
 }

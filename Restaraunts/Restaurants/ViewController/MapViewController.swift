@@ -53,12 +53,6 @@ extension MapViewError {
     }
 }
 
-enum ViewLifecycleEvent {
-    case viewDidLoad
-    case viewDidAppear
-    case viewDidDisappear
-}
-
 protocol MapViewModelInput: ViewModelInput {
     func onSettingsAppOpeningRequest()
     func onCenteringRequest()
