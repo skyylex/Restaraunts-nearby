@@ -96,7 +96,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         let validSearchRequestedPublisher = searchRequestedPublisher
             .compactMap { $0 }
             .subscribe(on: DispatchQueue.global())
-            .throttle(for: 0.5, scheduler: RunLoop.current, latest: true)
+            .throttle(for: 1.0, scheduler: RunLoop.current, latest: true) // To keep updates under quota limit as long as possible
             .eraseToAnyPublisher()
         
         let searchOnFirstAppearingEventPublisher = validSearchRequestedPublisher
