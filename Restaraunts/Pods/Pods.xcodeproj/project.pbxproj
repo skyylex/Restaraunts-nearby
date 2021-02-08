@@ -9,74 +9,76 @@
 /* Begin PBXBuildFile section */
 		0135162EACCDC49BE0826834EA5561FB /* GeoLocation+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7744E3253EA2E2503CBB4E31B68552B /* GeoLocation+Google.swift */; };
 		01430E27F323F072DE32E9C8A7D2D1B2 /* PartialAddressMatch+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491BB237AD0EA808BB6ADB5D1029507F /* PartialAddressMatch+Google.swift */; };
-		029D41E4C1CB82F70F3914DB1B902D10 /* UITableView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F8EFBEF8ADED2C2626BB29E811EA80 /* UITableView+Combine.swift */; };
+		021C11AD208D242F3157875FDD9C3B0E /* UIStepper+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A9532B1BE08738CE18F75E41A3506 /* UIStepper+Combine.swift */; };
 		02EDB919E1F9BCBA2AA226452198FCA4 /* LocationProvider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 429AD050EFB59D0EA30AA818BEB79EDC /* LocationProvider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03FA4FCF3D8D069C44C58A189B02BF7F /* IPLocation-IPApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74CCEEF2C81F495212EA6EC80E0FF10 /* IPLocation-IPApi.swift */; };
 		04301F0BAC29C8F80842BC666F34C7B1 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757304C845A6DD84C2F8B5DD464C739 /* Decodable.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		048992E0A0CFE0AF9D9FE4DA29B3D987 /* Functor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979BDF36754352C9F82CB03F2B105EA9 /* Functor.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		055662CA5409753B878A60C86312D974 /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FB52E4B96954E95A8BB23B25672C26 /* Combine.framework */; };
 		0612D4BFBAD01E3B14D6571D15378579 /* FailureCoalescing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2D6B8F0D807A511BB12B393200105 /* FailureCoalescing.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
-		08A4331858F587AE1217EA1FD7D26355 /* UIDatePicker+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4437F76357B7CAB415459EE8B42117F1 /* UIDatePicker+Combine.swift */; };
 		0D4CB87B128E36F811A99AAD6C90C378 /* Argo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A1633E28BC57CF6B16A664346F740 /* Argo.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		0D76A97298E1D638897127413725AC2D /* Pods-Restaurants-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 798BB18F7861A6B5A6673B66ADE7AD56 /* Pods-Restaurants-dummy.m */; };
-		0E7B3344D8CB7F6A6FDC17E82FE2CF55 /* UIGestureRecognizer+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE5E77D0E7B86223D97EE94A93EBCD /* UIGestureRecognizer+Combine.swift */; };
-		1040E574FCD67056AB7647D9AE527D4A /* DelegateProxyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85785689D4C29522950869A8A9C49945 /* DelegateProxyPublisher.swift */; };
 		1085032BF4B3BFC99F0D993189A1EE5E /* GeoLocation+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FF8CB521073F11E5771692DBF517C9 /* GeoLocation+Apple.swift */; };
-		12B0634E3632110328D2A7C33CC48D8C /* CombineControlTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7E9C36382C057C21A6462852FED657 /* CombineControlTarget.swift */; };
+		117B4D6D1C55F8F72D6B52BA0399CC51 /* UIBarButtonItem+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E97CACE64512A563C90937BF79763 /* UIBarButtonItem+Combine.swift */; };
 		151A6EBAD258D184920CB2A1C2A8B2DB /* Result+Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08664F5969DD2DBD8F8784A0E9479513 /* Result+Monad.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
-		153911E13D1FA8FBE8539512B02C7416 /* UIScrollView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B62ECD0AB787E88925C977C13D8A00 /* UIScrollView+Combine.swift */; };
 		15FC9DDE7B6FDD7F9AAA9F87DB223095 /* RequestProtocol+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB9C6A64E3C9D90B1405DF0D64846F /* RequestProtocol+Extension.swift */; };
 		17286132235230EF84AB32C9A2D59592 /* Curry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A7E711A0319397955BDF948AAAF9526 /* Curry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		18F4FCCC6344CF5B4847DB181256EB31 /* Optional+Applicative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754778F12D822AB2B250452F717FD2F /* Optional+Applicative.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
+		199E285FDE4555F4FA9D45D94A143753 /* UIDatePicker+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4437F76357B7CAB415459EE8B42117F1 /* UIDatePicker+Combine.swift */; };
 		1A6BE03FA83279A50BB1A0CCB802EB72 /* Applicative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B20EE16C82E2B7BBF51CB41AEC1932 /* Applicative.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		1AB03F8C7C500999E963A9C83BC3EDBD /* FoursquareAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E4603B215750412AB7F022744C38D9 /* FoursquareAuthViewController.swift */; };
 		1AEAECB35B3BDA40D76F4C4C73FB7F35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
 		1C12C694012D3F562B633785E30F4FE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
+		1D0CFA521A1CE75BA05D6E2B2BD9D1F7 /* UISlider+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA74E1C941F1AB38EE6851584457F /* UISlider+Combine.swift */; };
 		1D3DB9EAF867870E974BE4DA69C94F9B /* RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283276A46C0FDB06BD23C6D84791252A /* RawRepresentable.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		205D4926CA343ADD3625414DD8F0DC59 /* Geocoder-MapBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9398134D1000E737BADFBB2C9280B6B /* Geocoder-MapBox.swift */; };
 		2065140D76E30397E08796DE461BD19D /* Curry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 975FF74EFF32189EC6826B721CA8F4DE /* Curry-dummy.m */; };
 		2197E2AADE1ACCBE8763417CBA3A11AE /* Argo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F0229684D5946C60DA62939FC4147A /* Argo-dummy.m */; };
+		222191F33F84BF0E8987B48F54F9A3A0 /* UIPageControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BB5287AD8BA7CA65AF923D76256374 /* UIPageControl+Combine.swift */; };
 		22C49834F33FCD81113602CA3D9F070E /* GSMessages-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD257492E854CDFE0881EED0C97D4C /* GSMessages-dummy.m */; };
-		251F504C7916DE874A1B6FD3AF7904F6 /* UIBarButtonItem+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E97CACE64512A563C90937BF79763 /* UIBarButtonItem+Combine.swift */; };
+		25C6DD779E655326FFAC9E813648C9DB /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3ED32BFCDD2DC8CD6ADDFD3D4E48E /* DelegateProxy.swift */; };
 		25E30948884EDB2DEF4364F829BA337D /* GSMessages-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B44D27113D65108B7A0E2F8B6B4689F0 /* GSMessages-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		279756052F325D9A80D3201F207CE5CD /* GPSLocationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3C32054DA25165E400F1A05FD2552C /* GPSLocationOptions.swift */; };
 		2AA3EC58E1EB56DB264DE2FBCEB3336C /* GeoLocation+MapBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A485D3B4D479EBEA79A2CCBF415B76A7 /* GeoLocation+MapBox.swift */; };
 		2BB3511EB0AF3BD320684133D079A5F4 /* Optional+Functor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B66CAB18D75D50206432424ACDAC5D /* Optional+Functor.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		2DA633C02893DEF70699144701C914D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
+		2E16AED87423E3162CC1A0F1040AA159 /* AnimatedAssignSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5B8B7C268816CC568AA789CF84B38 /* AnimatedAssignSubscriber.swift */; };
 		2E3640EA28727C321974FDC0CA228023 /* BottomPopupTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E184266C34A5D54EE6F02DBDD8643 /* BottomPopupTransitionHandler.swift */; };
 		2E5E26C19866074833C0E9928E1F6BCC /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBAE6BCCECE06330A3A440251FE3EDA /* Dictionary.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		2EC9747367C97387D3A9DDA227E42C10 /* GeocoderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB38891177FC6B82BF8325B38226EB /* GeocoderServiceProtocol.swift */; };
 		2FB41CC95BC18138326AA6DAF708D9CE /* Runes-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD829D2A6E023EBE1AA3E356C53295D /* Runes-dummy.m */; };
+		2FBF3840607E397EDC15EF17955B8EB3 /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4A5C0A3FFB0B1AB30754C8936625E /* UIControl+Combine.swift */; };
 		30B264A2197B4424517FF3CBE4424E24 /* flatReduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51283E4732021F46EA8D2F32F6C56D /* flatReduce.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		318717772516B57BAE1DC5FD9CCA2D27 /* IPLocation-IPGeolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AF7C26114A28C91A4D75CA5CA5E2BD /* IPLocation-IPGeolocation.swift */; };
+		31A329A7587B2A3082CB7BC399816180 /* CombineCocoa-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F29FB6881E0E566DFBC15CAAD17AA80 /* CombineCocoa-dummy.m */; };
 		31C7A46003A5E739ACCB3CE39331CD13 /* GPSLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79AB266603FC5C15B7DAFF2B6341127 /* GPSLocationRequest.swift */; };
 		3286E9A500AB79D2394FF015FE5B9E69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
 		353E423A7476140A7CEDADA890A45A7A /* Result+Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F61CFBB294DA74F8405FF37147C04 /* Result+Alternative.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
-		380E16909BBFED14B1A6FC644C082B45 /* UISegmentedControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3455BDC0027F8172D8533AA6B621A1F1 /* UISegmentedControl+Combine.swift */; };
-		3A3754D198FA4E141BAC8CAA67225FE4 /* UISlider+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AA74E1C941F1AB38EE6851584457F /* UISlider+Combine.swift */; };
 		3C123754FB411A8C076DD9C991E5249D /* SwiftLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD4210A7F61A10ADBA7CE0CCE403ED9 /* SwiftLocation.swift */; };
-		3C718399D06F1E52D9C30164516592A7 /* UIRefreshControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882ACEB69B9CF191342D3AA4E2029585 /* UIRefreshControl+Combine.swift */; };
 		3F17740A6A5F9301B12BB79242A9DE58 /* VisitsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF3071C97527AE55D6914689982A7D /* VisitsRequest.swift */; };
+		3F56A8CD74F78622297ECDD90A94A0A3 /* UITextField+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F044608C88104F9A507AF187C4295E7 /* UITextField+Combine.swift */; };
 		3F7538BC802869FFB8C20483CD9618F9 /* ObjcDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 754A26B5DF791AE22B61433A986E86CD /* ObjcDelegateProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4044CC85D9132395F0D218EF9247D184 /* Geocoder-Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E925CAFEDF55006E03C9B8032D75A2A /* Geocoder-Apple.swift */; };
 		44D418770510BE27EEB9D64B2DE5E946 /* Geocoder-Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F34DB3E8EE54C5259C310A5EC546B29 /* Geocoder-Here.swift */; };
 		47CE6A620157EC8D64B8BC2ECE01B2C6 /* Autocomplete-Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003056DD10EEF5287A4524CAEF5766D2 /* Autocomplete-Google.swift */; };
-		4A4574B6645D66B4860C962215A81AF7 /* UISwitch+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10124AE4E47D2A6A7B5642AB6B7EAD34 /* UISwitch+Combine.swift */; };
+		4CFBE310E66E0F09C5067CA559DAB641 /* UIButton+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29CF945B7BF8494056A52CA7BC0FBF /* UIButton+Combine.swift */; };
 		4DA641A22A0550CFA4774B6324B948F0 /* sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50EE1E8A2576B8E68130B0156CA9648 /* sequence.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
+		4EB64257B2D918AF5F9AB02F4E12E5E2 /* NSTextStorage+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB461931476790D35993CBD401F7DAA4 /* NSTextStorage+Combine.swift */; };
+		4F65B3540133F191BCA6636838BBDE3D /* UITextView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AE165507429084EB1B2FF9CD5B86E /* UITextView+Combine.swift */; };
 		4FF5D707915071AF74473CE36FE3CEB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6A4BC2A183C5B9FA810B630C480D39 /* UIKit.framework */; };
 		5252BA9C73F43258A376154896809FB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
 		53978168EA95F4F6107FD40CD1AEBBD1 /* FoursquareAPIClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 460F0CE8BDDE0E56C81C19EF3CDDD49E /* FoursquareAPIClient-dummy.m */; };
 		546DCDC1077C5F9D66022B9A6B7B3292 /* Optional+Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9948660FA3C9266A1F966C7FF0F71F /* Optional+Alternative.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		6207DD484A8AE98D53D0A127A1E5DC74 /* BeaconRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CE0A80B4626DFE8BEB38E24A19B64 /* BeaconRequest.swift */; };
 		65252D1DE3E723064408246E2826257C /* Geocoder-Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D01218FC0871E8C7B4A8458133BAA62 /* Geocoder-Google.swift */; };
-		65E69FA38BB277ECB9AF805F6434D75A /* UITextField+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F044608C88104F9A507AF187C4295E7 /* UITextField+Combine.swift */; };
 		671A7AF928FF32097430DD9C75C0C02E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D122A4B759D969D0D45221ED9B291E2 /* CoreLocation.framework */; };
-		672E3725ACC88580351226F69B4DAA64 /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB3ED32BFCDD2DC8CD6ADDFD3D4E48E /* DelegateProxy.swift */; };
 		6AEB488DA191AF3A921D3CA5732A0A1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
 		6BCBE96B0E2CD03E52E5CC445BF5D00B /* IPLocation-IPStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F683C2F954B94E78313F57D65A6E9E5 /* IPLocation-IPStack.swift */; };
 		71662D2855678C6E47F4B71370411C97 /* FoursquareAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5782502FC7201172249A9812EBC3F07 /* FoursquareAuthClient.swift */; };
 		728609E86256A69C1375A79A06E684EE /* Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6D6E8A42646392BE8299E1DA28F525 /* Alternative.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		75DA8B808996CFEAA7F1303DB2A8279A /* FoursquareAPIClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DE81AB72A6C70F91955562971401758 /* FoursquareAPIClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		771BAE7F506B392135284E7DE0F6CEA4 /* UISwitch+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10124AE4E47D2A6A7B5642AB6B7EAD34 /* UISwitch+Combine.swift */; };
+		77474C33937F474F22C03060316165E6 /* DelegateProxyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85785689D4C29522950869A8A9C49945 /* DelegateProxyPublisher.swift */; };
 		7958484386870FDF42F864886293E61E /* DecodeOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA25AFD4C938BD68CC7BD2359EB1A26A /* DecodeOperators.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		7A247EE68A07D96E0C6D4BAC03B7D45F /* CLLocationManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0977C4975565D4E094F76819C68239A0 /* CLLocationManager+Extension.swift */; };
 		7B817009B47838FCA6B2192BF549B35B /* GeocoderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53D84ADE7E9F3037430B7BF1E1DA4C /* GeocoderRequest.swift */; };
@@ -86,7 +88,6 @@
 		81CEB0E88D7C47D70F9376F75B0CE018 /* IPLocation-IPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7512EF07CAAC3E1BAECAD50CB1611EC5 /* IPLocation-IPData.swift */; };
 		820B26B8BB2BBCA5DA3F604CC20A446B /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B049F87C82429A49D3AB11D5706DC54 /* GeoLocation.swift */; };
 		8256700B35C2DD7D84686198FA27FFBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
-		825F365AF3EAB312230F52ACBA122B4B /* UIButton+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29CF945B7BF8494056A52CA7BC0FBF /* UIButton+Combine.swift */; };
 		82CE45FA4DC8BF6AF495D9223967A9AC /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116461C028182F57B000CC3E110EC93 /* Curry.swift */; };
 		831F3988A0ED1969ADF9B3E3FF4A76B1 /* Array+Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08962B074865F880DD7BFA6260DE4BBD /* Array+Alternative.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		83781C677E9D0275268F5B800B05D3A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
@@ -94,20 +95,22 @@
 		88309A3B15C072EBC1E6C3886E0C3F0A /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29FC7F2996B7041962F9D37E5050DAD /* RequestProtocol.swift */; };
 		88ACDF7BC34ADAEB11A2E6940754AC9B /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85B467C1E21BF9431DF0B9092775B48 /* Runes.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		8915DB7C57E38C16195C5481E6D85AD7 /* Pods-Restaurants-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E302B89955ACF869D250703870DD467E /* Pods-Restaurants-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89303E0A7847DAFF04869B778890E989 /* CombineControlProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E0137A2300CFBAC62A6B11C9EC091 /* CombineControlProperty.swift */; };
 		896C41E3C8BC793AC59D31B277A75031 /* BottomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96034CB9FB6835564628D9D2B8C4EDC /* BottomPopupViewController.swift */; };
 		89A05BF36EBCA2E4FAE30F1182DCDA6F /* PartialAddressMatch+Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673695DB1BE21ADFE980747DCB82EFCC /* PartialAddressMatch+Here.swift */; };
 		8BA5B5CBAC42A14FDD3735E1F3794760 /* SwiftLocation+Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134AFB3A4CA37A831804E6EC890A8993 /* SwiftLocation+Credentials.swift */; };
-		91EC05BAB32ACEE6BE727D3A475973E5 /* UITextView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AE165507429084EB1B2FF9CD5B86E /* UITextView+Combine.swift */; };
+		8D875941BC61ADC9D954862BF1D2D5CD /* CombineControlTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7E9C36382C057C21A6462852FED657 /* CombineControlTarget.swift */; };
+		90F9FDBD4D583A764094695989A35FA6 /* UIGestureRecognizer+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE5E77D0E7B86223D97EE94A93EBCD /* UIGestureRecognizer+Combine.swift */; };
 		939ECD6C5B7C3414559A5DB6130E4770 /* DecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1CE5F7E94703A8129B33719EFEC82 /* DecodeError.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
+		94F294E3FCC83F7B132A803648C49913 /* ObjcDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5353766D678A329EA29A195F47BEA5D3 /* ObjcDelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		955D974C67A61E62F4C94034D2729777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
 		9751FB534C8CE7447B2E0EAFD64E52ED /* IPLocation+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5156975B453F9380ED083792341E961C /* IPLocation+Data.swift */; };
+		98EC2B48983F1098253A11C5E0E6DA5E /* UITableView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F8EFBEF8ADED2C2626BB29E811EA80 /* UITableView+Combine.swift */; };
 		99674CFFEB7281E016502C4088960816 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9706EA03A590A6E65060B0DD54651AB6 /* Foundation.framework */; };
 		996BB9319F51C162CD992D2AB253EA62 /* BottomPopupDismissInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2D7C35E808E97DD7B70AE653D1452 /* BottomPopupDismissInteractionController.swift */; };
 		9A7B51688A147300C69A2582814D690A /* BottomPopupPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951B37C137BFF03AC6810B9CCF3174E /* BottomPopupPresentAnimator.swift */; };
 		9A954E7892DB11A93340E4085B726602 /* LocationProvider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12DA8B1CBB4EA07027113B8B67B66AE5 /* LocationProvider-dummy.m */; };
 		9AF01FEA51445E2BB483672170FA3E2C /* Optional+Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EF85E98DB03D166F02D7E1424171FD /* Optional+Monad.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
-		9AF6F699D9852FD45884F5549E292EA8 /* CombineControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46184A6FED77C1F2A13013B4D45A9402 /* CombineControlEvent.swift */; };
+		9D804E17DBA30BB7EFD8783DA2496E6C /* UICollectionView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165C9D2E0B4F3DF015888081355C95C9 /* UICollectionView+Combine.swift */; };
 		9E546379D73ADFAC2E30A82FA11582BC /* Foundation+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8075ACBC91494E00C56559B9E38E6 /* Foundation+Extras.swift */; };
 		9EE9A9A14D9D563616E590AB3C4942D6 /* SwiftLocation+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB076B6F8B63E528FA9681301E3407B /* SwiftLocation+Errors.swift */; };
 		A04DA2D319E520A58E7CC2393886CD34 /* Array+Monad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C590C7DD33FD8A266BDF631CA5E735B /* Array+Monad.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
@@ -115,23 +118,21 @@
 		A38F98C1E7E109E049E408E7463F3404 /* PartialAddressMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5EA414C6DE7A84779B2AB5EB0E649D /* PartialAddressMatch.swift */; };
 		A3DF19EA68C1FA64097206021C12E785 /* Result+Functor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874DC797A3D8AEB562F3F70AB65A0D22 /* Result+Functor.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		A3E0AD6F44D874E74D58752CE9206BFF /* GSMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D748E3F4AACF3B64E03FD55125EEDF7 /* GSMessages.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3F605009A71DB8A2FB86472CB0EF131 /* CombineControlEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46184A6FED77C1F2A13013B4D45A9402 /* CombineControlEvent.swift */; };
 		A52975382748827E23ED45CEA4CD6071 /* Array+Functor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53811C7A1E09727DFE300F79A885542E /* Array+Functor.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		A55D4BB75E766525A3910CD17FCC0F19 /* BottomPopupDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17EE0869C6C35F8B489A8216029F233 /* BottomPopupDismissAnimator.swift */; };
-		A75988CBB7A66B261193F8CDC8CE4EAB /* UISearchBar+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9772FF10EF24D457D38CA75D29A00CBD /* UISearchBar+Combine.swift */; };
-		A759AA6F08CD63326373A3095F943936 /* DelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A2CCECEBCBCBD7530DEFD417B8192 /* DelegateProxyType.swift */; };
-		ACF4DB1B863356B32029E648AC15BE91 /* UIStepper+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A9532B1BE08738CE18F75E41A3506 /* UIStepper+Combine.swift */; };
+		A62EC2350B3861E5D0E94641C59DEA97 /* UIScrollView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B62ECD0AB787E88925C977C13D8A00 /* UIScrollView+Combine.swift */; };
+		A98690411EA5C6FB5AC2243B528BE184 /* UISearchBar+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9772FF10EF24D457D38CA75D29A00CBD /* UISearchBar+Combine.swift */; };
 		AF395ED8DBC3E8D98BB4BFBA59FBA3B1 /* LocationManagerImpProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801FD6A1F9E90A11848F94D3BCE26036 /* LocationManagerImpProtocol.swift */; };
 		B27636AB1135F857B7F503A59DC2204C /* Pods-RestaurantsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBAE5F3570B9C1130DD6A4615086CC7 /* Pods-RestaurantsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B897EF473433B7FB472E2E6BCD39B466 /* BottomPopupNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19B7807A638404E18DB80CAC71C8D6 /* BottomPopupNavigationController.swift */; };
 		BB2C552A44CC1DFDEF53FE1583C91BE4 /* Argo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D9C5743480FC468570B9FB18E58E9B5 /* Argo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCD7099CECD6BFD8F01FF23EB8E735FF /* AutocompleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495380E5A441E3FEB5675E4DC3295466 /* AutocompleteProtocol.swift */; };
+		BEF52F9A4EC6B88A2A1251CF2EB60803 /* UISegmentedControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3455BDC0027F8172D8533AA6B621A1F1 /* UISegmentedControl+Combine.swift */; };
 		C09E9659FE9DB6C66E6F0A12D51001DC /* CombineCocoa-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5440C8E9E44ECE882EF99DF154DF6A73 /* CombineCocoa-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C34A1399C1EC48FC68551B24D4DF008C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF481465035E4EADC5B2B9A17E4C044D /* GSMessage.swift */; };
-		C3AFE652E684138A90E1106012663FCD /* NSTextStorage+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB461931476790D35993CBD401F7DAA4 /* NSTextStorage+Combine.swift */; };
 		C7A693B2A1E29DD5B82A0C70EC68BC65 /* Geocoder-OpenStreet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB5224F353418DE5B8F54CD8AACEA9 /* Geocoder-OpenStreet.swift */; };
-		C9EC90E8A2D06959E39DEA579E3EB5FD /* UIControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4A5C0A3FFB0B1AB30754C8936625E /* UIControl+Combine.swift */; };
-		CBAC35D1D9CFB9F088E7215BD2704C07 /* UICollectionView+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165C9D2E0B4F3DF015888081355C95C9 /* UICollectionView+Combine.swift */; };
-		CC03CAE907A21161C9C25E2DA0B6202A /* CombineCocoa-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F29FB6881E0E566DFBC15CAAD17AA80 /* CombineCocoa-dummy.m */; };
+		CA3E35E0B9833BFE97CA8CDEEDC481AC /* UIRefreshControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882ACEB69B9CF191342D3AA4E2029585 /* UIRefreshControl+Combine.swift */; };
 		D15F0F68A7A30EDFC1AB64CA886A4520 /* GeofencingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB05B27106A519052EBCC16624B2A5F /* GeofencingRequest.swift */; };
 		D2BE3C7800F7D543E82BE610F24EA36F /* BottomPopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB68C0511CE215F9436DBEA06797507 /* BottomPopupPresentationController.swift */; };
 		D486CFCC6088532205DB023B3AE4D762 /* Pods-RestaurantsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B63ACAEDF93E5ED1B3C167F49F56750F /* Pods-RestaurantsTests-dummy.m */; };
@@ -146,15 +147,15 @@
 		D8FAF906A2BCCED9A5E528FD1F6D1C81 /* StandardTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD30CE991EFFFA29617CCEF803DCC552 /* StandardTypes.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		D942F7291D9969110028D5EC268858CB /* Decoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9566B96A7D8BCD7B21B569444C20296 /* Decoded.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		DAC9C8FD6C018726A9D60E5E0F8D120C /* catDecoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9115A2FDC2BEA84CFBD5727B7E88B9C8 /* catDecoded.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
+		DAEAA6FCC1B3B419022A7D1EBF4D5BC0 /* DelegateProxyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A2CCECEBCBCBD7530DEFD417B8192 /* DelegateProxyType.swift */; };
 		DB1BCEC8A549CB43ACF99355592ED8A3 /* GeoLocation+Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33558E2587E4160654802BF2203238F4 /* GeoLocation+Here.swift */; };
-		DE7653A271D1F54439EA6BC51BE15441 /* AnimatedAssignSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB5B8B7C268816CC568AA789CF84B38 /* AnimatedAssignSubscriber.swift */; };
+		DC53A44086ABD1271CD43A96ABFF2C1E /* CombineControlProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0E0137A2300CFBAC62A6B11C9EC091 /* CombineControlProperty.swift */; };
 		E0D9D8558FC2C08FA3D4BC4E89D7445E /* SwiftLocation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A09AD65A88B0A6A3A29EA25D5CA14D51 /* SwiftLocation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E558EDFBF1169C5933CD13ED5013F8DF /* BottomPopup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B1D9777E14357C25C8B0D4B4AA3684 /* BottomPopup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5B3D755E73497C751A86FB02E2D1916 /* AutocompleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034A7063ABB21644F5C04EE3BF22FC4A /* AutocompleteRequest.swift */; };
 		E69E1D32831BD4B4179629A34C716121 /* IPServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED52D883BF7EE1F76EDCC34ED09D9030 /* IPServiceProtocol.swift */; };
 		E6DD780EF16A3E6ABC37D31A48E7BBE8 /* Result+Applicative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACF120918C03E6247755D41178F4DB5 /* Result+Applicative.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		E6E097A350F8A0F5E15365C76CE84DBB /* Autocomplete-Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43003C0716D1E61609BE41BD00A4EA8D /* Autocomplete-Apple.swift */; };
-		E6E2965FA76BD98868A27DA401DFB5DD /* UIPageControl+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BB5287AD8BA7CA65AF923D76256374 /* UIPageControl+Combine.swift */; };
 		ECBB3AB504BEBE4E1AD32ADC20D08DD4 /* decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0547A101DC53C0BEC257203AB89DE5F /* decode.swift */; settings = {COMPILER_FLAGS = "-whole-module-optimization"; }; };
 		EE0846009144D7CC2D62221664404638 /* Autocomplete-Here.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35DD267B121BD7B77BF94B6500B8C97 /* Autocomplete-Here.swift */; };
 		EF5535FC9DDEBE1255EC1154CD3132D0 /* CombineCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 01543AB452855747AE96D353746344A7 /* CombineCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -167,7 +168,6 @@
 		F6326F229FB844B17ED504BD880DCF3C /* JSONNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97405E1B6B43D93521ECF450F0C415 /* JSONNetworkHelper.swift */; };
 		FB6D38EBC44E1493B4DBEDF519B192DF /* PartialAddressMatch+Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A40D574B217D50BA5762381F28D18 /* PartialAddressMatch+Apple.swift */; };
 		FB7A420E4B29689393E1F744E4E6E452 /* BottomPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB912DE8A6C3F2D65B21A5A998F22F5 /* BottomPopup-dummy.m */; };
-		FD7B0A6091D717E9BD539049162913B4 /* ObjcDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5353766D678A329EA29A195F47BEA5D3 /* ObjcDelegateProxy.m */; };
 		FFA5DE1E4B18077214CF18C5A2DAD012 /* IPLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA862D689EEC4102C12C53364E7717D /* IPLocationRequest.swift */; };
 /* End PBXBuildFile section */
 
@@ -1125,7 +1125,7 @@
 			buildConfigurationList = 5E1F268F1B43D6241A9527530DBD01B2 /* Build configuration list for PBXNativeTarget "CombineCocoa" */;
 			buildPhases = (
 				49B270190F5E299ADA4C1C7F1413363E /* Headers */,
-				59F482C751F52108147AA144CADC3E0A /* Sources */,
+				E1987194E37423306441384C4BF9A078 /* Sources */,
 				913DE315076D15E37D70C6F63D783622 /* Frameworks */,
 				41A0F0B9E82B859EF8ECEBCBE6F7CBD2 /* Resources */,
 			);
@@ -1507,40 +1507,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59F482C751F52108147AA144CADC3E0A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE7653A271D1F54439EA6BC51BE15441 /* AnimatedAssignSubscriber.swift in Sources */,
-				CC03CAE907A21161C9C25E2DA0B6202A /* CombineCocoa-dummy.m in Sources */,
-				9AF6F699D9852FD45884F5549E292EA8 /* CombineControlEvent.swift in Sources */,
-				89303E0A7847DAFF04869B778890E989 /* CombineControlProperty.swift in Sources */,
-				12B0634E3632110328D2A7C33CC48D8C /* CombineControlTarget.swift in Sources */,
-				672E3725ACC88580351226F69B4DAA64 /* DelegateProxy.swift in Sources */,
-				1040E574FCD67056AB7647D9AE527D4A /* DelegateProxyPublisher.swift in Sources */,
-				A759AA6F08CD63326373A3095F943936 /* DelegateProxyType.swift in Sources */,
-				C3AFE652E684138A90E1106012663FCD /* NSTextStorage+Combine.swift in Sources */,
-				FD7B0A6091D717E9BD539049162913B4 /* ObjcDelegateProxy.m in Sources */,
-				251F504C7916DE874A1B6FD3AF7904F6 /* UIBarButtonItem+Combine.swift in Sources */,
-				825F365AF3EAB312230F52ACBA122B4B /* UIButton+Combine.swift in Sources */,
-				CBAC35D1D9CFB9F088E7215BD2704C07 /* UICollectionView+Combine.swift in Sources */,
-				C9EC90E8A2D06959E39DEA579E3EB5FD /* UIControl+Combine.swift in Sources */,
-				08A4331858F587AE1217EA1FD7D26355 /* UIDatePicker+Combine.swift in Sources */,
-				0E7B3344D8CB7F6A6FDC17E82FE2CF55 /* UIGestureRecognizer+Combine.swift in Sources */,
-				E6E2965FA76BD98868A27DA401DFB5DD /* UIPageControl+Combine.swift in Sources */,
-				3C718399D06F1E52D9C30164516592A7 /* UIRefreshControl+Combine.swift in Sources */,
-				153911E13D1FA8FBE8539512B02C7416 /* UIScrollView+Combine.swift in Sources */,
-				A75988CBB7A66B261193F8CDC8CE4EAB /* UISearchBar+Combine.swift in Sources */,
-				380E16909BBFED14B1A6FC644C082B45 /* UISegmentedControl+Combine.swift in Sources */,
-				3A3754D198FA4E141BAC8CAA67225FE4 /* UISlider+Combine.swift in Sources */,
-				ACF4DB1B863356B32029E648AC15BE91 /* UIStepper+Combine.swift in Sources */,
-				4A4574B6645D66B4860C962215A81AF7 /* UISwitch+Combine.swift in Sources */,
-				029D41E4C1CB82F70F3914DB1B902D10 /* UITableView+Combine.swift in Sources */,
-				65E69FA38BB277ECB9AF805F6434D75A /* UITextField+Combine.swift in Sources */,
-				91EC05BAB32ACEE6BE727D3A475973E5 /* UITextView+Combine.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A15CA8622143C7D3CA225C4CC928092 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1653,6 +1619,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D76A97298E1D638897127413725AC2D /* Pods-Restaurants-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1987194E37423306441384C4BF9A078 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E16AED87423E3162CC1A0F1040AA159 /* AnimatedAssignSubscriber.swift in Sources */,
+				31A329A7587B2A3082CB7BC399816180 /* CombineCocoa-dummy.m in Sources */,
+				A3F605009A71DB8A2FB86472CB0EF131 /* CombineControlEvent.swift in Sources */,
+				DC53A44086ABD1271CD43A96ABFF2C1E /* CombineControlProperty.swift in Sources */,
+				8D875941BC61ADC9D954862BF1D2D5CD /* CombineControlTarget.swift in Sources */,
+				25C6DD779E655326FFAC9E813648C9DB /* DelegateProxy.swift in Sources */,
+				77474C33937F474F22C03060316165E6 /* DelegateProxyPublisher.swift in Sources */,
+				DAEAA6FCC1B3B419022A7D1EBF4D5BC0 /* DelegateProxyType.swift in Sources */,
+				4EB64257B2D918AF5F9AB02F4E12E5E2 /* NSTextStorage+Combine.swift in Sources */,
+				94F294E3FCC83F7B132A803648C49913 /* ObjcDelegateProxy.m in Sources */,
+				117B4D6D1C55F8F72D6B52BA0399CC51 /* UIBarButtonItem+Combine.swift in Sources */,
+				4CFBE310E66E0F09C5067CA559DAB641 /* UIButton+Combine.swift in Sources */,
+				9D804E17DBA30BB7EFD8783DA2496E6C /* UICollectionView+Combine.swift in Sources */,
+				2FBF3840607E397EDC15EF17955B8EB3 /* UIControl+Combine.swift in Sources */,
+				199E285FDE4555F4FA9D45D94A143753 /* UIDatePicker+Combine.swift in Sources */,
+				90F9FDBD4D583A764094695989A35FA6 /* UIGestureRecognizer+Combine.swift in Sources */,
+				222191F33F84BF0E8987B48F54F9A3A0 /* UIPageControl+Combine.swift in Sources */,
+				CA3E35E0B9833BFE97CA8CDEEDC481AC /* UIRefreshControl+Combine.swift in Sources */,
+				A62EC2350B3861E5D0E94641C59DEA97 /* UIScrollView+Combine.swift in Sources */,
+				A98690411EA5C6FB5AC2243B528BE184 /* UISearchBar+Combine.swift in Sources */,
+				BEF52F9A4EC6B88A2A1251CF2EB60803 /* UISegmentedControl+Combine.swift in Sources */,
+				1D0CFA521A1CE75BA05D6E2B2BD9D1F7 /* UISlider+Combine.swift in Sources */,
+				021C11AD208D242F3157875FDD9C3B0E /* UIStepper+Combine.swift in Sources */,
+				771BAE7F506B392135284E7DE0F6CEA4 /* UISwitch+Combine.swift in Sources */,
+				98EC2B48983F1098253A11C5E0E6DA5E /* UITableView+Combine.swift in Sources */,
+				3F56A8CD74F78622297ECDD90A94A0A3 /* UITextField+Combine.swift in Sources */,
+				4F65B3540133F191BCA6636838BBDE3D /* UITextView+Combine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
