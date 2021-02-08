@@ -10,6 +10,7 @@ import Foundation
 import XCTest
 import FoursquareAPIClient
 import CoreLocation
+import Combine
 @testable import Restaurants
 
 class FoursquareAPIMock: FoursquareAPI {
@@ -35,6 +36,8 @@ class FoursquareAPIMock: FoursquareAPI {
 }
 
 final class FourSquareServiceTests: XCTestCase {
+    var cancellables = [AnyCancellable]()
+    
     func testSearchRequest() {
         let apiMock = FoursquareAPIMock()
         let service = FourSquareService(config: FourSquareConfig(), apiClient: apiMock)
@@ -57,11 +60,11 @@ final class FourSquareServiceTests: XCTestCase {
         let expectVenues = expectation(description: "Expect successfully loaded venues objects")
         
         let resultsPromise = service.searchVenues(near: CLLocationCoordinate2D.newYork)
-        let cancellable = resultsPromise.sink { (result) in } receiveValue: { (venues) in
+        cancellables += [resultsPromise.sink { (result) in } receiveValue: { (venues) in
             XCTAssertEqual(venues.count, 1)
             XCTAssertEqual(venues.first?.name, "Mr. Purple")
             expectVenues.fulfill()
-        }
+        }]
         
         apiMock.executedRequests.first?.completion(.success(jsonDataFromSuccessfullSearch()))
 
@@ -75,7 +78,7 @@ final class FourSquareServiceTests: XCTestCase {
         let expectError = expectation(description: "Expect error from API client")
         
         let resultsPromise = service.searchVenues(near: CLLocationCoordinate2D.newYork)
-        let cancellable = resultsPromise.sink { (result) in
+        cancellables += [resultsPromise.sink { (result) in
             guard case .failure(let error) = result else  {
                 XCTAssertFalse(true, "Expected an error completion")
                 return
@@ -85,7 +88,7 @@ final class FourSquareServiceTests: XCTestCase {
             expectError.fulfill()
         } receiveValue: { (venues) in
             XCTAssertFalse(true, "No venues expected")
-        }
+        }]
         
         let connectionError = NSError(domain: "TestNetworkDomain", code: 343, userInfo: nil)
         apiMock.executedRequests.first?.completion(.failure(.connectionError(connectionError)))
@@ -100,7 +103,7 @@ final class FourSquareServiceTests: XCTestCase {
         let expectError = expectation(description: "Expect an error due to no JSON in the response data")
         
         let resultsPromise = service.searchVenues(near: CLLocationCoordinate2D.newYork)
-        let cancellable = resultsPromise.sink { (result) in
+        cancellables += [resultsPromise.sink { (result) in
             guard case .failure(let error) = result else  {
                 XCTAssertFalse(true, "Expected an error completion")
                 return
@@ -110,7 +113,7 @@ final class FourSquareServiceTests: XCTestCase {
             expectError.fulfill()
         } receiveValue: { (venues) in
             XCTAssertFalse(true, "No venues expected")
-        }
+        }]
         
         apiMock.executedRequests.first?.completion(.success(Data()))
 
@@ -124,7 +127,7 @@ final class FourSquareServiceTests: XCTestCase {
         let expectError = expectation(description: "Expect an error due to invalid json")
         
         let resultsPromise = service.searchVenues(near: CLLocationCoordinate2D.newYork)
-        let cancellable = resultsPromise.sink { (result) in
+        cancellables += [resultsPromise.sink { (result) in
             guard case .failure(let error) = result else  {
                 XCTAssertFalse(true, "Expected an error completion")
                 return
@@ -134,7 +137,7 @@ final class FourSquareServiceTests: XCTestCase {
             expectError.fulfill()
         } receiveValue: { (venues) in
             XCTAssertFalse(true, "No venues expected")
-        }
+        }]
         
         apiMock.executedRequests.first?.completion(.success(corruptedJsonData()))
 
