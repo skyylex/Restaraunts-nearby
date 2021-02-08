@@ -21,6 +21,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
         let locationProvider: SimpleLocationProviding
         let searchService: FourSquareServicing
         let showVenueDetailsCallback: (FourSquareVenue) -> Void
+        let openSettingsApp: () -> Void
     }
     
     struct Strings {
@@ -46,13 +47,14 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     private var restaurantsLoadingOnVisibleRegionUpdateToken: AnyCancellable?
     private var zoomingToUserLocationOnAppearingToken: AnyCancellable?
     private var showVenueDetailsCallback: (FourSquareVenue) -> Void
-    
+    private var openSettingsApp: () -> Void
     private var searchRequestedPublisher = CurrentValueSubject<CLLocationCoordinate2D?, Never>(nil)
     
     init(dependencies: Dependencies) {
         locationProvider = dependencies.locationProvider
         searchService = dependencies.searchService
         showVenueDetailsCallback = dependencies.showVenueDetailsCallback
+        openSettingsApp = dependencies.openSettingsApp
         
         super.init()
         
@@ -146,9 +148,7 @@ final class MapViewModel: ViewModel, MapViewModelInput, MapViewModelOutput {
     }
     
     func onSettingsAppOpeningRequest() {
-        // TODO: move to Coordinator
-        let url = URL(string: UIApplication.openSettingsURLString)!
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        openSettingsApp()
     }
     
     func onVisibleRegionChanged(regionCenter: CLLocationCoordinate2D, latDelta: CLLocationDegrees, lngDelta: CLLocationDegrees) {

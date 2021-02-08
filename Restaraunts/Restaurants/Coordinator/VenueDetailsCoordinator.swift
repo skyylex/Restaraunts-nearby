@@ -27,4 +27,5 @@ final class VenueDetailsCoordinator: Coordinator {
         
         currentVC.present(venueDetailsVC, animated: true, completion: nil)
     }
+    
 }

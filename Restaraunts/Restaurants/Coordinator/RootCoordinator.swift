@@ -16,11 +16,13 @@ class Coordinator {
     weak var parent: Coordinator?
     
     func addChild(_ coordinator: Coordinator) {
+        coordinator.parent = self
         children += [coordinator]
     }
     
     func removeChild(_ coordinator: Coordinator) {
-        children = children.filter { $0 === coordinator }
+        children = children.filter { $0 !== coordinator }
+        coordinator.parent = nil
     }
     
     func removeFromParent() {
@@ -73,13 +75,24 @@ final class RootCoordinator: Coordinator {
         
         let config = FourSquareConfig()
         let api = FoursquareAPIClient(clientId: config.clientId, clientSecret: config.clientSecret)
+        
+        let showVenueDetailsCallback: (FourSquareVenue) -> Void = { [weak self] venue in
+            guard let self = self else { return }
+            
+            let detailsCoordinator = VenueDetailsCoordinator()
+            self.addChild(detailsCoordinator)
+            detailsCoordinator.start(with: venue, currentVC: rootViewController)
+        }
+        
+        let openSettingsAppCallback = {
+            let url = URL(string: UIApplication.openSettingsURLString)!
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
         let dependencies = MapViewModel.Dependencies(
             locationProvider: SimpleLocationProvider(),
             searchService: FourSquareService(apiClient: api),
-            showVenueDetailsCallback: { [weak self] venue in
-                guard let self = self else { return }
-                self.showVenueDetails(venue, currentViewController: rootViewController)
-            }
+            showVenueDetailsCallback: showVenueDetailsCallback, openSettingsApp: openSettingsAppCallback
         )
         let mapViewModel = MapViewModel(dependencies: dependencies)
         rootViewController.viewModelInput = mapViewModel
@@ -90,12 +103,5 @@ final class RootCoordinator: Coordinator {
         
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
-    }
-
-    // External
-    private func showVenueDetails(_ venue: FourSquareVenue, currentViewController: UIViewController) {
-        let detailsCoordinator = VenueDetailsCoordinator()
-        addChild(self)
-        detailsCoordinator.start(with: venue, currentVC: currentViewController)
     }
 }
