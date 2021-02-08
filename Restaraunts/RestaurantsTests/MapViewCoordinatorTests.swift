@@ -1,5 +1,5 @@
 //
-//  RootCoordinatorTests.swift
+//  MapViewCoordinatorTests.swift
 //  RestaurantsTests
 //
 //  Created by Yury Lapitsky on 05/02/2021.
@@ -11,7 +11,7 @@ import XCTest
 
 @testable import Restaurants
 
-final class RootCoordinatorTests: XCTestCase {
+final class MapViewCoordinatorTests: XCTestCase {
     
     func testStart() {
         let window = UIWindow()
